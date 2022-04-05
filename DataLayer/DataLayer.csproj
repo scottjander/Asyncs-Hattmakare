@@ -52,15 +52,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
+    <Compile Include="Migrations\202204051531462_minforsta.cs" />
+    <Compile Include="Migrations\202204051531462_minforsta.designer.cs">
+      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomsDeclaration.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Enums\HatSizeEnumcs.cs" />
     <Compile Include="Models\Hat.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Enums\OrderStatus.cs" />
+    <Compile Include="Models\ShippingLabel.cs" />
+    <Compile Include="Models\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testklassen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204051531462_minforsta.resx">
+      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

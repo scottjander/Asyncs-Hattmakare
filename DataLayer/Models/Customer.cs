@@ -13,6 +13,8 @@ namespace DataLayer.Models
         public string LastName { get; set; }
         public int Phone { get; set; }
         public string Email { get; set; }
+        public Address Address { get; set; }
+
         public int CustomerBonusPoints { get; set; }
     }
 }

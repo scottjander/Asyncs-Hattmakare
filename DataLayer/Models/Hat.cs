@@ -10,9 +10,13 @@ namespace DataLayer.Models
     {
 
         public int Id { get; set; }
-        public bool MadeToOrder { get; set; }
         public int Price { get; set; }
-        public string Comment { get; set; }
-        //public int ExtraTillägg? ifall vi sa att alla tillägg kostar lika mycket?
+        public string Comment { get; set; } 
     }
+   public class SpecialHat : Hat
+   {
+       public int AmountOfDecorations { get; set; }
+       public string ImagePath { get; set; }
+
+   }
 }
