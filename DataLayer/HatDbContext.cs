@@ -9,6 +9,15 @@ namespace DataLayer
     public class HatDbContext : DbContext
     {
         public DbSet<Employees> Employees { get; set; }
+        public DbSet<Hat> Hats { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<SpecialHat> SpecialHats { get; set; }
+        public DbSet<HatStock> HatStock { get; set; }
+        public DbSet<FabricStock> MaterialStock { get; set; }
+        public DbSet<ShippingLabel> ShippingLabels { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<IncomingInvoice> IncomingInvoices { get; set; }
 
         // Your context has been configured to use a 'HatDbContext' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -18,7 +27,8 @@ namespace DataLayer
         // connection string in the application configuration file.
         public HatDbContext()
             : base("name=HatDbContext")
-        {
+        {   
+
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

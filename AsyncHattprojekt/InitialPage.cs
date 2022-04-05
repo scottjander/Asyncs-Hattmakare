@@ -32,12 +32,6 @@ namespace AsyncHattprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var context = new HatDbContext())
-            {
-                var nyanstalld = new Employees() {Name = textBox1.Text};
-                context.Employees.Add(nyanstalld);
-                context.SaveChanges();
-            }
 
         }
     }
