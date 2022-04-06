@@ -33,6 +33,33 @@ namespace DataLayer
                 context.Hats.Add(enHatt);
                 context.Hats.Add(tvaHatt);
                 context.Orders.Add(minOrder);
+
+                var silke = new FabricStock()
+                {
+                    ItemName = "Silke", Price = 200, AmountInStock = 30, Colour = "Black"
+                };
+
+                var filt = new FabricStock()
+                {
+                    ItemName = "Filt",
+                    Price = 100,
+                    AmountInStock = 40,
+                    Colour = "Blue"
+                };
+
+                var polyester = new FabricStock()
+                {
+                    ItemName = "Polyester",
+                    Price = 300,
+                    AmountInStock = 50,
+                    Colour = "Red"
+                };
+
+                context.MaterialStock.Add(filt);
+                context.MaterialStock.Add(polyester);
+                context.MaterialStock.Add(silke);
+
+
                 context.SaveChanges();
 
             }

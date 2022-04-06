@@ -1,0 +1,30 @@
+﻿using DataLayer.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataLayer.Repository
+{
+    public class StockRepository
+    {
+        private readonly HatDbContext _context;
+        public StockRepository()
+        {
+            _context = new HatDbContext();
+        }
+
+        public List<FabricStock> GetAllFabric()
+        {
+
+            return _context.MaterialStock.ToList();
+        }
+
+        public static implicit operator StockRepository(SpecialHatRepository v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+}
