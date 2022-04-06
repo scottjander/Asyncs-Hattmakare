@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +17,14 @@ namespace AsyncHattprojekt
     {
         private readonly ShippingLabelController controller = new ShippingLabelController();
 
-        public shippinglabel()
+        public shippinglabel(Customer customer, Address address)
         {
             InitializeComponent();
             controller.PrintDocument.PrintPage += new PrintPageEventHandler(controller.printDocument_PrintPage);
+
+            lblName.Text = customer.FirstName + " " + customer.LastName;
+            lblStreet.Text = address.StreetName + " " + address.StreetNumber;
+            lblTown.Text = address.PostalCode + " " + address.TownName;
         }
 
         private void label1_Click(object sender, EventArgs e)

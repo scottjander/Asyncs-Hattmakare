@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -29,6 +30,11 @@ namespace BusinessLayer
            System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(MemoryImage, 0, 0);
+        }
+
+        public void SetLabels(Address address, Customer customer)
+        {
+            
         }
     }
 
