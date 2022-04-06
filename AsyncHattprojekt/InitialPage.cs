@@ -32,7 +32,6 @@ namespace AsyncHattprojekt
 
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             StartPage f = new StartPage();
             f.Show();

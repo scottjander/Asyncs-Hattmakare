@@ -33,6 +33,7 @@
             this.btnSeOrder = new System.Windows.Forms.Button();
             this.btnBestall = new System.Windows.Forms.Button();
             this.btnLoggaUt = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSeKundRegister
@@ -85,11 +86,23 @@
             this.btnLoggaUt.UseVisualStyleBackColor = true;
             this.btnLoggaUt.Click += new System.EventHandler(this.btnLoggaUt_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(327, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(393, 75);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Välkommen";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1541, 766);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoggaUt);
             this.Controls.Add(this.btnSeKundRegister);
             this.Controls.Add(this.btnLagerStatus);
@@ -98,6 +111,7 @@
             this.Name = "StartPage";
             this.Text = "StartPage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +122,6 @@
         private System.Windows.Forms.Button btnSeOrder;
         private System.Windows.Forms.Button btnBestall;
         private System.Windows.Forms.Button btnLoggaUt;
+        private System.Windows.Forms.Label label1;
     }
 }
