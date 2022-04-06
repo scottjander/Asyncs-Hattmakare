@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Models.Enums
 {
-    internal class PriceEnum
+    public enum Price
     {
+        BasePrice = 500, 
+        DecorationPrice = 100
     }
 }

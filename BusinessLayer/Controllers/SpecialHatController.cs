@@ -1,4 +1,5 @@
 ﻿using DataLayer.Models;
+using DataLayer.Models.Enums;
 using DataLayer.Repository;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,30 @@ namespace BusinessLayer.Controllers
             StockRepository = new StockRepository();
         }
 
-        public void CreateSpecialOrder(Order order)
+        public void AddSpecialHat(String name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId)
         {
-            //SpecialHatRepository.addSpecialHat();
+            var price = CalculatePrice(fabric, fabricLength, decoration);
+
+            var newHat = new SpecialHat()
+            {
+                Name = name,
+                Price = price,
+                Comment = comment,
+                AmountOfDecorations = decoration,
+                ImagePath = "test"
+            };
+
+            SpecialHatRepository.addSpecialHat(newHat, orderId);
+        }
+
+        private double CalculatePrice(FabricStock fabric, double fabricLength, int decoration)
+        {
+            var price = (double)Price.BasePrice;
+
+            price += fabric.Price * fabricLength;
+            price += decoration * (double)Price.DecorationPrice;
+
+            return price;
         }
 
         public List<FabricStock> GetFabric()

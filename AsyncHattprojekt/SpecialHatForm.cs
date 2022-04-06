@@ -16,8 +16,9 @@ namespace AsyncHattprojekt
     {
         private SpecialHatController specialHatController;
         private Testklassen testklassen;
+        private int orderID;
 
-        public SpecialHatForm()
+        public SpecialHatForm(int orderID)
         {
             InitializeComponent();
             specialHatController = new SpecialHatController();
@@ -32,7 +33,9 @@ namespace AsyncHattprojekt
             cmbBoxFabric.DisplayMember = "ItemName";
         }
 
+        private void btnAddHat_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
