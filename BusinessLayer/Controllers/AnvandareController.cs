@@ -14,7 +14,13 @@ namespace BusinessLayer
             get { return new AnvandareRepository(); }
         }
 
+        public List<string> getAllEmployeeNames()
+        {
+            List<string> namn = AnvandareRepository.GetAllNames();
+            return namn;
 
+
+        }
 
 
     }

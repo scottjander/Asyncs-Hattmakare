@@ -15,7 +15,13 @@ namespace DataLayer
         {
            using (var context = new HatDbContext())
             {
-               
+                var allaAnstallda = context.Employees.ToList();
+                List<string> names = new List<string>();
+                foreach(var anstalld in allaAnstallda)
+                {
+                    names.Add(anstalld.Name);
+                }
+                return names;
             }
         }
 
