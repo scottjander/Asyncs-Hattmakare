@@ -7,6 +7,7 @@ using DataLayer.Repositories;
 using DataLayer.Models;
 using DataLayer;
 
+
 namespace BusinessLayer
 {
     public class CustomerController
@@ -17,7 +18,7 @@ namespace BusinessLayer
         {
             CustomerRepository = new CustomerRepository();
         }
-        public void kundReg(string firstName, string lastName, int phone, string email, string address)
+        public void RegisterCustomer(string firstName, string lastName, int phone, string email, Address address, string comment)
         {
             var customer = new Customer()
             {
@@ -26,9 +27,12 @@ namespace BusinessLayer
                 Phone = phone,
                 Email = email,
                 Address = address,
-
-
+                Comment = comment,
             };
+
+            var a = address;
+
+            HatDbContext.Addresses.Add(a);
             HatDbContext.Customers.Add(customer);
             HatDbContext.SaveChanges();
         }

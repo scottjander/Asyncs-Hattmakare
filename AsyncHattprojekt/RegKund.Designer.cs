@@ -32,7 +32,7 @@
             this.FirstNameTxd = new System.Windows.Forms.TextBox();
             this.Phonetxd = new System.Windows.Forms.TextBox();
             this.EmailTxd = new System.Windows.Forms.TextBox();
-            this.AddressTxd = new System.Windows.Forms.TextBox();
+            this.AdrNamTxd = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.LastName = new System.Windows.Forms.Label();
             this.PhoneLabel = new System.Windows.Forms.Label();
@@ -40,11 +40,17 @@
             this.AddressLabel = new System.Windows.Forms.Label();
             this.CommentTxt = new System.Windows.Forms.RichTextBox();
             this.CommentLabel = new System.Windows.Forms.Label();
+            this.AdrNmrTxd = new System.Windows.Forms.TextBox();
+            this.StadTxd = new System.Windows.Forms.TextBox();
+            this.PostNmrTxd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RegistreraBtn
             // 
-            this.RegistreraBtn.Location = new System.Drawing.Point(665, 382);
+            this.RegistreraBtn.Location = new System.Drawing.Point(882, 478);
             this.RegistreraBtn.Name = "RegistreraBtn";
             this.RegistreraBtn.Size = new System.Drawing.Size(93, 35);
             this.RegistreraBtn.TabIndex = 0;
@@ -80,12 +86,12 @@
             this.EmailTxd.Size = new System.Drawing.Size(241, 22);
             this.EmailTxd.TabIndex = 5;
             // 
-            // AddressTxd
+            // AdrNamTxd
             // 
-            this.AddressTxd.Location = new System.Drawing.Point(517, 276);
-            this.AddressTxd.Name = "AddressTxd";
-            this.AddressTxd.Size = new System.Drawing.Size(241, 22);
-            this.AddressTxd.TabIndex = 6;
+            this.AdrNamTxd.Location = new System.Drawing.Point(517, 273);
+            this.AdrNamTxd.Name = "AdrNamTxd";
+            this.AdrNamTxd.Size = new System.Drawing.Size(241, 22);
+            this.AdrNamTxd.TabIndex = 6;
             // 
             // FirstNameLabel
             // 
@@ -127,35 +133,89 @@
             // AddressLabel
             // 
             this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Location = new System.Drawing.Point(262, 282);
+            this.AddressLabel.Location = new System.Drawing.Point(262, 279);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(58, 16);
+            this.AddressLabel.Size = new System.Drawing.Size(94, 16);
             this.AddressLabel.TabIndex = 12;
-            this.AddressLabel.Text = "Address";
+            this.AddressLabel.Text = "AddressNamn";
             // 
             // CommentTxt
             // 
-            this.CommentTxt.Location = new System.Drawing.Point(263, 321);
+            this.CommentTxt.Location = new System.Drawing.Point(517, 417);
             this.CommentTxt.Name = "CommentTxt";
-            this.CommentTxt.Size = new System.Drawing.Size(343, 96);
+            this.CommentTxt.Size = new System.Drawing.Size(241, 96);
             this.CommentTxt.TabIndex = 13;
             this.CommentTxt.Text = "";
             // 
             // CommentLabel
             // 
             this.CommentLabel.AutoSize = true;
-            this.CommentLabel.Location = new System.Drawing.Point(110, 352);
+            this.CommentLabel.Location = new System.Drawing.Point(262, 456);
             this.CommentLabel.Name = "CommentLabel";
             this.CommentLabel.Size = new System.Drawing.Size(75, 16);
             this.CommentLabel.TabIndex = 14;
             this.CommentLabel.Text = "Kommentar";
             this.CommentLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // AdrNmrTxd
+            // 
+            this.AdrNmrTxd.Location = new System.Drawing.Point(517, 311);
+            this.AdrNmrTxd.Name = "AdrNmrTxd";
+            this.AdrNmrTxd.Size = new System.Drawing.Size(241, 22);
+            this.AdrNmrTxd.TabIndex = 15;
+            // 
+            // StadTxd
+            // 
+            this.StadTxd.Location = new System.Drawing.Point(517, 339);
+            this.StadTxd.Name = "StadTxd";
+            this.StadTxd.Size = new System.Drawing.Size(241, 22);
+            this.StadTxd.TabIndex = 16;
+            // 
+            // PostNmrTxd
+            // 
+            this.PostNmrTxd.Location = new System.Drawing.Point(517, 367);
+            this.PostNmrTxd.Name = "PostNmrTxd";
+            this.PostNmrTxd.Size = new System.Drawing.Size(241, 22);
+            this.PostNmrTxd.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(262, 317);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Addresssnummer";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Stad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(262, 373);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Postnummer";
+            // 
             // RegKund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(987, 525);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PostNmrTxd);
+            this.Controls.Add(this.StadTxd);
+            this.Controls.Add(this.AdrNmrTxd);
             this.Controls.Add(this.CommentLabel);
             this.Controls.Add(this.CommentTxt);
             this.Controls.Add(this.AddressLabel);
@@ -163,7 +223,7 @@
             this.Controls.Add(this.PhoneLabel);
             this.Controls.Add(this.LastName);
             this.Controls.Add(this.FirstNameLabel);
-            this.Controls.Add(this.AddressTxd);
+            this.Controls.Add(this.AdrNamTxd);
             this.Controls.Add(this.EmailTxd);
             this.Controls.Add(this.Phonetxd);
             this.Controls.Add(this.FirstNameTxd);
@@ -182,7 +242,7 @@
         private System.Windows.Forms.TextBox LastNameTxd;
         private System.Windows.Forms.TextBox FirstNameTxd;
         private System.Windows.Forms.TextBox EmailTxd;
-        private System.Windows.Forms.TextBox AddressTxd;
+        private System.Windows.Forms.TextBox AdrNamTxd;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label LastName;
         private System.Windows.Forms.Label PhoneLabel;
@@ -191,5 +251,11 @@
         private System.Windows.Forms.TextBox Phonetxd;
         private System.Windows.Forms.RichTextBox CommentTxt;
         private System.Windows.Forms.Label CommentLabel;
+        private System.Windows.Forms.TextBox AdrNmrTxd;
+        private System.Windows.Forms.TextBox StadTxd;
+        private System.Windows.Forms.TextBox PostNmrTxd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

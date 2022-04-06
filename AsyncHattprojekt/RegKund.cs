@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using DataLayer.Models;
 
 namespace AsyncHattprojekt
 {
@@ -37,7 +38,11 @@ namespace AsyncHattprojekt
 
         private void RegistreraBtn_Click(object sender, EventArgs e)
         {
-            customerController.kundReg();
+            var nyAddress = new Address() { StreetName = AdrNamTxd.Text, StreetNumber = AdrNmrTxd.Text, TownName = StadTxd.Text, PostalCode = PostNmrTxd.Text};
+            int telefon = Phonetxd.ToString().Length;
+
+            customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, telefon, EmailTxd.Text, nyAddress, CommentTxt.Text);
+            // string firstName, string lastName, int phone, string email, Address address, string comment
         }
     }
 }

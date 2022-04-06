@@ -8,10 +8,10 @@ namespace DataLayer.Repositories
 {
     public class CustomerRepository
     {
-        public CustomerRepository CustomerRepository;
+        // public CustomerRepository CustomerRepository;
         public CustomerRepository()
         {
-            CustomerRepository = new CustomerRepository();
+            // CustomerRepository = new CustomerRepository();
         }
     }
 }
