@@ -16,5 +16,6 @@ namespace DataLayer.Models
         public Address Address { get; set; }
 
         public int CustomerBonusPoints { get; set; }
+        public string Comment { get; set; }
     }
 }

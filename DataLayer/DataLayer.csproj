@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,9 +54,9 @@
   <ItemGroup>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204051531462_minforsta.cs" />
-    <Compile Include="Migrations\202204051531462_minforsta.designer.cs">
-      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    <Compile Include="Migrations\202204061014087_first_migration.cs" />
+    <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -80,10 +81,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204051531462_minforsta.resx">
-      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204061014087_first_migration.resx">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
