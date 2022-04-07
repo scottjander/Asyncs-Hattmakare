@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IronBarCode;
 
 namespace BusinessLayer
 {
@@ -15,7 +16,7 @@ namespace BusinessLayer
 
         public Bitmap MemoryImage;
 
-        public PrintDocument PrintDocument = new PrintDocument();
+        public PrintDocument printDocument = new PrintDocument();
     
         public void PrintLabel(Form printForm)
         {
@@ -24,19 +25,21 @@ namespace BusinessLayer
             Size s = printForm.Size;
             MemoryImage = new Bitmap(s.Width, s.Height, myGraphics);
             Graphics memoryGraphics = Graphics.FromImage(MemoryImage);
-            memoryGraphics.CopyFromScreen(printForm.Location.X, printForm.Location.Y, 0, 0, s);
+            memoryGraphics.CopyFromScreen(printForm.Location.X, printForm.Location.Y, -10, -40, s);
+
+
             ShowPrinterChoices();
         }
 
         public void ShowPrinterChoices()
         {
             PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = PrintDocument;
+            printDialog.Document = printDocument;
             DialogResult result = printDialog.ShowDialog();
 
             if (result == DialogResult.OK)
             {
-                PrintDocument.Print();
+                printDocument.Print();
             }
         }
 
@@ -46,10 +49,17 @@ namespace BusinessLayer
             e.Graphics.DrawImage(MemoryImage, 0, 0);
         }
 
-        public void SetLabels(Address address, Customer customer)
+        public Image GenerateBarCode(string enstring)
         {
-            
-        }
+
+            GeneratedBarcode OrderBarCode =
+                IronBarCode.BarcodeWriter.CreateBarcode(enstring, BarcodeWriterEncoding.Code128);
+            OrderBarCode.ResizeTo(774, 179);
+
+            return OrderBarCode.Image;
+
+        }   
+
     }
 
   
