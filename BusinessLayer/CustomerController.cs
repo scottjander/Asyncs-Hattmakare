@@ -18,7 +18,7 @@ namespace BusinessLayer
         {
             CustomerRepository = new CustomerRepository();
         }
-        public void RegisterCustomer(string firstName, string lastName, int phone, string email, Address address, string comment)
+        public void RegisterCustomer(string firstName, string lastName, string phone, string email, Address address, string comment)
         {
             var customer = new Customer()
             {

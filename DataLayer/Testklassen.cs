@@ -19,7 +19,7 @@ namespace DataLayer
                     Email = "meh",
                     FirstName = "Ferik",
                     LastName = "Fawerman",
-                    Phone = 07623424
+                    // Phone = 07623424
                 };
                 var enHatt = new Hat() { Comment = "Gjorde två hatt", Price = 100 };
                 var tvaHatt = new SpecialHat() { Comment = "Gjorde specialhatt", Price = 570, AmountOfDecorations = 2 };

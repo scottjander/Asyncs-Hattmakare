@@ -30,7 +30,7 @@
             this.RegistreraBtn = new System.Windows.Forms.Button();
             this.LastNameTxd = new System.Windows.Forms.TextBox();
             this.FirstNameTxd = new System.Windows.Forms.TextBox();
-            this.Phonetxd = new System.Windows.Forms.TextBox();
+            this.PhoneTxd = new System.Windows.Forms.TextBox();
             this.EmailTxd = new System.Windows.Forms.TextBox();
             this.AdrNamTxd = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
@@ -72,12 +72,12 @@
             this.FirstNameTxd.Size = new System.Drawing.Size(241, 22);
             this.FirstNameTxd.TabIndex = 3;
             // 
-            // Phonetxd
+            // PhoneTxd
             // 
-            this.Phonetxd.Location = new System.Drawing.Point(517, 157);
-            this.Phonetxd.Name = "Phonetxd";
-            this.Phonetxd.Size = new System.Drawing.Size(241, 22);
-            this.Phonetxd.TabIndex = 4;
+            this.PhoneTxd.Location = new System.Drawing.Point(517, 157);
+            this.PhoneTxd.Name = "PhoneTxd";
+            this.PhoneTxd.Size = new System.Drawing.Size(241, 22);
+            this.PhoneTxd.TabIndex = 4;
             // 
             // EmailTxd
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AdrNamTxd);
             this.Controls.Add(this.EmailTxd);
-            this.Controls.Add(this.Phonetxd);
+            this.Controls.Add(this.PhoneTxd);
             this.Controls.Add(this.FirstNameTxd);
             this.Controls.Add(this.LastNameTxd);
             this.Controls.Add(this.RegistreraBtn);
@@ -248,7 +248,7 @@
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.Label AddressLabel;
-        private System.Windows.Forms.TextBox Phonetxd;
+        private System.Windows.Forms.TextBox PhoneTxd;
         private System.Windows.Forms.RichTextBox CommentTxt;
         private System.Windows.Forms.Label CommentLabel;
         private System.Windows.Forms.TextBox AdrNmrTxd;

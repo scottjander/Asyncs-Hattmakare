@@ -34,5 +34,11 @@ namespace AsyncHattprojekt
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form2 = new RegKund();
+            form2.Show();
+        }
     }
 }
