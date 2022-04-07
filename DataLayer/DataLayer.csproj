@@ -52,9 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204070824570_migration three.cs" />
-    <Compile Include="Migrations\202204070824570_migration three.designer.cs">
-      <DependentUpon>202204070824570_migration three.cs</DependentUpon>
+    <Compile Include="Migrations\202204070837206_a.cs" />
+    <Compile Include="Migrations\202204070837206_a.designer.cs">
+      <DependentUpon>202204070837206_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -81,8 +81,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204070824570_migration three.resx">
-      <DependentUpon>202204070824570_migration three.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204070837206_a.resx">
+      <DependentUpon>202204070837206_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
