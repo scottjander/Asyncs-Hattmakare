@@ -25,16 +25,16 @@ namespace AsyncHattprojekt
             }
         }
 
-        private void cbVäljAnvändare_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+      
+        public static string username = "";
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            username = cbVäljAnvändare.Text;
             StartPage f = new StartPage();
             f.Show();
+
+           
         }
     }
 }

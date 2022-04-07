@@ -57,7 +57,7 @@ namespace AsyncHattprojekt
             this.cbVäljAnvändare.Size = new System.Drawing.Size(201, 30);
             this.cbVäljAnvändare.TabIndex = 1;
             this.cbVäljAnvändare.Text = "Välj Användare";
-            this.cbVäljAnvändare.SelectedIndexChanged += new System.EventHandler(this.cbVäljAnvändare_SelectedIndexChanged);
+      
             // 
             // InitialPage
             // 

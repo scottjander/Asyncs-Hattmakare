@@ -15,6 +15,7 @@ namespace AsyncHattprojekt
         public StartPage()
         {
             InitializeComponent();
+            lblNamn.Text = InitialPage.username;
 
         }
 
@@ -53,5 +54,6 @@ namespace AsyncHattprojekt
             f.Show();
         }
 
+       
     }
 }
