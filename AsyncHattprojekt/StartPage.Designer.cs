@@ -43,7 +43,7 @@
             this.btnSeKundRegister.Name = "btnSeKundRegister";
             this.btnSeKundRegister.Size = new System.Drawing.Size(236, 85);
             this.btnSeKundRegister.TabIndex = 10;
-            this.btnSeKundRegister.Text = "Se Kundregister";
+            this.btnSeKundRegister.Text = "(Kundregister) tillfälligt faktura";
             this.btnSeKundRegister.UseVisualStyleBackColor = true;
             this.btnSeKundRegister.Click += new System.EventHandler(this.btnSeKundRegister_Click);
             // 
