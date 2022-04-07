@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StandardHatOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardHatOrder.Designer.cs">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitialPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="RegKund.resx">
       <DependentUpon>RegKund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardHatOrder.resx">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="packages.config" />

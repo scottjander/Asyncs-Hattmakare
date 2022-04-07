@@ -10,7 +10,7 @@ namespace DataLayer.Models
     {
 
         public int Id { get; set; }
-        public int Price { get; set; }
+        public string Price { get; set; }
         public string Comment { get; set; } 
     }
    public class SpecialHat : Hat
