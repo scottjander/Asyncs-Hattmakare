@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace DataLayer
+namespace DataLayer.Repositories
 {
     public class AnvandareRepository
     {
