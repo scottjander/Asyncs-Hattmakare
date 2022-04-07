@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblName = new System.Windows.Forms.Label();
-            this.lblFabric = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.lblDecoration = new System.Windows.Forms.Label();
             this.txtBoxName = new System.Windows.Forms.TextBox();
@@ -42,6 +41,11 @@
             this.lblComment = new System.Windows.Forms.Label();
             this.lblFabricLength = new System.Windows.Forms.Label();
             this.txtBoxFabricLength = new System.Windows.Forms.TextBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtBoxFileName = new System.Windows.Forms.TextBox();
+            this.lblFabric = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -52,15 +56,6 @@
             this.lblName.Size = new System.Drawing.Size(51, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Namn";
-            // 
-            // lblFabric
-            // 
-            this.lblFabric.AutoSize = true;
-            this.lblFabric.Location = new System.Drawing.Point(126, 147);
-            this.lblFabric.Name = "lblFabric";
-            this.lblFabric.Size = new System.Drawing.Size(56, 20);
-            this.lblFabric.TabIndex = 1;
-            this.lblFabric.Text = "Matrial";
             // 
             // lblSize
             // 
@@ -127,6 +122,7 @@
             this.btnAddImage.TabIndex = 9;
             this.btnAddImage.Text = "Lägg till bild";
             this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
             // 
             // txtBoxComment
             // 
@@ -138,11 +134,11 @@
             // lblComment
             // 
             this.lblComment.AutoSize = true;
-            this.lblComment.Location = new System.Drawing.Point(134, 323);
+            this.lblComment.Location = new System.Drawing.Point(126, 323);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(78, 20);
+            this.lblComment.Size = new System.Drawing.Size(91, 20);
             this.lblComment.TabIndex = 11;
-            this.lblComment.Text = "Komentar";
+            this.lblComment.Text = "Kommentar";
             // 
             // lblFabricLength
             // 
@@ -160,9 +156,49 @@
             this.txtBoxFabricLength.Size = new System.Drawing.Size(100, 26);
             this.txtBoxFabricLength.TabIndex = 13;
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(439, 376);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(255, 231);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 14;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(130, 530);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 32);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "btnTest";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtBoxFileName
+            // 
+            this.txtBoxFileName.Location = new System.Drawing.Point(101, 581);
+            this.txtBoxFileName.Name = "txtBoxFileName";
+            this.txtBoxFileName.Size = new System.Drawing.Size(267, 26);
+            this.txtBoxFileName.TabIndex = 16;
+            // 
+            // lblFabric
+            // 
+            this.lblFabric.AutoSize = true;
+            this.lblFabric.Location = new System.Drawing.Point(126, 146);
+            this.lblFabric.Name = "lblFabric";
+            this.lblFabric.Size = new System.Drawing.Size(65, 20);
+            this.lblFabric.TabIndex = 18;
+            this.lblFabric.Text = "Material";
+            // 
             // SpecialHatForm
             // 
             this.ClientSize = new System.Drawing.Size(919, 631);
+            this.Controls.Add(this.lblFabric);
+            this.Controls.Add(this.txtBoxFileName);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.txtBoxFabricLength);
             this.Controls.Add(this.lblFabricLength);
             this.Controls.Add(this.lblComment);
@@ -175,9 +211,9 @@
             this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.lblDecoration);
             this.Controls.Add(this.lblSize);
-            this.Controls.Add(this.lblFabric);
             this.Controls.Add(this.lblName);
             this.Name = "SpecialHatForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblFabric;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label lblDecoration;
         private System.Windows.Forms.TextBox txtBoxName;
@@ -199,5 +234,9 @@
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Label lblFabricLength;
         private System.Windows.Forms.TextBox txtBoxFabricLength;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtBoxFileName;
+        private System.Windows.Forms.Label lblFabric;
     }
 }

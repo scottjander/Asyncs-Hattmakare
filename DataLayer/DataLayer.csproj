@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202204051531462_minforsta.designer.cs">
       <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204070831247_hej.cs" />
+    <Compile Include="Migrations\202204070831247_hej.designer.cs">
+      <DependentUpon>202204070831247_hej.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -78,12 +82,13 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202204051531462_minforsta.resx">
       <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204070831247_hej.resx">
+      <DependentUpon>202204070831247_hej.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

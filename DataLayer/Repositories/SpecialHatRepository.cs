@@ -17,8 +17,9 @@ namespace DataLayer.Repository
 
         public void addSpecialHat(SpecialHat hat, int id)
         {
-            var currentOrder = _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra 
-            currentOrder.Hats.Add(hat);
+            Order order = _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra 
+            _context.Hats.Add(hat);
+            order.Hats.Add(hat);
             _context.SaveChanges();
         }
     }
