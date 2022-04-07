@@ -23,35 +23,45 @@ namespace AsyncHattprojekt
         {
             this.Hide();
             Testform f = new Testform();
-            f.Show();
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
 
         private void btnSeOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
             Testform f = new Testform();
-            f.Show();
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
 
         private void btnLagerStatus_Click(object sender, EventArgs e)
         {
             this.Hide();
             Testform f = new Testform();
-            f.Show();
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
 
         private void btnSeKundRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
             Testform f = new Testform();
-            f.Show();
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
 
         private void btnLoggaUt_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InitialPage f = new InitialPage();
-            f.Show();
+            this.Close();
+        }
+        private void OnFormClose(object sender, FormClosedEventArgs e)
+        { 
+            Application.Exit();
         }
 
        

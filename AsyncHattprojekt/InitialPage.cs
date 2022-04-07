@@ -32,9 +32,14 @@ namespace AsyncHattprojekt
             this.Hide();
             username = cbVäljAnvändare.Text;
             StartPage f = new StartPage();
-            f.Show();
+            f.ShowDialog();
+            f = null;
+            this.Show();
+        }
 
-           
+        private void OnFormClose(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

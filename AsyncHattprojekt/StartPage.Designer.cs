@@ -39,7 +39,7 @@
             // 
             // btnSeKundRegister
             // 
-            this.btnSeKundRegister.Location = new System.Drawing.Point(1188, 276);
+            this.btnSeKundRegister.Location = new System.Drawing.Point(1196, 503);
             this.btnSeKundRegister.Name = "btnSeKundRegister";
             this.btnSeKundRegister.Size = new System.Drawing.Size(236, 85);
             this.btnSeKundRegister.TabIndex = 10;
@@ -49,7 +49,7 @@
             // 
             // btnLagerStatus
             // 
-            this.btnLagerStatus.Location = new System.Drawing.Point(821, 276);
+            this.btnLagerStatus.Location = new System.Drawing.Point(841, 503);
             this.btnLagerStatus.Name = "btnLagerStatus";
             this.btnLagerStatus.Size = new System.Drawing.Size(236, 85);
             this.btnLagerStatus.TabIndex = 9;
@@ -59,7 +59,7 @@
             // 
             // btnSeOrder
             // 
-            this.btnSeOrder.Location = new System.Drawing.Point(471, 276);
+            this.btnSeOrder.Location = new System.Drawing.Point(472, 503);
             this.btnSeOrder.Name = "btnSeOrder";
             this.btnSeOrder.Size = new System.Drawing.Size(236, 85);
             this.btnSeOrder.TabIndex = 8;
@@ -69,7 +69,7 @@
             // 
             // btnBestall
             // 
-            this.btnBestall.Location = new System.Drawing.Point(69, 276);
+            this.btnBestall.Location = new System.Drawing.Point(91, 503);
             this.btnBestall.Name = "btnBestall";
             this.btnBestall.Size = new System.Drawing.Size(236, 85);
             this.btnBestall.TabIndex = 7;
