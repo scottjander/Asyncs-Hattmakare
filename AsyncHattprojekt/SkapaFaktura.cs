@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLayer;
+using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace AsyncHattprojekt
         public SkapaFaktura()
         {
             InitializeComponent();
+        }
+
+        private void btnSkapaFaktura_Click(object sender, EventArgs e)
+        {
+            using (var context = new HatDbContext())
+            {
+                double summa = Convert.ToDouble(tbSummaAttBetala.Text);
+
+                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked };
+                context.Invoices.Add(nyfaktura);
+                context.SaveChanges();
+            }
         }
     }
 }

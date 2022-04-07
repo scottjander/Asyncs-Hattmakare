@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository\AnvandareRepository.cs" />
+    <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="HatDbContext.cs" />
     <Compile Include="Migrations\202204061014087_first_migration.cs" />
     <Compile Include="Migrations\202204061014087_first_migration.designer.cs">

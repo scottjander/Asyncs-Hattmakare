@@ -49,7 +49,8 @@ namespace AsyncHattprojekt
         private void btnSeKundRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Testform f = new Testform();
+            //Testform f = new Testform();
+            SkapaFaktura f = new SkapaFaktura();
             f.ShowDialog();
             f = null;
             this.Show();
