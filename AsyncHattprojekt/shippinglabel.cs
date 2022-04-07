@@ -35,7 +35,7 @@ namespace AsyncHattprojekt
         private void btnPrint_Click(object sender, EventArgs e)
         {
             controller.PrintLabel(this);
-            controller.PrintDocument.Print();
+
         }
     }
 }

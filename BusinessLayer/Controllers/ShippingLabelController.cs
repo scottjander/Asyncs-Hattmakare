@@ -19,11 +19,25 @@ namespace BusinessLayer
     
         public void PrintLabel(Form printForm)
         {
+            PrintDialog printDialog = new PrintDialog();
             Graphics myGraphics = printForm.CreateGraphics();
             Size s = printForm.Size;
             MemoryImage = new Bitmap(s.Width, s.Height, myGraphics);
             Graphics memoryGraphics = Graphics.FromImage(MemoryImage);
             memoryGraphics.CopyFromScreen(printForm.Location.X, printForm.Location.Y, 0, 0, s);
+            ShowPrinterChoices();
+        }
+
+        public void ShowPrinterChoices()
+        {
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = PrintDocument;
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                PrintDocument.Print();
+            }
         }
 
         public void printDocument_PrintPage(System.Object sender,
