@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="Repository\AnvandareRepository.cs" />
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204051531462_minforsta.cs" />
-    <Compile Include="Migrations\202204051531462_minforsta.designer.cs">
-      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    <Compile Include="Migrations\202204061014087_first_migration.cs" />
+    <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -80,8 +80,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204051531462_minforsta.resx">
-      <DependentUpon>202204051531462_minforsta.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204061014087_first_migration.resx">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
