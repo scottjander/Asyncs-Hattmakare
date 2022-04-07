@@ -31,9 +31,11 @@ namespace BusinessLayer.Controllers
                 Price = price,
                 Comment = comment,
                 AmountOfDecorations = decoration,
-                ImagePath = imagePath
+                ImagePath = imagePath,
+
             };
-            
+            Order order = SpecialHatRepository.getOrder(1);
+            newHat.Order = order;
             SpecialHatRepository.addSpecialHat(newHat, orderId);
         }
 

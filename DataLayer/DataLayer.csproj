@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202204070831247_hej.designer.cs">
       <DependentUpon>202204070831247_hej.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204071453197_coolt.cs" />
+    <Compile Include="Migrations\202204071453197_coolt.designer.cs">
+      <DependentUpon>202204071453197_coolt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204070831247_hej.resx">
       <DependentUpon>202204070831247_hej.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071453197_coolt.resx">
+      <DependentUpon>202204071453197_coolt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
