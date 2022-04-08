@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace AsyncHattprojekt
             InitializeComponent();
             anvandareController = new AnvandareController();
             cbVäljAnvändare_fyllcbx();
+           
         }
 
         private void cbVäljAnvändare_fyllcbx()
@@ -29,12 +31,15 @@ namespace AsyncHattprojekt
         public static string username = "";
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
+            var testklassen = new Testklassen();
+            testklassen.dummydata();
             this.Hide();
             username = cbVäljAnvändare.Text;
             StartPage f = new StartPage();
             f.ShowDialog();
             f = null;
             this.Show();
+           
         }
 
         private void OnFormClose(object sender, FormClosedEventArgs e)

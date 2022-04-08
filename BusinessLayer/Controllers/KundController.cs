@@ -14,10 +14,15 @@ namespace BusinessLayer.Controllers
             get { return new KundRepository(); }
         }
     
-    
-    
-    
-    
-    
+        public int HamtaIndex(int id)
+        {
+            int index = KundRepository.HamtaIndex(id);
+            return index;
+        }
+
+
+
+
+
     }
 }

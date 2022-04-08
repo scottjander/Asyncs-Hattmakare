@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using BusinessLayer.Controllers;
+using DataLayer;
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace AsyncHattprojekt
 {
     public partial class SkapaFaktura : Form
     {
+        KundController kundController;
         public SkapaFaktura()
         {
             InitializeComponent();
+            kundController = new KundController();
         }
 
         private void btnSkapaFaktura_Click(object sender, EventArgs e)
@@ -30,5 +33,16 @@ namespace AsyncHattprojekt
                 context.SaveChanges();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int id = Convert.ToInt32(tbKundID.Text);
+            int index = kundController.HamtaIndex(id);
+
+            tbFaktureringsadress.Text = index.ToString();
+
+                
+        } 
     }
 }

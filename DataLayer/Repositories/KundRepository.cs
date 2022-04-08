@@ -8,6 +8,16 @@ namespace DataLayer.Repositories
 {
      public class KundRepository
     {
-     
+     public int HamtaIndex (int id)
+        {
+            using (var context = new HatDbContext())
+            {
+                var customer = context.Customers.Find(id);
+                var index =  customer.Address.Id;
+                return index;
+            }
+
+
+        }
     }
 }
