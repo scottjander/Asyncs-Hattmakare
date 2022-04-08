@@ -13,6 +13,7 @@ namespace DataLayer.Repositories
             using (var context = new HatDbContext())
             {
                 var customer = context.Customers.Find(id);
+                var adress = customer.Address;
                 var index =  customer.Address.Id;
                 return index;
             }
