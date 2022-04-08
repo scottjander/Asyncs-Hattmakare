@@ -15,7 +15,6 @@ namespace DataLayer.Models
         public int size { get; set; }
         public string color    { get; set; }
         public string itemName { get; set; }
-        public Stock stock { get; set; }
     }
    public class SpecialHat : Hat
    {
