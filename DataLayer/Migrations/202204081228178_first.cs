@@ -36,13 +36,19 @@
                 .Index(t => t.Id);
             
             CreateTable(
-                "dbo.Employees",
+                "dbo.Orders",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Id = c.Int(nullable: false),
+                        StartDate = c.DateTime(nullable: false),
+                        DateFinished = c.DateTime(nullable: false),
+                        Comment = c.String(),
+                        TotalPrice = c.Int(nullable: false),
+                        OrderStatus = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Customers", t => t.Id)
+                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.Hats",
@@ -59,6 +65,15 @@
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Orders", t => t.Order_Id)
                 .Index(t => t.Order_Id);
+            
+            CreateTable(
+                "dbo.Employees",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.HatStocks",
@@ -100,22 +115,6 @@
                 .Index(t => t.Order_Id);
             
             CreateTable(
-                "dbo.Orders",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        StartDate = c.DateTime(nullable: false),
-                        DateFinished = c.DateTime(nullable: false),
-                        Comment = c.String(),
-                        TotalPrice = c.Int(nullable: false),
-                        OrderStatus = c.Int(nullable: false),
-                        Customer_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customers", t => t.Customer_Id)
-                .Index(t => t.Customer_Id);
-            
-            CreateTable(
                 "dbo.FabricStocks",
                 c => new
                     {
@@ -146,24 +145,24 @@
         {
             DropForeignKey("dbo.ShippingLabels", "Address_Id", "dbo.Addresses");
             DropForeignKey("dbo.Invoices", "Order_Id", "dbo.Orders");
-            DropForeignKey("dbo.Hats", "Order_Id", "dbo.Orders");
-            DropForeignKey("dbo.Orders", "Customer_Id", "dbo.Customers");
             DropForeignKey("dbo.Invoices", "InvoiceAddress_Id", "dbo.Addresses");
+            DropForeignKey("dbo.Hats", "Order_Id", "dbo.Orders");
+            DropForeignKey("dbo.Orders", "Id", "dbo.Customers");
             DropForeignKey("dbo.Customers", "Id", "dbo.Addresses");
             DropIndex("dbo.ShippingLabels", new[] { "Address_Id" });
-            DropIndex("dbo.Orders", new[] { "Customer_Id" });
             DropIndex("dbo.Invoices", new[] { "Order_Id" });
             DropIndex("dbo.Invoices", new[] { "InvoiceAddress_Id" });
             DropIndex("dbo.Hats", new[] { "Order_Id" });
+            DropIndex("dbo.Orders", new[] { "Id" });
             DropIndex("dbo.Customers", new[] { "Id" });
             DropTable("dbo.ShippingLabels");
             DropTable("dbo.FabricStocks");
-            DropTable("dbo.Orders");
             DropTable("dbo.Invoices");
             DropTable("dbo.IncomingInvoices");
             DropTable("dbo.HatStocks");
-            DropTable("dbo.Hats");
             DropTable("dbo.Employees");
+            DropTable("dbo.Hats");
+            DropTable("dbo.Orders");
             DropTable("dbo.Customers");
             DropTable("dbo.Addresses");
         }

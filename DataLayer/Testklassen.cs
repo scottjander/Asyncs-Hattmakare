@@ -44,6 +44,7 @@ namespace DataLayer
 
             var address = new Address()
             { StreetName = "Köpmangatan", StreetNumber = "13", PostalCode = "70210", TownName = "Örebro" };
+         
             var customer = new Customer()
             {
                 CustomerBonusPoints = 0,
@@ -53,10 +54,19 @@ namespace DataLayer
                 Phone = 07623424,
                 Address = address
             };
+            var order = new Order()
+            {
+                StartDate = DateTime.Now,
+                DateFinished = DateTime.Now,
+                Comment = "Test",
+                TotalPrice = 799,
+                Customer = customer
+            };
             using (var context = new HatDbContext())
             {
                 context.Addresses.Add(address);
                 context.Customers.Add(customer);
+                context.Orders.Add(order);
                 context.SaveChanges();
             }
         }

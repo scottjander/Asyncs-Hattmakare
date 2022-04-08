@@ -15,11 +15,11 @@ namespace BusinessLayer.Controllers
         }
 
         
-             public int HamtaKundIdPaOrderId(int id)
-        {
-            int index = OrderRepository.HamtaKundIdPaOrderId(id);
-            return index;
-        }
+        //     public int HamtaKundIdPaOrderId(int id)
+        //{
+        //    int index = OrderRepository.HamtaKundIdPaOrderId(id);
+        //    return index;
+        //}
 
 
 

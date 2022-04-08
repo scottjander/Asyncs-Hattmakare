@@ -17,11 +17,13 @@ namespace AsyncHattprojekt
     {
         KundController kundController;
         OrderController orderController;
+        FakturaController fakturaController;
         public SkapaFaktura()
         {
             InitializeComponent();
             kundController = new KundController();
             orderController = new OrderController();
+            fakturaController = new FakturaController();
         }
 
         private void btnSkapaFaktura_Click(object sender, EventArgs e)
@@ -43,12 +45,34 @@ namespace AsyncHattprojekt
             //int index = kundController.HamtaIndex(id);
 
             //tbFaktureringsadress.Text = index.ToString();
-            int id = Convert.ToInt32(tbOrderID.Text);
-            int index = orderController.HamtaKundIdPaOrderId(id);
 
-            tbFaktureringsadress.Text = index.ToString();
+            //int id = Convert.ToInt32(tbOrderID.Text);
+            //int index = fakturaController.HamtaKundIdPaOrderId(id);
+
+            //tbFaktureringsadress.Text = index.ToString();
 
 
-        } 
+            int fornamn = Convert.ToInt32(tbOrderID.Text);
+            string hamtafornamn = fakturaController.HamtaForNamn(fornamn);
+            tbForNamn.Text = hamtafornamn.ToString();
+           
+            int efternamn = Convert.ToInt32(tbOrderID.Text);
+            string hamtaefternamn = fakturaController.HamtaEfterNamn(efternamn);
+            tbEfterNamn.Text = hamtaefternamn.ToString();
+
+            int adress = Convert.ToInt32(tbOrderID.Text);
+            string hamtaadress = fakturaController.HamtaAdressPaKundID(adress);
+            tbFaktureringsadress.Text = hamtaadress.ToString();
+
+            int summa = Convert.ToInt32(tbOrderID.Text);
+            int hamtasumma = fakturaController.HamtaTotalSumma(summa);
+            tbSummaAttBetala.Text = hamtasumma.ToString();
+            
+        }
+
+        private void tbKundID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

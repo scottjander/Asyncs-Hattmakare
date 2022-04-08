@@ -52,9 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202204081030058_first.cs" />
-    <Compile Include="Migrations\202204081030058_first.designer.cs">
-      <DependentUpon>202204081030058_first.cs</DependentUpon>
+    <Compile Include="Migrations\202204081228178_first.cs" />
+    <Compile Include="Migrations\202204081228178_first.designer.cs">
+      <DependentUpon>202204081228178_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="HatDbContext.cs" />
@@ -71,6 +71,7 @@
     <Compile Include="Models\ShippingLabel.cs" />
     <Compile Include="Models\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\FakturaRepository.cs" />
     <Compile Include="Repositories\KundRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Testklassen.cs" />
@@ -83,8 +84,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204081030058_first.resx">
-      <DependentUpon>202204081030058_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204081228178_first.resx">
+      <DependentUpon>202204081228178_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

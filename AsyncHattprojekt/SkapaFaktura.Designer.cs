@@ -37,10 +37,10 @@
             this.lblFaktureringsadress = new System.Windows.Forms.Label();
             this.lblSummaAttBetala = new System.Windows.Forms.Label();
             this.lblOrderID = new System.Windows.Forms.Label();
-            this.tbKundID = new System.Windows.Forms.TextBox();
+            this.tbForNamn = new System.Windows.Forms.TextBox();
             this.lblFörnamn = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbEfterNamn = new System.Windows.Forms.TextBox();
             this.lblEfternamn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -84,14 +84,14 @@
             // 
             // tbFaktureringsadress
             // 
-            this.tbFaktureringsadress.Location = new System.Drawing.Point(92, 345);
+            this.tbFaktureringsadress.Location = new System.Drawing.Point(92, 353);
             this.tbFaktureringsadress.Name = "tbFaktureringsadress";
             this.tbFaktureringsadress.Size = new System.Drawing.Size(194, 20);
             this.tbFaktureringsadress.TabIndex = 5;
             // 
             // tbSummaAttBetala
             // 
-            this.tbSummaAttBetala.Location = new System.Drawing.Point(92, 404);
+            this.tbSummaAttBetala.Location = new System.Drawing.Point(92, 434);
             this.tbSummaAttBetala.Name = "tbSummaAttBetala";
             this.tbSummaAttBetala.Size = new System.Drawing.Size(194, 20);
             this.tbSummaAttBetala.TabIndex = 6;
@@ -100,7 +100,7 @@
             // 
             this.lblFaktureringsadress.AutoSize = true;
             this.lblFaktureringsadress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaktureringsadress.Location = new System.Drawing.Point(94, 308);
+            this.lblFaktureringsadress.Location = new System.Drawing.Point(88, 326);
             this.lblFaktureringsadress.Name = "lblFaktureringsadress";
             this.lblFaktureringsadress.Size = new System.Drawing.Size(170, 24);
             this.lblFaktureringsadress.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             this.lblSummaAttBetala.AutoSize = true;
             this.lblSummaAttBetala.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummaAttBetala.Location = new System.Drawing.Point(88, 368);
+            this.lblSummaAttBetala.Location = new System.Drawing.Point(88, 398);
             this.lblSummaAttBetala.Name = "lblSummaAttBetala";
             this.lblSummaAttBetala.Size = new System.Drawing.Size(153, 24);
             this.lblSummaAttBetala.TabIndex = 8;
@@ -126,12 +126,13 @@
             this.lblOrderID.TabIndex = 10;
             this.lblOrderID.Text = "OrderID";
             // 
-            // tbKundID
+            // tbForNamn
             // 
-            this.tbKundID.Location = new System.Drawing.Point(92, 208);
-            this.tbKundID.Name = "tbKundID";
-            this.tbKundID.Size = new System.Drawing.Size(194, 20);
-            this.tbKundID.TabIndex = 11;
+            this.tbForNamn.Location = new System.Drawing.Point(92, 208);
+            this.tbForNamn.Name = "tbForNamn";
+            this.tbForNamn.Size = new System.Drawing.Size(194, 20);
+            this.tbForNamn.TabIndex = 11;
+            this.tbForNamn.TextChanged += new System.EventHandler(this.tbKundID_TextChanged);
             // 
             // lblFörnamn
             // 
@@ -153,12 +154,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tbEfterNamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 273);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 14;
+            this.tbEfterNamn.Location = new System.Drawing.Point(92, 273);
+            this.tbEfterNamn.Name = "tbEfterNamn";
+            this.tbEfterNamn.Size = new System.Drawing.Size(194, 20);
+            this.tbEfterNamn.TabIndex = 14;
             // 
             // lblEfternamn
             // 
@@ -176,10 +177,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 609);
             this.Controls.Add(this.lblEfternamn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbEfterNamn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblFörnamn);
-            this.Controls.Add(this.tbKundID);
+            this.Controls.Add(this.tbForNamn);
             this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.lblSummaAttBetala);
             this.Controls.Add(this.lblFaktureringsadress);
@@ -207,10 +208,10 @@
         private System.Windows.Forms.Label lblFaktureringsadress;
         private System.Windows.Forms.Label lblSummaAttBetala;
         private System.Windows.Forms.Label lblOrderID;
-        private System.Windows.Forms.TextBox tbKundID;
+        private System.Windows.Forms.TextBox tbForNamn;
         private System.Windows.Forms.Label lblFörnamn;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbEfterNamn;
         private System.Windows.Forms.Label lblEfternamn;
     }
 }

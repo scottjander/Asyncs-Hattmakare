@@ -19,5 +19,7 @@ namespace DataLayer.Models
 
         public int CustomerBonusPoints { get; set; }
         public string Comment { get; set; }
+        
+        public virtual Order Order { get; set; }
     }
 }
