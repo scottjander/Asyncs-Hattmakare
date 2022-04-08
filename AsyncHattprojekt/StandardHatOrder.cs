@@ -32,7 +32,7 @@ namespace AsyncHattprojekt
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            standardHatController.OrderStandardHat(prisTxtBx.Text, kommentarTxtBx.Text);
+            standardHatController.OrderStandardHat(Convert.ToDouble(prisTxtBx.Text), kommentarTxtBx.Text);
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)

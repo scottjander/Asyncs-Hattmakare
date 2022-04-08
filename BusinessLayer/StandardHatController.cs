@@ -21,7 +21,7 @@ namespace BusinessLayer
 
 
 
-        public void OrderStandardHat(string price, string comment)
+        public void OrderStandardHat(double price, string comment)
         {
             var hat = new Hat()
             {

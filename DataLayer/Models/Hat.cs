@@ -10,8 +10,12 @@ namespace DataLayer.Models
     {
 
         public int Id { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
         public string Comment { get; set; } 
+        public int size { get; set; }
+        public string color    { get; set; }
+        public string itemName { get; set; }
+        public Stock stock { get; set; }
     }
    public class SpecialHat : Hat
    {

@@ -52,9 +52,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204070837206_a.cs" />
-    <Compile Include="Migrations\202204070837206_a.designer.cs">
-      <DependentUpon>202204070837206_a.cs</DependentUpon>
+    <Compile Include="Migrations\202204080844347_newhat.cs" />
+    <Compile Include="Migrations\202204080844347_newhat.designer.cs">
+      <DependentUpon>202204080844347_newhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204080849020_newhat2.cs" />
+    <Compile Include="Migrations\202204080849020_newhat2.designer.cs">
+      <DependentUpon>202204080849020_newhat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204080853583_ye.cs" />
+    <Compile Include="Migrations\202204080853583_ye.designer.cs">
+      <DependentUpon>202204080853583_ye.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -81,8 +89,14 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204070837206_a.resx">
-      <DependentUpon>202204070837206_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204080844347_newhat.resx">
+      <DependentUpon>202204080844347_newhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204080849020_newhat2.resx">
+      <DependentUpon>202204080849020_newhat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204080853583_ye.resx">
+      <DependentUpon>202204080853583_ye.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

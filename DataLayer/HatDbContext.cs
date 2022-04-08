@@ -13,12 +13,12 @@ namespace DataLayer
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<SpecialHat> SpecialHats { get; set; }
-        public DbSet<HatStock> HatStock { get; set; }
         public DbSet<FabricStock> MaterialStock { get; set; }
         public DbSet<ShippingLabel> ShippingLabels { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<IncomingInvoice> IncomingInvoices { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Stock> Stock { get; set; }
 
 
         // Your context has been configured to use a 'HatDbContext' connection string from your application's 

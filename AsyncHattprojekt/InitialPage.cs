@@ -15,9 +15,13 @@ namespace AsyncHattprojekt
 {
     public partial class InitialPage : Form
     {
+        public Testklassen testklassen;
+
         public InitialPage()
         {
             InitializeComponent();
+            testklassen = new Testklassen();
+            testklassen.TestMetoden3();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,6 +42,12 @@ namespace AsyncHattprojekt
         private void button2_Click(object sender, EventArgs e)
         {
             var form2 = new RegKund();
+            form2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form2 = new StandardHatOrder();
             form2.Show();
         }
     }

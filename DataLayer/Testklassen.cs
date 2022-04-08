@@ -37,5 +37,35 @@ namespace DataLayer
 
                 }
             }*/
+        public void TestMetoden3()
+        {
+            using (var context = new HatDbContext())
+            {
+                var stock = new Stock();
+                context.Stock.Add(stock);
+                var customer = new Customer()
+                {
+                    CustomerBonusPoints = 0,
+                    Email = "meh",
+                    FirstName = "Ferik",
+                    LastName = "Fawerman",
+                    // Phone = 07623424
+                };
+                var enHatt = new Hat() {stock = stock};
+                // var tvaHatt = new SpecialHat() { Comment = "Gjorde specialhatt", Price = "570", AmountOfDecorations = 2 };
+                var hattLista = new List<Hat>();
+                hattLista.Add(enHatt);
+                // hattLista.Add(tvaHatt);
+                DateTime tiden = DateTime.Now;
+                var minOrder = new Order()
+                { Comment = "Joe", Customer = customer, Hats = hattLista, TotalPrice = (double)hattLista.Sum(x => x.Price), StartDate = tiden, DateFinished = tiden };
+                context.Customers.Add(customer);
+                context.Hats.Add(enHatt);
+                // context.Hats.Add(tvaHatt);
+                context.Orders.Add(minOrder);
+                context.SaveChanges();
+
+            }
+        }
     }
 }
