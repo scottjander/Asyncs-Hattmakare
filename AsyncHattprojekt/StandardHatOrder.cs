@@ -18,15 +18,15 @@ namespace AsyncHattprojekt
         public HatDbContext HatDbContext = new HatDbContext();
         public StandardHatController standardHatController = new StandardHatController();
 
+        
         public StandardHatOrder()
         {
             InitializeComponent();
+            fillCombobox();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
-
 
         }
 
@@ -38,6 +38,16 @@ namespace AsyncHattprojekt
         private void prisTxtBx_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+        private void fillCombobox()
+        {
+            HatCb.DataSource = standardHatController.GetUniqueHats();
+            HatCb.DisplayMember = "itemName";
+            HatCb.Update();
         }
     }
 }

@@ -52,10 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204080934295_test.cs" />
-    <Compile Include="Migrations\202204080934295_test.designer.cs">
-      <DependentUpon>202204080934295_test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -80,11 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204080934295_test.resx">
-      <DependentUpon>202204080934295_test.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
