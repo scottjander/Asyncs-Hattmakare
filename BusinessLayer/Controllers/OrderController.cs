@@ -13,11 +13,15 @@ namespace BusinessLayer.Controllers
         {
             get { return new OrderRepository(); }
         }
-   
-    
-    
-    
-    
-    
+
+        
+             public int HamtaKundIdPaOrderId(int id)
+        {
+            int index = OrderRepository.HamtaKundIdPaOrderId(id);
+            return index;
+        }
+
+
+
     }
 }

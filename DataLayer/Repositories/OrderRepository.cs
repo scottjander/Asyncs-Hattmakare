@@ -8,5 +8,18 @@ namespace DataLayer.Repositories
 {
     public class OrderRepository
     {
+
+        public int HamtaKundIdPaOrderId(int id)
+        {
+            using (var context = new HatDbContext())
+            {
+                var order = context.Orders.Find(id);
+                var customern = order.Customer;
+                var index = order.Customer.Id;
+                return index;
+            }
+
+
+        }
     }
 }

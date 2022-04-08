@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first_migration : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
@@ -23,18 +23,17 @@
                 "dbo.Customers",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         FirstName = c.String(),
                         LastName = c.String(),
                         Phone = c.Int(nullable: false),
                         Email = c.String(),
                         CustomerBonusPoints = c.Int(nullable: false),
                         Comment = c.String(),
-                        Address_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Addresses", t => t.Address_Id)
-                .Index(t => t.Address_Id);
+                .ForeignKey("dbo.Addresses", t => t.Id)
+                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.Employees",
@@ -150,13 +149,13 @@
             DropForeignKey("dbo.Hats", "Order_Id", "dbo.Orders");
             DropForeignKey("dbo.Orders", "Customer_Id", "dbo.Customers");
             DropForeignKey("dbo.Invoices", "InvoiceAddress_Id", "dbo.Addresses");
-            DropForeignKey("dbo.Customers", "Address_Id", "dbo.Addresses");
+            DropForeignKey("dbo.Customers", "Id", "dbo.Addresses");
             DropIndex("dbo.ShippingLabels", new[] { "Address_Id" });
             DropIndex("dbo.Orders", new[] { "Customer_Id" });
             DropIndex("dbo.Invoices", new[] { "Order_Id" });
             DropIndex("dbo.Invoices", new[] { "InvoiceAddress_Id" });
             DropIndex("dbo.Hats", new[] { "Order_Id" });
-            DropIndex("dbo.Customers", new[] { "Address_Id" });
+            DropIndex("dbo.Customers", new[] { "Id" });
             DropTable("dbo.ShippingLabels");
             DropTable("dbo.FabricStocks");
             DropTable("dbo.Orders");
