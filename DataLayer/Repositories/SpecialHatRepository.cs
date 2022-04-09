@@ -1,6 +1,7 @@
 ﻿using DataLayer.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,7 @@ namespace DataLayer.Repository
 
         public void addSpecialHat(SpecialHat hat, int id)
         {
-             
             _context.SpecialHats.Add(hat);
-           
             _context.SaveChanges();
         }
 
@@ -28,6 +27,20 @@ namespace DataLayer.Repository
            return _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra
         }
 
+        public string SaveHatPicture(string filename)
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+
+            string folderPath = currentDirectory.Substring(0, currentDirectory.Length - 26) + "DataLayer\\Images";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            File.Copy(filename, Path.Combine(folderPath, Path.GetFileName(filename)),
+                true);
+            return folderPath + "\\" + filename;
+        }
 
     }
 

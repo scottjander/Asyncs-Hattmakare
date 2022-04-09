@@ -1,4 +1,18 @@
-﻿using DataLayer.Models;
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+using DataLayer.Models;
 using DataLayer.Models.Enums;
 using DataLayer.Repository;
 using System;
@@ -17,14 +31,13 @@ namespace BusinessLayer.Controllers
         public SpecialHatController()
         {
             SpecialHatRepository = new SpecialHatRepository();
-
             StockRepository = new StockRepository();
         }
 
         public void AddSpecialHat(string name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string fileName)
         {
             var price = CalculatePrice(fabric, fabricLength, decoration);
-            var imagePath= SaveHatPicture(fileName);
+            var imagePath= SpecialHatRepository.SaveHatPicture(fileName);
             var newHat = new SpecialHat()
             {
                 Name = name,
@@ -34,44 +47,26 @@ namespace BusinessLayer.Controllers
                 ImagePath = imagePath,
 
             };
-            Order order = SpecialHatRepository.getOrder(1);
-            newHat.Order = order;
+            newHat.Order = SpecialHatRepository.getOrder(orderId);
             SpecialHatRepository.addSpecialHat(newHat, orderId);
         }
 
         private double CalculatePrice(FabricStock fabric, double fabricLength, int decoration)
         {
             var price = (double)Price.BasePrice;
-
             price += fabric.Price * fabricLength;
             price += decoration * (double)Price.DecorationPrice;
-
             return price;
         }
 
         public List<FabricStock> GetFabric()
         {
-            var fabricList = StockRepository.GetAllFabric();
-
-
-
-            return fabricList;
+            return StockRepository.GetAllFabric();
         }
 
-        public string SaveHatPicture(string filename)
-        {
-            string currentDirectory = Directory.GetCurrentDirectory();
+     
 
-            string folderPath = currentDirectory.Substring(0, currentDirectory.Length - 26) + "DataLayer\\Images";
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
 
-            File.Copy(filename, Path.Combine(folderPath, Path.GetFileName(filename)),
-                true);
-            return folderPath + "\\" + filename;
-        }
 
     }
 }
