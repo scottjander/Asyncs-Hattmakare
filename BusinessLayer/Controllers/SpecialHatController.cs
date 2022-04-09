@@ -1,18 +1,4 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-using DataLayer.Models;
+﻿using DataLayer.Models;
 using DataLayer.Models.Enums;
 using DataLayer.Repository;
 using System;
@@ -63,10 +49,5 @@ namespace BusinessLayer.Controllers
         {
             return StockRepository.GetAllFabric();
         }
-
-     
-
-
-
     }
 }
