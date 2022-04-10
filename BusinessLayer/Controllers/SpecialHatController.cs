@@ -20,10 +20,10 @@ namespace BusinessLayer.Controllers
             StockRepository = new StockRepository();
         }
 
-        public void AddSpecialHat(string name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string fileName)
+        public void AddSpecialHat(string name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
         {
             var price = CalculatePrice(fabric, fabricLength, decoration);
-            var imagePath= SpecialHatRepository.SaveHatPicture(fileName);
+            var imagePath= SpecialHatRepository.SaveHatPicture(filePath, fileName);
             var newHat = new SpecialHat()
             {
                 Name = name,

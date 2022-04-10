@@ -20,6 +20,7 @@ namespace AsyncHattprojekt
         private SpecialHatController specialHatController;
         private Testklassen testklassen;
         private int orderID;
+        private string filePath;
 
         public SpecialHatForm(int orderId)
         {
@@ -46,7 +47,7 @@ namespace AsyncHattprojekt
             int size = Convert.ToInt32(txtBoxSize.Text);
             string comment = txtBoxComment.Text;
             string fileName = txtBoxFileName.Text;
-            specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID, fileName);
+            specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID, fileName, filePath);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace AsyncHattprojekt
             {
                 pictureBox.Image = new Bitmap(dialog.FileName);
                 txtBoxFileName.Text = dialog.FileName;
+                filePath = dialog.SafeFileName;
             }
 
         }

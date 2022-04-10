@@ -52,9 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204091355365_hej.cs" />
-    <Compile Include="Migrations\202204091355365_hej.designer.cs">
-      <DependentUpon>202204091355365_hej.cs</DependentUpon>
+    <Compile Include="Migrations\202204100833527_hej.cs" />
+    <Compile Include="Migrations\202204100833527_hej.designer.cs">
+      <DependentUpon>202204100833527_hej.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -79,8 +79,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204091355365_hej.resx">
-      <DependentUpon>202204091355365_hej.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204100833527_hej.resx">
+      <DependentUpon>202204100833527_hej.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

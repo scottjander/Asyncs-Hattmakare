@@ -27,7 +27,7 @@ namespace DataLayer.Repository
            return _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra
         }
 
-        public string SaveHatPicture(string filename)
+        public string SaveHatPicture(string filePath, string fileName)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
 
@@ -37,9 +37,9 @@ namespace DataLayer.Repository
                 Directory.CreateDirectory(folderPath);
             }
 
-            File.Copy(filename, Path.Combine(folderPath, Path.GetFileName(filename)),
+            File.Copy(filePath, Path.Combine(folderPath, Path.GetFileName(filePath)),
                 true);
-            return folderPath + "\\" + filename;
+            return folderPath + "\\" + fileName;
         }
 
     }
