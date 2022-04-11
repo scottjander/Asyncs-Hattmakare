@@ -3,26 +3,10 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class hej : DbMigration
+    public partial class please : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Customers",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
-                        Phone = c.Int(nullable: false),
-                        Email = c.String(),
-                        CustomerBonusPoints = c.Int(nullable: false),
-                        Address_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Addresses", t => t.Address_Id)
-                .Index(t => t.Address_Id);
-            
             CreateTable(
                 "dbo.Addresses",
                 c => new
@@ -34,6 +18,23 @@
                         PostalCode = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Phone = c.Int(nullable: false),
+                        Email = c.String(),
+                        CustomerBonusPoints = c.Int(nullable: false),
+                        Comment = c.String(),
+                        Address_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Addresses", t => t.Address_Id)
+                .Index(t => t.Address_Id);
             
             CreateTable(
                 "dbo.Employees",
@@ -180,8 +181,8 @@
             DropTable("dbo.HatStocks");
             DropTable("dbo.Hats");
             DropTable("dbo.Employees");
-            DropTable("dbo.Addresses");
             DropTable("dbo.Customers");
+            DropTable("dbo.Addresses");
         }
     }
 }

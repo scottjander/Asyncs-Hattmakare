@@ -53,12 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204100833527_hej.cs" />
-    <Compile Include="Migrations\202204100833527_hej.designer.cs">
-      <DependentUpon>202204100833527_hej.cs</DependentUpon>
-    <Compile Include="Migrations\202204061014087_first_migration.cs" />
-    <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
-      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
+    <Compile Include="Migrations\202204111311289_please.cs" />
+    <Compile Include="Migrations\202204111311289_please.designer.cs">
+      <DependentUpon>202204111311289_please.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -84,14 +81,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204100833527_hej.resx">
-      <DependentUpon>202204100833527_hej.cs</DependentUpon>
     <Folder Include="Images\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204061014087_first_migration.resx">
-      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204111311289_please.resx">
+      <DependentUpon>202204111311289_please.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
