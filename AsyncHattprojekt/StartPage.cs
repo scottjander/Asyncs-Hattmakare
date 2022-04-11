@@ -65,6 +65,9 @@ namespace AsyncHattprojekt
             Application.Exit();
         }
 
-     
+        private void lblNamn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

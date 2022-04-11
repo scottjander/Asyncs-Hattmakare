@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tbEfterNamn = new System.Windows.Forms.TextBox();
             this.lblEfternamn = new System.Windows.Forms.Label();
+            this.btnVisaFärdigFaktura = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSkapaFaktura
@@ -171,11 +172,22 @@
             this.lblEfternamn.TabIndex = 15;
             this.lblEfternamn.Text = "Efternamn";
             // 
+            // btnVisaFärdigFaktura
+            // 
+            this.btnVisaFärdigFaktura.Location = new System.Drawing.Point(292, 537);
+            this.btnVisaFärdigFaktura.Name = "btnVisaFärdigFaktura";
+            this.btnVisaFärdigFaktura.Size = new System.Drawing.Size(87, 36);
+            this.btnVisaFärdigFaktura.TabIndex = 16;
+            this.btnVisaFärdigFaktura.Text = "Visa Färdig Faktura";
+            this.btnVisaFärdigFaktura.UseVisualStyleBackColor = true;
+            this.btnVisaFärdigFaktura.Click += new System.EventHandler(this.btnVisaFärdigFaktura_Click);
+            // 
             // SkapaFaktura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 609);
+            this.Controls.Add(this.btnVisaFärdigFaktura);
             this.Controls.Add(this.lblEfternamn);
             this.Controls.Add(this.tbEfterNamn);
             this.Controls.Add(this.button1);
@@ -213,5 +225,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbEfterNamn;
         private System.Windows.Forms.Label lblEfternamn;
+        private System.Windows.Forms.Button btnVisaFärdigFaktura;
     }
 }

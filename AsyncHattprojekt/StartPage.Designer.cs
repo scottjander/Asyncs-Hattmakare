@@ -106,7 +106,7 @@
             this.lblNamn.Size = new System.Drawing.Size(231, 75);
             this.lblNamn.TabIndex = 13;
             this.lblNamn.Text = "Namn!";
-          
+            this.lblNamn.Click += new System.EventHandler(this.lblNamn_Click);
             // 
             // StartPage
             // 

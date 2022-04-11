@@ -31,11 +31,15 @@ namespace AsyncHattprojekt
             using (var context = new HatDbContext())
             {
                 double summa = Convert.ToDouble(tbSummaAttBetala.Text);
+              
+                int adress = Convert.ToInt32(tbOrderID.Text);
+                string hamtaadress = fakturaController.HamtaAdressPaKundID(adress);
 
-                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked };
+                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, };
                 context.Invoices.Add(nyfaktura);
                 context.SaveChanges();
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,6 +77,28 @@ namespace AsyncHattprojekt
         private void tbKundID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        public static string OrderID = "";
+        public static string ForNamn = "";
+        public static string EfterNamn = "";
+        public static string FaktureringsAdress = "";
+        public static string SummaAttBetala = "";
+        private void btnVisaFärdigFaktura_Click(object sender, EventArgs e)
+        {
+
+            OrderID = tbOrderID.Text;
+            ForNamn = tbForNamn.Text;
+            EfterNamn = tbEfterNamn.Text;
+            FaktureringsAdress = tbFaktureringsadress.Text;
+            SummaAttBetala = tbSummaAttBetala.Text;
+
+            this.Hide();
+            FärdigFaktura f = new FärdigFaktura();
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
     }
 }
