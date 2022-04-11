@@ -20,8 +20,8 @@ namespace DataLayer.Models
         public int CustomerBonusPoints { get; set; }
         public string Comment { get; set; }
 
-        public virtual Order Order { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
       
-        public string DisplayName => FirstName + " " + LastName;
+        public string DisplayName => FirstName + " fult fult " + LastName;
     }
 }

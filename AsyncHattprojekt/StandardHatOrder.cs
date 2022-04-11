@@ -36,8 +36,8 @@ namespace AsyncHattprojekt
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            var hat = new Hat();
             standardHatController.OrderStandardHat(orderID, hatID);
+            this.Close();
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)

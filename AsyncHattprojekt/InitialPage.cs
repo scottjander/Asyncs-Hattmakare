@@ -31,8 +31,8 @@ namespace AsyncHattprojekt
         public static string username = "";
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
-            //var testklassen = new Testklassen();
-            //testklassen.dummydata();
+            var testklassen = new Testklassen();
+            testklassen.FillHat();
             this.Hide();
             username = cbVäljAnvändare.Text;
             StartPage f = new StartPage();

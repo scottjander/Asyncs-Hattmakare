@@ -15,26 +15,26 @@ namespace DataLayer.Repository
             _context = new HatDbContext();
         }
 
-        public List<FabricStock> GetAllFabric()
+        public List<Fabric> GetAllFabric()
         {
 
-            return _context.MaterialStock.ToList();
+            return _context.Fabrics.ToList();
         }
 
-        public void DecreaseAmountInStorage(double amountToDecrease, FabricStock fabric)
+        public void DecreaseAmountInStorage(double amountToDecrease, Fabric fabric)
         {
             fabric.AmountInStock -= amountToDecrease;
             _context.SaveChanges();
         }
-        public void IncreaseAmountInStorage(double amountToIncrease, FabricStock fabric)
+        public void IncreaseAmountInStorage(double amountToIncrease, Fabric fabric)
         {
             fabric.AmountInStock += -amountToIncrease;
             _context.SaveChanges();
         }
 
-        public FabricStock GetFabricOnId(int id)
+        public Fabric GetFabricOnId(int id)
         {
-            return _context.MaterialStock.FirstOrDefault(fabric => fabric.Id == id);
+            return _context.Fabrics.FirstOrDefault(fabric => fabric.Id == id);
         }
     }
 

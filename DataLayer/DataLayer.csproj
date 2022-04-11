@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204111438268_hej.cs" />
-    <Compile Include="Migrations\202204111438268_hej.designer.cs">
-      <DependentUpon>202204111438268_hej.cs</DependentUpon>
+    <Compile Include="Migrations\202204111556445_fucku.cs" />
+    <Compile Include="Migrations\202204111556445_fucku.designer.cs">
+      <DependentUpon>202204111556445_fucku.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -72,7 +72,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Enums\OrderStatus.cs" />
     <Compile Include="Models\ShippingLabel.cs" />
-    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\Fabric.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
@@ -93,8 +93,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204111438268_hej.resx">
-      <DependentUpon>202204111438268_hej.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204111556445_fucku.resx">
+      <DependentUpon>202204111556445_fucku.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

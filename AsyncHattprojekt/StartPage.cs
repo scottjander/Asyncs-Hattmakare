@@ -7,22 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer.Controllers;
+using DataLayer.Models;
 
 namespace AsyncHattprojekt
 {
     public partial class StartPage : Form
     {
+        private OrderControllerScottRobin orderController = new OrderControllerScottRobin();
         public StartPage()
         {
             InitializeComponent();
             lblNamn.Text = InitialPage.username;
-
         }
 
         private void btnBestall_Click(object sender, EventArgs e)
         {
+
+
             this.Hide();
-            Testform f = new Testform();
+            CreateOrder f = new CreateOrder();
             f.ShowDialog();
             f = null;
             this.Show();

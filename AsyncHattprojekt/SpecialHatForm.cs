@@ -36,7 +36,7 @@ namespace AsyncHattprojekt
         private void FillListView()
         {
             listView1.Items.Clear();
-            foreach (FabricStock fabric in specialHatController.GetAllFabrics())
+            foreach (Fabric fabric in specialHatController.GetAllFabrics())
             {
                 ListViewItem lvi = new ListViewItem(fabric.Id.ToString());
                 lvi.SubItems.Add(fabric.ItemName);
@@ -50,7 +50,7 @@ namespace AsyncHattprojekt
         private void btnAddHat_Click(object sender, EventArgs e)
         {
             //validera fält
-            FabricStock fabric = specialHatController.GetFabricOnId(fabricID);
+            Fabric fabric = specialHatController.GetFabricOnId(fabricID);
             string name = txtBoxName.Text;
             double length = Convert.ToDouble(txtBoxFabricLength.Text);
             int decoration = Convert.ToInt32(txtBoxDecoration.Text);
@@ -58,6 +58,7 @@ namespace AsyncHattprojekt
             string comment = txtBoxComment.Text;
             string fileName = txtBoxFileName.Text;
             specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID, fileName, filePath);
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

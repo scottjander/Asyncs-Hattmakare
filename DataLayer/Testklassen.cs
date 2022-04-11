@@ -10,6 +10,7 @@ namespace DataLayer
 {
     public class Testklassen
     {
+        private HatDbContext hatDbContext = new HatDbContext();
         /*    public void testmetoden()
             {
                 using (var context = new hatdbcontext())
@@ -83,12 +84,12 @@ namespace DataLayer
             //    context.SpecialHats.Add(tvaHatt);
             //    context.Orders.Add(minOrder);
 
-            //    var silke = new FabricStock()
+            //    var silke = new Fabric()
             //    {
             //        ItemName = "Silke", Price = 200, AmountInStock = 30, Colour = "Black"
             //    };
 
-            //    var filt = new FabricStock()
+            //    var filt = new Fabric()
             //    {
             //        ItemName = "Filt",
             //        Price = 100,
@@ -96,7 +97,7 @@ namespace DataLayer
             //        Colour = "Blue"
             //    };
 
-            //    var polyester = new FabricStock()
+            //    var polyester = new Fabric()
             //    {
             //        ItemName = "Polyester",
             //        Price = 300,
@@ -104,9 +105,9 @@ namespace DataLayer
             //        Colour = "Red"
             //    };
 
-            //    context.MaterialStock.Add(filt);
-            //    context.MaterialStock.Add(polyester);
-            //    context.MaterialStock.Add(silke);
+            //    context.Fabrics.Add(filt);
+            //    context.Fabrics.Add(polyester);
+            //    context.Fabrics.Add(silke);
 
 
             //    context.SaveChanges();
@@ -146,6 +147,73 @@ namespace DataLayer
         //    }
         //}
 
-
+        public void FillHat()
+        {
+            var hat1 = new Hat()
+            {
+                Price = 150,
+                size = 20,
+                color = "Svart",
+                itemName = "Doktorshatt"
+            };
+            var hat2 = new Hat()
+            {
+                Price = 150,
+                size = 100,
+                color = "Blå",
+                itemName = "Doktorshatt"
+            };
+            var hat3 = new Hat()
+            {
+                Price = 150,
+                size = 33,
+                color = "Grön",
+                itemName = "Doktorshatt"
+            };
+            var hat4 = new Hat()
+            {
+                Price = 150,
+                size = 45,
+                color = "Lila",
+                itemName = "Doktorshatt"
+            };
+            var hat5 = new Hat()
+            {
+                Price = 150,
+                size = 25,
+                color = "Gul",
+                itemName = "Doktorshatt"
+            };
+            var fabric1 = new Fabric()
+            {
+                ItemName = "Silke",
+                Colour = "Svart",
+                AmountInStock = 30,
+                Price = 100
+            };
+            var fabric2 = new Fabric()
+            {
+                ItemName = "Sten",
+                Colour = "Grå",
+                AmountInStock = 20,
+                Price = 500
+            };
+            var fabric3 = new Fabric()
+            {
+                ItemName = "Trä",
+                Colour = "Vit",
+                AmountInStock = 15,
+                Price = 340
+            };
+            hatDbContext.Hats.Add(hat1);
+            hatDbContext.Hats.Add(hat2);
+            hatDbContext.Hats.Add(hat3);
+            hatDbContext.Hats.Add(hat4);
+            hatDbContext.Hats.Add(hat5);
+            hatDbContext.Fabrics.Add(fabric1);
+            hatDbContext.Fabrics.Add(fabric2);
+            hatDbContext.Fabrics.Add(fabric3);
+            hatDbContext.SaveChanges();
+        }
     }
 }

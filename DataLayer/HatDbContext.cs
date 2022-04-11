@@ -13,7 +13,7 @@ namespace DataLayer
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<SpecialHat> SpecialHats { get; set; }
-        public DbSet<FabricStock> MaterialStock { get; set; }
+        public DbSet<Fabric> Fabrics { get; set; }
         public DbSet<ShippingLabel> ShippingLabels { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<IncomingInvoice> IncomingInvoices { get; set; }

@@ -43,6 +43,8 @@ namespace AsyncHattprojekt
             customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, PhoneTxd.Text, EmailTxd.Text, nyAddress, CommentTxt.Text);
             // string firstName, string lastName, int phone, string email, Address address, string comment
             MessageBox.Show("Kund registrerad.");
+            CreateOrder orderfrom = new CreateOrder();
+            orderfrom.Show();
             Close();
         }
     }

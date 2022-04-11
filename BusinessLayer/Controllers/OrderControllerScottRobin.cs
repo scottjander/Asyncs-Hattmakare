@@ -11,7 +11,7 @@ namespace BusinessLayer.Controllers
     public class OrderControllerScottRobin
     {
         private readonly OrderRepository repository = new OrderRepository();
-        public void CreateOrder(string comment, Customer customer)
+        public int CreateOrder(string comment, Customer customer)
         {
             var order = new Order()
             {
@@ -19,7 +19,13 @@ namespace BusinessLayer.Controllers
                 DateFinished = DateTime.Now.AddDays(21), OrderStatus = 0, TotalPrice = 0
             };
             repository.SaveOrder(order);
+            return repository.GetLatestOrderId();
         }
+        public List<Customer> GetAllCustomers()
+        {
+            return repository.getallcustomers();
+        }
+
 
     }
 }

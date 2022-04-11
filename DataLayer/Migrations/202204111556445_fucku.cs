@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class hej : DbMigration
+    public partial class fucku : DbMigration
     {
         public override void Up()
         {
@@ -39,16 +39,17 @@
                 "dbo.Orders",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         StartDate = c.DateTime(nullable: false),
                         DateFinished = c.DateTime(nullable: false),
                         Comment = c.String(),
                         TotalPrice = c.Double(nullable: false),
                         OrderStatus = c.Int(nullable: false),
+                        Customer_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customers", t => t.Id)
-                .Index(t => t.Id);
+                .ForeignKey("dbo.Customers", t => t.Customer_Id, cascadeDelete: true)
+                .Index(t => t.Customer_Id);
             
             CreateTable(
                 "dbo.Hats",
@@ -72,6 +73,18 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Fabrics",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ItemName = c.String(),
+                        Price = c.Double(nullable: false),
+                        AmountInStock = c.Double(nullable: false),
+                        Colour = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -100,18 +113,6 @@
                 .ForeignKey("dbo.Orders", t => t.Order_Id)
                 .Index(t => t.InvoiceAddress_Id)
                 .Index(t => t.Order_Id);
-            
-            CreateTable(
-                "dbo.FabricStocks",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        ItemName = c.String(),
-                        Price = c.Double(nullable: false),
-                        AmountInStock = c.Double(nullable: false),
-                        Colour = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.ShippingLabels",
@@ -151,20 +152,20 @@
             DropForeignKey("dbo.Invoices", "Order_Id", "dbo.Orders");
             DropForeignKey("dbo.Invoices", "InvoiceAddress_Id", "dbo.Addresses");
             DropForeignKey("dbo.Hats", "order_Id", "dbo.Orders");
-            DropForeignKey("dbo.Orders", "Id", "dbo.Customers");
+            DropForeignKey("dbo.Orders", "Customer_Id", "dbo.Customers");
             DropForeignKey("dbo.Customers", "Id", "dbo.Addresses");
             DropIndex("dbo.SpecialHats", new[] { "Order_Id" });
             DropIndex("dbo.ShippingLabels", new[] { "Address_Id" });
             DropIndex("dbo.Invoices", new[] { "Order_Id" });
             DropIndex("dbo.Invoices", new[] { "InvoiceAddress_Id" });
             DropIndex("dbo.Hats", new[] { "order_Id" });
-            DropIndex("dbo.Orders", new[] { "Id" });
+            DropIndex("dbo.Orders", new[] { "Customer_Id" });
             DropIndex("dbo.Customers", new[] { "Id" });
             DropTable("dbo.SpecialHats");
             DropTable("dbo.ShippingLabels");
-            DropTable("dbo.FabricStocks");
             DropTable("dbo.Invoices");
             DropTable("dbo.IncomingInvoices");
+            DropTable("dbo.Fabrics");
             DropTable("dbo.Employees");
             DropTable("dbo.Hats");
             DropTable("dbo.Orders");

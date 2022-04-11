@@ -15,17 +15,11 @@ namespace AsyncHattprojekt
 {
     public partial class OrderForm : Form
     {
-        private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
-        private readonly OrderRepository repository = new OrderRepository();
-        public OrderForm()
+        private int orderID;
+        public OrderForm(int orderId)
         {
             InitializeComponent();
-
-            List<Customer> customers = repository.getallcustomers();
-            comboBox1.DataSource = customers;
-            comboBox1.DisplayMember = "DisplayName";
-
-
+            orderID = orderId;
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -33,17 +27,18 @@ namespace AsyncHattprojekt
 
         }
 
-        private void btnCreateOrder_Click(object sender, EventArgs e)
+        private void btnCreateStandard_Click(object sender, EventArgs e)
         {
-            var comment = txtBoxComment.Text;
-            var Customer  = (Customer) comboBox1.SelectedItem;
-
-            if (Customer != null)
-            {
-                controller.CreateOrder(comment, Customer);
-            }
-
+            StandardHatOrder standardHatOrder = new StandardHatOrder(orderID);
+            standardHatOrder.Show();
         }
+
+        private void btnCreateSpecial_Click(object sender, EventArgs e)
+        {
+            SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
+            specialHatForm.Show();
+        }
+
 
         //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         //{
