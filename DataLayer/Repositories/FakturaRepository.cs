@@ -55,7 +55,7 @@ namespace DataLayer.Repositories
             }
         }
 
-        public int HamtaTotalSumma(int id)
+        public double HamtaTotalSumma(int id)
         {
             using (var context = new HatDbContext())
             {

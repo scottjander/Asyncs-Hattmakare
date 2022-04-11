@@ -42,9 +42,9 @@ namespace BusinessLayer.Controllers
             string adress = FakturaRepository.HamtaAdressPaKundID(id);
             return adress;
         }
-        public int HamtaTotalSumma(int id)
+        public double HamtaTotalSumma(int id)
         {
-            int summa = FakturaRepository.HamtaTotalSumma(id);
+            double summa = FakturaRepository.HamtaTotalSumma(id);
             return summa;
         }
         public Address HamtaAdressObjekt(int id)

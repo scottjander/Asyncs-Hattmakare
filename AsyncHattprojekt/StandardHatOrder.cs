@@ -24,7 +24,7 @@ namespace AsyncHattprojekt
         public StandardHatOrder(int orderID)
         {
             InitializeComponent();
-            testklassen.testmetoden3();
+            //testklassen.testmetoden3();
             FillListView();
             this.orderID = orderID;
         }
