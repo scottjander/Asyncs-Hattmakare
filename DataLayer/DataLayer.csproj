@@ -56,6 +56,7 @@
     <Compile Include="Migrations\202204100833527_hej.cs" />
     <Compile Include="Migrations\202204100833527_hej.designer.cs">
       <DependentUpon>202204100833527_hej.cs</DependentUpon>
+		</Compile>
     <Compile Include="Migrations\202204061014087_first_migration.cs" />
     <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
       <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
@@ -86,9 +87,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202204100833527_hej.resx">
       <DependentUpon>202204100833527_hej.cs</DependentUpon>
+        </EmbeddedResource>
     <Folder Include="Images\" />
     <Folder Include="Repositories\" />
-  </ItemGroup>
+  
+</ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202204061014087_first_migration.resx">
       <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
