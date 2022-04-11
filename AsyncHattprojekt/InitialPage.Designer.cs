@@ -29,50 +29,54 @@ namespace AsyncHattprojekt
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnLoggaIn = new System.Windows.Forms.Button();
+            this.cbVäljAnvändare = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnLoggaIn
             // 
-            this.button1.Location = new System.Drawing.Point(69, 170);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 15);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLoggaIn.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoggaIn.Location = new System.Drawing.Point(150, 126);
+            this.btnLoggaIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoggaIn.Name = "btnLoggaIn";
+            this.btnLoggaIn.Size = new System.Drawing.Size(130, 33);
+            this.btnLoggaIn.TabIndex = 0;
+            this.btnLoggaIn.Text = "Logga In";
+            this.btnLoggaIn.UseVisualStyleBackColor = true;
+            this.btnLoggaIn.Click += new System.EventHandler(this.btnLoggaIn_Click);
             // 
-            // textBox1
+            // cbVäljAnvändare
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.cbVäljAnvändare.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVäljAnvändare.FormattingEnabled = true;
+            this.cbVäljAnvändare.IntegralHeight = false;
+            this.cbVäljAnvändare.ItemHeight = 22;
+            this.cbVäljAnvändare.Location = new System.Drawing.Point(123, 76);
+            this.cbVäljAnvändare.MaxDropDownItems = 99;
+            this.cbVäljAnvändare.Name = "cbVäljAnvändare";
+            this.cbVäljAnvändare.Size = new System.Drawing.Size(201, 30);
+            this.cbVäljAnvändare.TabIndex = 1;
+            this.cbVäljAnvändare.Text = "Välj Användare";
+      
             // 
             // InitialPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 261);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(465, 417);
+            this.Controls.Add(this.cbVäljAnvändare);
+            this.Controls.Add(this.btnLoggaIn);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InitialPage";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnLoggaIn;
+        private System.Windows.Forms.ComboBox cbVäljAnvändare;
     }
 }
 

@@ -55,6 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AnvandareController.cs" />
+    <Compile Include="Controllers\FakturaController.cs" />
+    <Compile Include="Controllers\KundController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\SpecialHatController.cs" />
     <Compile Include="Controllers\OrderControllerScottRobin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
