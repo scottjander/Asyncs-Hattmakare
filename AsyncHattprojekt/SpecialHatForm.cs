@@ -86,5 +86,10 @@ namespace AsyncHattprojekt
                                           listView1.SelectedItems[0].SubItems[2].Text;
             }
         }
+
+        private void SpecialHatForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
