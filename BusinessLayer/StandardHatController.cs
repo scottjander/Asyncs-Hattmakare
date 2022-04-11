@@ -23,7 +23,7 @@ namespace BusinessLayer
 
         public void addHats()
         {
-            HatRepository.AddHatsToStock(10, "plommonHatt", 19.99, "vad", 25, "svart");
+            HatRepository.AddHatsToStock(10, "plommonHatt", 19.99, null, 25, "svart");
             HatRepository.AddHatsToStock(5, "HampusHatt", 12.99, "vad", 25, "gul");
             HatRepository.AddHatsToStock(9, "GilHatt", 15.99, "vad", 25, "lila");
         }
@@ -37,16 +37,9 @@ namespace BusinessLayer
         }
 
 
-        public void OrderStandardHat(double price, string comment)
+        public void OrderStandardHat(int orderID, int hatID)
         {
-            var hat = new Hat()
-            {
-               Price = price,
-               Comment = comment,
-
-            };
-            HatDbContext.Hats.Add(hat);
-            HatDbContext.SaveChanges(); 
+            HatRepository.AddHatToOrder(orderID, hatID);
         }
 
         public List<Hat> GetUniqueHats()

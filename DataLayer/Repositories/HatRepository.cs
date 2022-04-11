@@ -42,9 +42,13 @@ namespace DataLayer.Repositories
 
         public List<Hat> GetAllAvalibleHats()
         {
-            var query = from Hat in _context.Hats where Hat.Comment == null select Hat;
+            var query = from Hat in _context.Hats where Hat.order == null select Hat;
             return query.ToList();
 
+        }
+        public Hat GetHatOnID(int ID)
+        {
+            return _context.Hats.FirstOrDefault(hat => hat.Id == ID);
         }
 
         public void DeleteHatsFromStock(int amountToDelete, string itemName, double price, string comment, int size, string color)
@@ -72,7 +76,19 @@ namespace DataLayer.Repositories
                 _context.Hats.Remove(hat);
             }
 
+
             _context.SaveChanges();
+        }
+        public void AddHatToOrder(int orderId,int hatID)
+        {
+            var order = getOrder(orderId);
+            var hat = GetHatOnID(hatID);
+            hat.order = order;
+            _context.SaveChanges();
+        }
+        public Order getOrder(int id)
+        {
+            return _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra
         }
     }
 }

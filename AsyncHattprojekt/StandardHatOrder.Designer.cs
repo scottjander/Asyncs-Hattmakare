@@ -32,7 +32,12 @@
             this.kommentarLbl = new System.Windows.Forms.Label();
             this.prisTxtBx = new System.Windows.Forms.RichTextBox();
             this.prisLbl = new System.Windows.Forms.Label();
-            this.HatCb = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // registerBtn
@@ -88,21 +93,53 @@
             this.prisLbl.TabIndex = 6;
             this.prisLbl.Text = "Pris";
             // 
-            // HatCb
+            // listView1
             // 
-            this.HatCb.FormattingEnabled = true;
-            this.HatCb.Location = new System.Drawing.Point(377, 44);
-            this.HatCb.Name = "HatCb";
-            this.HatCb.Size = new System.Drawing.Size(121, 24);
-            this.HatCb.TabIndex = 10;
-            this.HatCb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(333, 44);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(253, 97);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Pris";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Storlek";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Färg";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(333, 184);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(253, 22);
+            this.textBox1.TabIndex = 12;
             // 
             // StandardHatOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 642);
-            this.Controls.Add(this.HatCb);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.prisLbl);
             this.Controls.Add(this.prisTxtBx);
             this.Controls.Add(this.kommentarLbl);
@@ -123,6 +160,11 @@
         private System.Windows.Forms.Label kommentarLbl;
         private System.Windows.Forms.RichTextBox prisTxtBx;
         private System.Windows.Forms.Label prisLbl;
-        private System.Windows.Forms.ComboBox HatCb;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

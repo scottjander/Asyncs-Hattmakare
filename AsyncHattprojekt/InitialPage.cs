@@ -50,7 +50,7 @@ namespace AsyncHattprojekt
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var form2 = new StandardHatOrder();
+            var form2 = new StandardHatOrder(5);
             form2.Show();
         }
 

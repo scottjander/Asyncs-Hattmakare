@@ -15,6 +15,7 @@ namespace DataLayer.Models
         public int size { get; set; }
         public string color    { get; set; }
         public string itemName { get; set; }
+        public Order order { get; set; }
     }
    public class SpecialHat : Hat
    {
