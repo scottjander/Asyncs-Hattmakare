@@ -1,45 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessLayer;
+﻿using BusinessLayer;
 using DataLayer;
-using DataLayer.Models;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 
 
 namespace AsyncHattprojekt
 {
     public partial class InitialPage : Form
     {
-        public Testklassen testklassen;
-        public StandardHatController StandardHatController;
-
+        AnvandareController anvandareController;
         public InitialPage()
         {
             InitializeComponent();
-            testklassen = new Testklassen();
-            //testklassen.TestMetoden3();
-            StandardHatController = new StandardHatController();
+            anvandareController = new AnvandareController();
+            cbVäljAnvändare_fyllcbx();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void cbVäljAnvändare_fyllcbx()
         {
-
+            List<string> namn = anvandareController.getAllEmployeeNames();
+            foreach(string name in namn)
+            {
+                cbVäljAnvändare.Items.Add(name);
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+      
+        public static string username = "";
+        private void btnLoggaIn_Click(object sender, EventArgs e)
         {
-
+            //var testklassen = new Testklassen();
+            //testklassen.dummydata();
+            this.Hide();
+            username = cbVäljAnvändare.Text;
+            StartPage f = new StartPage();
+            f.ShowDialog();
+            f = null;
+            this.Show();
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OnFormClose(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)

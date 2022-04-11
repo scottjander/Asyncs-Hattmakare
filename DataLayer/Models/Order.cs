@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,8 @@ namespace DataLayer.Models
         public string Comment { get; set; }
         public double TotalPrice { get; set; }
         public ICollection<Hat> Hats { get; set; }
-        public Customer Customer { get; set; }
+        [Required]
+        public virtual Customer Customer { get; set; }
         public OrderStatus OrderStatus { get; set; }
     }
 }

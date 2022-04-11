@@ -18,8 +18,6 @@ namespace DataLayer
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<IncomingInvoice> IncomingInvoices { get; set; }
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Stock> Stock { get; set; }
-
 
         // Your context has been configured to use a 'HatDbContext' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
