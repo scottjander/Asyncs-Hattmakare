@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\SpecialHatController.cs" />
     <Compile Include="Controllers\OrderControllerScottRobin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\ShippingLabelController.cs" />

@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
+    <Compile Include="Migrations\202204100833527_hej.cs" />
+    <Compile Include="Migrations\202204100833527_hej.designer.cs">
+      <DependentUpon>202204100833527_hej.cs</DependentUpon>
     <Compile Include="Migrations\202204061014087_first_migration.cs" />
     <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
       <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
@@ -63,6 +66,7 @@
     <Compile Include="Models\CustomsDeclaration.cs" />
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\Enums\HatSizeEnumcs.cs" />
+    <Compile Include="Models\Enums\PriceEnum.cs" />
     <Compile Include="Models\Hat.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Order.cs" />
@@ -71,6 +75,8 @@
     <Compile Include="Models\Stock.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\SpecialHatRepository.cs" />
+    <Compile Include="Repositories\FabricRepository.cs" />
     <Compile Include="Testklassen.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +84,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204100833527_hej.resx">
+      <DependentUpon>202204100833527_hej.cs</DependentUpon>
     <Folder Include="Images\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
