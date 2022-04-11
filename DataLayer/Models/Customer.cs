@@ -17,5 +17,11 @@ namespace DataLayer.Models
 
         public int CustomerBonusPoints { get; set; }
         public string Comment { get; set; }
+        public string DisplayName
+        {
+            get {return FirstName + " " + LastName; }
+        }
+
+        public Order Order { get; set; }
     }
 }

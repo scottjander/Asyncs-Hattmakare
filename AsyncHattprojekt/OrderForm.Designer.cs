@@ -33,16 +33,18 @@ namespace AsyncHattprojekt
             this.btnCreateCustomer = new System.Windows.Forms.Button();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtBoxComment = new System.Windows.Forms.RichTextBox();
             this.btnCreateSpecial = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnCreateOrder = new System.Windows.Forms.Button();
+            this.listViewHats = new System.Windows.Forms.ListView();
+            this.Hatt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnCreateStandard
             // 
-            this.btnCreateStandard.Location = new System.Drawing.Point(753, 757);
+            this.btnCreateStandard.Location = new System.Drawing.Point(753, 737);
             this.btnCreateStandard.Name = "btnCreateStandard";
             this.btnCreateStandard.Size = new System.Drawing.Size(118, 45);
             this.btnCreateStandard.TabIndex = 0;
@@ -71,44 +73,59 @@ namespace AsyncHattprojekt
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(100, 166);
+            this.comboBox1.Location = new System.Drawing.Point(93, 122);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(288, 21);
             this.comboBox1.TabIndex = 3;
             // 
-            // richTextBox1
+            // txtBoxComment
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(100, 714);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(281, 134);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.txtBoxComment.Location = new System.Drawing.Point(100, 714);
+            this.txtBoxComment.Name = "txtBoxComment";
+            this.txtBoxComment.Size = new System.Drawing.Size(281, 134);
+            this.txtBoxComment.TabIndex = 4;
+            this.txtBoxComment.Text = "";
             // 
             // btnCreateSpecial
             // 
-            this.btnCreateSpecial.Location = new System.Drawing.Point(753, 825);
+            this.btnCreateSpecial.Location = new System.Drawing.Point(753, 788);
             this.btnCreateSpecial.Name = "btnCreateSpecial";
             this.btnCreateSpecial.Size = new System.Drawing.Size(118, 45);
             this.btnCreateSpecial.TabIndex = 5;
             this.btnCreateSpecial.Text = "Lägg Till Specialhatt";
             this.btnCreateSpecial.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnCreateOrder
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 406);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 250);
-            this.dataGridView1.TabIndex = 7;
+            this.btnCreateOrder.Location = new System.Drawing.Point(753, 839);
+            this.btnCreateOrder.Name = "btnCreateOrder";
+            this.btnCreateOrder.Size = new System.Drawing.Size(118, 44);
+            this.btnCreateOrder.TabIndex = 8;
+            this.btnCreateOrder.Text = "Skapa order";
+            this.btnCreateOrder.UseVisualStyleBackColor = true;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
+            // 
+            // listViewHats
+            // 
+            this.listViewHats.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Hatt,
+            this.columnHeader1});
+            this.listViewHats.HideSelection = false;
+            this.listViewHats.Location = new System.Drawing.Point(100, 338);
+            this.listViewHats.Name = "listViewHats";
+            this.listViewHats.Size = new System.Drawing.Size(771, 332);
+            this.listViewHats.TabIndex = 9;
+            this.listViewHats.UseCompatibleStateImageBehavior = false;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 895);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listViewHats);
+            this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.btnCreateSpecial);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtBoxComment);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.btnCreateCustomer);
@@ -116,7 +133,6 @@ namespace AsyncHattprojekt
             this.Name = "OrderForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OrderForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,9 +144,12 @@ namespace AsyncHattprojekt
         private System.Windows.Forms.Button btnCreateCustomer;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtBoxComment;
         private System.Windows.Forms.Button btnCreateSpecial;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCreateOrder;
+        private System.Windows.Forms.ListView listViewHats;
+        private System.Windows.Forms.ColumnHeader Hatt;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
