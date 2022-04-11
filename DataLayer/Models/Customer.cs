@@ -21,5 +21,8 @@ namespace DataLayer.Models
         public string Comment { get; set; }
         
         public virtual Order Order { get; set; }
+      
+        public string DisplayName => FirstName + " " + LastName;
+
     }
 }

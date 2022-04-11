@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="FärdigFaktura.Designer.cs">
       <DependentUpon>FärdigFaktura.cs</DependentUpon>
+     </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InitialPage.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,13 @@
     <Compile Include="StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
+      <Compile Include="SpecialHatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialHatForm.Designer.cs">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingLabelForm.cs">
     <Compile Include="StartPage.Designer.cs">
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
@@ -95,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InitialPage.resx">
       <DependentUpon>InitialPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +130,12 @@
     <EmbeddedResource Include="Testform.resx">
       <DependentUpon>Testform.cs</DependentUpon>
     </EmbeddedResource>
+      <EmbeddedResource Include="SpecialHatForm.resx">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingLabelForm.resx">
+      <DependentUpon>ShippingLabelForm.cs</DependentUpon>
+     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
