@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,5 +75,29 @@ namespace DataLayer
 
             }
         }
+
+        public void dummydata()
+        {
+
+            var address = new Address()
+            { StreetName = "Köpmangatan", StreetNumber = "13", PostalCode = "70210", TownName = "Örebro" };
+            var customer = new Customer()
+            {
+                CustomerBonusPoints = 0,
+                Email = "bobin@aziz.com",
+                FirstName = "Robin",
+                LastName = "Aziz",
+                Phone = 07623424,
+                Address = address
+            };
+            using (var context = new HatDbContext())
+            {
+                context.Addresses.Add(address);
+                context.Customers.Add(customer);
+                context.SaveChanges();
+            }
+        }
+
+
     }
 }

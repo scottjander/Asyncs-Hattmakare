@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Migrations\202204061014087_first_migration.cs" />
+    <Compile Include="Migrations\202204061014087_first_migration.designer.cs">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
+    </Compile>
+>>>>>>> 75964e274336caabc42867a5dd57e7d0673e6e51
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -76,7 +84,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204061014087_first_migration.resx">
+      <DependentUpon>202204061014087_first_migration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+>>>>>>> 75964e274336caabc42867a5dd57e7d0673e6e51
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

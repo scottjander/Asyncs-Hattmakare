@@ -72,6 +72,15 @@
     <Compile Include="RegKund.Designer.cs">
       <DependentUpon>RegKund.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShippingLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShippingLabelForm.Designer.cs">
+      <DependentUpon>ShippingLabelForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InitialPage.resx">
+      <DependentUpon>InitialPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,6 +97,9 @@
       <DependentUpon>StandardHatOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
+    <EmbeddedResource Include="ShippingLabelForm.resx">
+      <DependentUpon>ShippingLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
