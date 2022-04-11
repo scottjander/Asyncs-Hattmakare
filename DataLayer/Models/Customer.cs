@@ -12,17 +12,16 @@ namespace DataLayer.Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
        [Required]
         public virtual Address Address { get; set; }
 
         public int CustomerBonusPoints { get; set; }
         public string Comment { get; set; }
-        
+
         public virtual Order Order { get; set; }
       
         public string DisplayName => FirstName + " " + LastName;
-
     }
 }

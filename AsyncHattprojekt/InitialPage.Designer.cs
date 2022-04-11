@@ -29,12 +29,14 @@ namespace AsyncHattprojekt
         /// </summary>
         private void InitializeComponent()
         {
+
             this.btnLoggaIn = new System.Windows.Forms.Button();
             this.cbVäljAnvändare = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnLoggaIn
             // 
+
             this.btnLoggaIn.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoggaIn.Location = new System.Drawing.Point(150, 126);
             this.btnLoggaIn.Margin = new System.Windows.Forms.Padding(2);

@@ -58,7 +58,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FärdigFaktura.cs">
+    <Compile Include="StandardHatOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardHatOrder.Designer.cs">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    </Compile>
+     <Compile Include="FärdigFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FärdigFaktura.Designer.cs">
@@ -69,7 +75,7 @@
     </Compile>
     <Compile Include="OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
-    </Compile>
+     </Compile>
     <Compile Include="InitialPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegKund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegKund.Designer.cs">
+      <DependentUpon>RegKund.cs</DependentUpon>
+    </Compile>
     <Compile Include="SkapaFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegKund.resx">
+      <DependentUpon>RegKund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardHatOrder.resx">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
     <EmbeddedResource Include="SkapaFaktura.resx">
       <DependentUpon>SkapaFaktura.cs</DependentUpon>
     </EmbeddedResource>

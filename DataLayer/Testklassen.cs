@@ -10,17 +10,61 @@ namespace DataLayer
 {
     public class Testklassen
     {
-        public void TestMetoden()
+        /*    public void testmetoden()
+            {
+                using (var context = new hatdbcontext())
+                {
+                    var customer = new customer()
+                    {
+                        customerbonuspoints = 0,
+                        email = "meh",
+                        firstname = "ferik",
+                        lastname = "fawerman",
+                         phone = 07623424
+                    };
+                    var enhatt = new hat() { comment = "gjorde två hatt", price = "100" };
+                    var tvahatt = new specialhat() { comment = "gjorde specialhatt", price = "570", amountofdecorations = 2 };
+                    var hattlista = new list<hat>();
+                    hattlista.add(enhatt);
+                    hattlista.add(tvahatt);
+                    datetime tiden = datetime.now;
+                    var minorder = new order()
+                        { comment = "joe", customer = customer, hats = hattlista, totalprice = hattlista.sum(x => x.price), startdate = tiden, datefinished = tiden };
+                    context.customers.add(customer);
+                    context.hats.add(enhatt);
+                    context.hats.add(tvahatt);
+                    context.orders.add(minorder);
+                    context.savechanges();
+
+                }
+            }*/
+        public void testmetoden3()
         {
             using (var context = new HatDbContext())
             {
-                var customer = new Customer()
+                //var stock = new stock();
+                //context.stock.add(stock);
+                //var customer = new customer()
+                //{
+                //    customerbonuspoints = 0,
+                //    email = "meh",
+                //    firstname = "ferik",
+                //    lastname = "fawerman",
+                //    // phone = 07623424
+                //};
+                ////var enhatt = new hat() {stock = stock};
+                //// var tvahatt = new specialhat() { comment = "gjorde specialhatt", price = "570", amountofdecorations = 2 };
+                //var hattlista = new list<hat>();
+                //hattlista.add(enhatt);
+                //// hattlista.add(tvahatt);
+                //datetime tiden = datetime.now;
+                DateTime tiden = DateTime.Now;
+                List<Hat> list = new List<Hat>();
+                var minorder = new Order()
                 {
-                    CustomerBonusPoints = 0,
-                    Email = "meh",
-                    FirstName = "Ferik",
-                    LastName = "Fawerman",
-                    Phone = 07623424
+                    StartDate = tiden,
+                    DateFinished = tiden,
+                    Hats = list
                 };
                 var enHatt = new Hat() {Comment = "Gjorde två hatt", Price = 100};
                 var tvaHatt = new SpecialHat() {Comment = "Gjorde specialhatt", Price = 570, AmountOfDecorations = 2};
