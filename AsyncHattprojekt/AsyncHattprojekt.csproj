@@ -58,20 +58,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StandardHatOrder.cs">
+    <Compile Include="FärdigFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StandardHatOrder.Designer.cs">
-      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    <Compile Include="FärdigFaktura.Designer.cs">
+      <DependentUpon>FärdigFaktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitialPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitialPage.Designer.cs">
+      <DependentUpon>InitialPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegKund.cs">
+    <Compile Include="SkapaFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegKund.Designer.cs">
-      <DependentUpon>RegKund.cs</DependentUpon>
+    <Compile Include="SkapaFaktura.Designer.cs">
+      <DependentUpon>SkapaFaktura.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialHatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialHatForm.Designer.cs">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testform.Designer.cs">
+      <DependentUpon>Testform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FärdigFaktura.resx">
+      <DependentUpon>FärdigFaktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialPage.resx">
+      <DependentUpon>InitialPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,13 +123,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegKund.resx">
-      <DependentUpon>RegKund.cs</DependentUpon>
+    <EmbeddedResource Include="SkapaFaktura.resx">
+      <DependentUpon>SkapaFaktura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StandardHatOrder.resx">
-      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".editorconfig" />
+    <EmbeddedResource Include="Testform.resx">
+      <DependentUpon>Testform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialHatForm.resx">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingLabelForm.resx">
+      <DependentUpon>ShippingLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
