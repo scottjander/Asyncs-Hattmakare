@@ -44,6 +44,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204111424264_komigenpls.cs" />
-    <Compile Include="Migrations\202204111424264_komigenpls.designer.cs">
-      <DependentUpon>202204111424264_komigenpls.cs</DependentUpon>
+    <Compile Include="Migrations\202204111438268_hej.cs" />
+    <Compile Include="Migrations\202204111438268_hej.designer.cs">
+      <DependentUpon>202204111438268_hej.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -91,8 +93,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204111424264_komigenpls.resx">
-      <DependentUpon>202204111424264_komigenpls.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204111438268_hej.resx">
+      <DependentUpon>202204111438268_hej.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
