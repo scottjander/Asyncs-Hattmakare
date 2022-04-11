@@ -21,27 +21,37 @@ namespace AsyncHattprojekt
         private Testklassen testklassen;
         private int orderID;
         private string filePath;
+        private int fabricID;
 
         public SpecialHatForm(int orderId)
         {
             InitializeComponent();
             specialHatController = new SpecialHatController();
             testklassen = new Testklassen();
-            testklassen.TestMetoden();
-            FillComboBox();
-            orderID=orderId;
+            orderID = orderId;
+            FillListView();
         }
 
-        private void FillComboBox()
+
+        private void FillListView()
         {
-            cmbBoxFabric.DataSource = specialHatController.GetFabric();
-            cmbBoxFabric.DisplayMember = "ItemName";
+            listView1.Items.Clear();
+            foreach (FabricStock fabric in specialHatController.GetAllFabrics())
+            {
+                ListViewItem lvi = new ListViewItem(fabric.Id.ToString());
+                lvi.SubItems.Add(fabric.ItemName);
+                lvi.SubItems.Add(fabric.Colour);
+                lvi.SubItems.Add(fabric.AmountInStock.ToString());
+                listView1.Items.Add(lvi);
+            }
         }
+
 
         private void btnAddHat_Click(object sender, EventArgs e)
         {
+            //validera fält
+            FabricStock fabric = specialHatController.GetFabricOnId(fabricID);
             string name = txtBoxName.Text;
-            FabricStock fabric = cmbBoxFabric.SelectedItem as FabricStock;
             double length = Convert.ToDouble(txtBoxFabricLength.Text);
             int decoration = Convert.ToInt32(txtBoxDecoration.Text);
             int size = Convert.ToInt32(txtBoxSize.Text);
@@ -65,6 +75,16 @@ namespace AsyncHattprojekt
                 filePath = dialog.SafeFileName;
             }
 
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                fabricID = Convert.ToInt32(listView1.SelectedItems[0].Text);
+                txtBoxChosenFabric.Text = listView1.SelectedItems[0].SubItems[1].Text + "\t " +
+                                          listView1.SelectedItems[0].SubItems[2].Text;
+            }
         }
     }
 }

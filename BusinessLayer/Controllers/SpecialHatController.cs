@@ -13,15 +13,21 @@ namespace BusinessLayer.Controllers
     public class SpecialHatController
     {
         private SpecialHatRepository SpecialHatRepository;
-        private StockRepository StockRepository;
+        private FabricRepository FabricRepository;
         public SpecialHatController()
         {
             SpecialHatRepository = new SpecialHatRepository();
-            StockRepository = new StockRepository();
+            FabricRepository = new FabricRepository();
         }
 
         public void AddSpecialHat(string name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
         {
+            if (fabric.AmountInStock < fabricLength)
+            {
+                //gör validering
+                return;
+            }
+            FabricRepository.DecreaseAmountInStorage(fabricLength, fabric);
             var price = CalculatePrice(fabric, fabricLength, decoration);
             var imagePath= SpecialHatRepository.SaveHatPicture(filePath, fileName);
             var newHat = new SpecialHat()
@@ -45,9 +51,14 @@ namespace BusinessLayer.Controllers
             return price;
         }
 
-        public List<FabricStock> GetFabric()
+        public List<FabricStock> GetAllFabrics()
         {
-            return StockRepository.GetAllFabric();
+            return FabricRepository.GetAllFabric();
+        }
+
+        public FabricStock GetFabricOnId(int id)
+        {
+            return FabricRepository.GetFabricOnId(id);
         }
     }
 }
