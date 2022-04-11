@@ -32,10 +32,12 @@ namespace AsyncHattprojekt
             {
                 double summa = Convert.ToDouble(tbSummaAttBetala.Text);
               
-                int adress = Convert.ToInt32(tbOrderID.Text);
-                string hamtaadress = fakturaController.HamtaAdressPaKundID(adress);
+                int OrderId = Convert.ToInt32(tbOrderID.Text);
+                var hamtaadressobjekt = fakturaController.HamtaAdressObjekt(OrderId);  
+                var hamtaorderobjekt = fakturaController.HamtaOrderObjektPaOrderId(OrderId);
+                
 
-                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, };
+                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, InvoiceAddress = hamtaadressobjekt, };
                 context.Invoices.Add(nyfaktura);
                 context.SaveChanges();
             }

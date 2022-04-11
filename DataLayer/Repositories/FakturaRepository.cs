@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,5 +64,29 @@ namespace DataLayer.Repositories
                 return totalpris;
             }
         }
+
+        public Address HamtaAdressObjekt (int KundId)
+        {
+            using (var context = new HatDbContext())
+            {
+                var customer = context.Customers.Find(KundId);           
+                var adress = customer.Address;
+                return adress;
+            }
+        }
+        public Order HamtaOrderObjekt(int OrderId)
+        {
+            using (var context = new HatDbContext())
+            {
+                var Order = context.Orders.Find(OrderId);
+                return Order;
+            }
+        }
+
+
+
+
+
+
     }
 }

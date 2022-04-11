@@ -1,4 +1,5 @@
-﻿using DataLayer.Repositories;
+﻿using DataLayer.Models;
+using DataLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,11 @@ namespace BusinessLayer.Controllers
         {
             int index = FakturaRepository.HamtaKundIdPaOrderId(id);
             return index;
+        }
+        public Order HamtaOrderObjektPaOrderId(int id)
+        {
+            var order = FakturaRepository.HamtaOrderObjekt(id);
+            return order;
         }
 
         public string HamtaForNamn(int id)
@@ -40,6 +46,12 @@ namespace BusinessLayer.Controllers
         {
             int summa = FakturaRepository.HamtaTotalSumma(id);
             return summa;
+        }
+        public Address HamtaAdressObjekt(int id)
+        {
+            var kund = HamtaKundIdPaOrderId(id);
+            var adress = FakturaRepository.HamtaAdressObjekt(id);
+            return adress;
         }
 
     }
