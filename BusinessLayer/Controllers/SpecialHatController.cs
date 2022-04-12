@@ -39,7 +39,7 @@ namespace BusinessLayer.Controllers
                 ImagePath = imagePath,
 
             };
-            newHat.Order = SpecialHatRepository.getOrder(orderId);
+            newHat.Order = SpecialHatRepository.GetOrderOnId(orderId);
             SpecialHatRepository.addSpecialHat(newHat, orderId);
         }
 

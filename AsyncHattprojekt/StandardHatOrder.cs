@@ -38,6 +38,8 @@ namespace AsyncHattprojekt
         {
             standardHatController.OrderStandardHat(orderID, hatID);
             this.Close();
+            OrderForm orderform = new OrderForm(orderID);
+            orderform.Show();
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)

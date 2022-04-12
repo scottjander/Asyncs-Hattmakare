@@ -57,6 +57,7 @@ namespace AsyncHattprojekt
             this.lblTotalPrice.Size = new System.Drawing.Size(53, 20);
             this.lblTotalPrice.TabIndex = 2;
             this.lblTotalPrice.Text = "0,00 :-";
+            this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
             // 
             // btnCreateSpecial
             // 

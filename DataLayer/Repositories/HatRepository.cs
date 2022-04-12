@@ -84,6 +84,7 @@ namespace DataLayer.Repositories
             var order = getOrder(orderId);
             var hat = GetHatOnID(hatID);
             hat.order = order;
+            order.TotalPrice += hat.Price;
             _context.SaveChanges();
         }
         public Order getOrder(int id)

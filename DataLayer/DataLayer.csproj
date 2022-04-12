@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204111556445_fucku.cs" />
-    <Compile Include="Migrations\202204111556445_fucku.designer.cs">
-      <DependentUpon>202204111556445_fucku.cs</DependentUpon>
+    <Compile Include="Migrations\202204121003127_test.cs" />
+    <Compile Include="Migrations\202204121003127_test.designer.cs">
+      <DependentUpon>202204121003127_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -73,14 +73,13 @@
     <Compile Include="Models\Enums\OrderStatus.cs" />
     <Compile Include="Models\ShippingLabel.cs" />
     <Compile Include="Models\Fabric.cs" />
-    <Compile Include="OrderRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\HatRepository.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\FakturaRepository.cs" />
     <Compile Include="Repositories\KundRepository.cs" />
-    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\SpecialHatRepository.cs" />
     <Compile Include="Repositories\FabricRepository.cs" />
     <Compile Include="Testklassen.cs" />
@@ -93,8 +92,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204111556445_fucku.resx">
-      <DependentUpon>202204111556445_fucku.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204121003127_test.resx">
+      <DependentUpon>202204121003127_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

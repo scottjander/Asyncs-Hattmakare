@@ -16,13 +16,15 @@ namespace DataLayer.Repository
             _context = new HatDbContext();
         }
 
-        public void addSpecialHat(SpecialHat hat, int id)
+        public void addSpecialHat(SpecialHat hat, int orderId)
         {
+            var order = GetOrderOnId(orderId);
             _context.SpecialHats.Add(hat);
+            order.TotalPrice += hat.Price;
             _context.SaveChanges();
         }
 
-        public Order getOrder(int id)
+        public Order GetOrderOnId(int id)
         {
            return _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra
         }

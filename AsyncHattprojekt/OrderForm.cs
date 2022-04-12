@@ -15,11 +15,19 @@ namespace AsyncHattprojekt
 {
     public partial class OrderForm : Form
     {
+        private OrderRepository orderRepository = new OrderRepository();
         private int orderID;
         public OrderForm(int orderId)
         {
             InitializeComponent();
             orderID = orderId;
+            UpdatePrice();
+        }
+
+        public void UpdatePrice()
+        {
+            var currentOrder = orderRepository.GetOrderOnId(orderID);
+            lblTotalPrice.Text = currentOrder.TotalPrice.ToString() + ":-" ?? "0.00:-";
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -31,12 +39,18 @@ namespace AsyncHattprojekt
         {
             StandardHatOrder standardHatOrder = new StandardHatOrder(orderID);
             standardHatOrder.Show();
+            this.Close();
         }
 
         private void btnCreateSpecial_Click(object sender, EventArgs e)
         {
-            SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
-            specialHatForm.Show();
+            //SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
+            //specialHatForm.Show();
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
         }
 
 

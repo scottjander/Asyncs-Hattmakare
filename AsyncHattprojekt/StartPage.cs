@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer.Controllers;
+using DataLayer;
 using DataLayer.Models;
 
 namespace AsyncHattprojekt
@@ -18,6 +19,8 @@ namespace AsyncHattprojekt
         public StartPage()
         {
             InitializeComponent();
+            //var testklassen = new Testklassen();
+            //testklassen.FillHat();
             lblNamn.Text = InitialPage.username;
         }
 
