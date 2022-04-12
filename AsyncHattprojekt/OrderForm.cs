@@ -15,17 +15,19 @@ namespace AsyncHattprojekt
 {
     public partial class OrderForm : Form
     {
-        private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
-        private readonly OrderRepository repository = new OrderRepository();
-        public OrderForm()
+        private OrderRepository orderRepository = new OrderRepository();
+        private int orderID;
+        public OrderForm(int orderId)
         {
             InitializeComponent();
+            orderID = orderId;
+            UpdatePrice();
+        }
 
-            List<Customer> customers = repository.getallcustomers();
-            comboBox1.DataSource = customers;
-            comboBox1.DisplayMember = "DisplayName";
-
-
+        public void UpdatePrice()
+        {
+            var currentOrder = orderRepository.GetOrderOnId(orderID);
+            lblTotalPrice.Text = currentOrder.TotalPrice.ToString() + ":-" ?? "0.00:-";
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -33,17 +35,24 @@ namespace AsyncHattprojekt
 
         }
 
-        private void btnCreateOrder_Click(object sender, EventArgs e)
+        private void btnCreateStandard_Click(object sender, EventArgs e)
         {
-            var comment = txtBoxComment.Text;
-            var Customer  = (Customer) comboBox1.SelectedItem;
+            StandardHatOrder standardHatOrder = new StandardHatOrder(orderID);
+            standardHatOrder.Show();
+            this.Close();
+        }
 
-            if (Customer != null)
-            {
-                controller.CreateOrder(comment, Customer);
-            }
+        private void btnCreateSpecial_Click(object sender, EventArgs e)
+        {
+            //SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
+            //specialHatForm.Show();
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
 
         }
+
 
         //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         //{

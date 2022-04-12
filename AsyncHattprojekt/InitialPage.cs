@@ -31,8 +31,7 @@ namespace AsyncHattprojekt
         public static string username = "";
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
-            //var testklassen = new Testklassen();
-            //testklassen.dummydata();
+           
             this.Hide();
             username = cbVäljAnvändare.Text;
             StartPage f = new StartPage();
@@ -59,21 +58,21 @@ namespace AsyncHattprojekt
             form2.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            StandardHatController.addHats();
-        }
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    StandardHatController.addHats();
+        //}
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            StandardHatController.deleteHats();
-        }
+        //private void button5_Click(object sender, EventArgs e)
+        //{
+        //    StandardHatController.deleteHats();
+        //}
 
-        private void button6_Click(object sender, EventArgs e)
-        {
+        //private void button6_Click(object sender, EventArgs e)
+        //{
             
-            textBox1.Text = Convert.ToString(StandardHatController.GetUniqueHats().Count());
+        //    textBox1.Text = Convert.ToString(StandardHatController.GetUniqueHats().Count());
 
-        }
+        //}
     }
 }

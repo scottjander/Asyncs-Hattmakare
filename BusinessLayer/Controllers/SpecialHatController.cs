@@ -20,7 +20,7 @@ namespace BusinessLayer.Controllers
             FabricRepository = new FabricRepository();
         }
 
-        public void AddSpecialHat(string name, FabricStock fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
+        public void AddSpecialHat(string name, Fabric fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
         {
             if (fabric.AmountInStock < fabricLength)
             {
@@ -39,11 +39,11 @@ namespace BusinessLayer.Controllers
                 ImagePath = imagePath,
 
             };
-            newHat.Order = SpecialHatRepository.getOrder(orderId);
+            newHat.Order = SpecialHatRepository.GetOrderOnId(orderId);
             SpecialHatRepository.addSpecialHat(newHat, orderId);
         }
 
-        private double CalculatePrice(FabricStock fabric, double fabricLength, int decoration)
+        private double CalculatePrice(Fabric fabric, double fabricLength, int decoration)
         {
             var price = (double)Price.BasePrice;
             price += fabric.Price * fabricLength;
@@ -51,12 +51,12 @@ namespace BusinessLayer.Controllers
             return price;
         }
 
-        public List<FabricStock> GetAllFabrics()
+        public List<Fabric> GetAllFabrics()
         {
             return FabricRepository.GetAllFabric();
         }
 
-        public FabricStock GetFabricOnId(int id)
+        public Fabric GetFabricOnId(int id)
         {
             return FabricRepository.GetFabricOnId(id);
         }

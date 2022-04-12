@@ -71,7 +71,7 @@ namespace AsyncHattprojekt
             tbFaktureringsadress.Text = hamtaadress.ToString();
 
             int summa = Convert.ToInt32(tbOrderID.Text);
-            int hamtasumma = fakturaController.HamtaTotalSumma(summa);
+            double hamtasumma = fakturaController.HamtaTotalSumma(summa);
             tbSummaAttBetala.Text = hamtasumma.ToString();
             
         }

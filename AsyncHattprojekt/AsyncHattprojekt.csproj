@@ -58,24 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateOrder.Designer.cs">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandardHatOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StandardHatOrder.Designer.cs">
       <DependentUpon>StandardHatOrder.cs</DependentUpon>
     </Compile>
-     <Compile Include="FärdigFaktura.cs">
+    <Compile Include="FärdigFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FärdigFaktura.Designer.cs">
       <DependentUpon>FärdigFaktura.cs</DependentUpon>
-     </Compile>
+    </Compile>
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
-     </Compile>
+    </Compile>
     <Compile Include="InitialPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,16 +105,16 @@
     <Compile Include="StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-      <Compile Include="SpecialHatForm.cs">
+    <Compile Include="SpecialHatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SpecialHatForm.Designer.cs">
       <DependentUpon>SpecialHatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ShippingLabelForm.cs">
-	    <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
-	    <Compile Include="StartPage.Designer.cs">
+    <Compile Include="StartPage.Designer.cs">
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Testform.cs">
@@ -117,6 +123,9 @@
     <Compile Include="Testform.Designer.cs">
       <DependentUpon>Testform.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateOrder.resx">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FärdigFaktura.resx">
       <DependentUpon>FärdigFaktura.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,12 +160,12 @@
     <EmbeddedResource Include="Testform.resx">
       <DependentUpon>Testform.cs</DependentUpon>
     </EmbeddedResource>
-      <EmbeddedResource Include="SpecialHatForm.resx">
+    <EmbeddedResource Include="SpecialHatForm.resx">
       <DependentUpon>SpecialHatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShippingLabelForm.resx">
       <DependentUpon>ShippingLabelForm.cs</DependentUpon>
-     </EmbeddedResource>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

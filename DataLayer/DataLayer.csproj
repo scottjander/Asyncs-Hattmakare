@@ -44,6 +44,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,17 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202204081228178_first.cs" />
-    <Compile Include="Migrations\202204081228178_first.designer.cs">
-      <DependentUpon>202204081228178_first.cs</DependentUpon>
-    </Compile>
-        <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204111311289_please.cs" />
-    <Compile Include="Migrations\202204111311289_please.designer.cs">
-      <DependentUpon>202204111311289_please.cs</DependentUpon>
-      </Compile>
-    <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="HatDbContext.cs" />
+    <Compile Include="Migrations\202204121003127_test.cs" />
+    <Compile Include="Migrations\202204121003127_test.designer.cs">
+      <DependentUpon>202204121003127_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -75,15 +72,14 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Enums\OrderStatus.cs" />
     <Compile Include="Models\ShippingLabel.cs" />
-    <Compile Include="Models\Stock.cs" />
-    <Compile Include="OrderRepository.cs" />
+    <Compile Include="Models\Fabric.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\HatRepository.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\FakturaRepository.cs" />
     <Compile Include="Repositories\KundRepository.cs" />
-    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\SpecialHatRepository.cs" />
     <Compile Include="Repositories\FabricRepository.cs" />
     <Compile Include="Testklassen.cs" />
@@ -96,12 +92,9 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204081228178_first.resx">
-      <DependentUpon>202204081228178_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204121003127_test.resx">
+      <DependentUpon>202204121003127_test.cs</DependentUpon>
     </EmbeddedResource>
-      <EmbeddedResource Include="Migrations\202204111311289_please.resx">
-      <DependentUpon>202204111311289_please.cs</DependentUpon>
-     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class test : DbMigration
     {
         public override void Up()
         {
@@ -26,7 +26,7 @@
                         Id = c.Int(nullable: false),
                         FirstName = c.String(),
                         LastName = c.String(),
-                        Phone = c.Int(nullable: false),
+                        Phone = c.String(),
                         Email = c.String(),
                         CustomerBonusPoints = c.Int(nullable: false),
                         Comment = c.String(),
@@ -39,32 +39,33 @@
                 "dbo.Orders",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         StartDate = c.DateTime(nullable: false),
                         DateFinished = c.DateTime(nullable: false),
                         Comment = c.String(),
-                        TotalPrice = c.Int(nullable: false),
+                        TotalPrice = c.Double(nullable: false),
                         OrderStatus = c.Int(nullable: false),
+                        Customer_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customers", t => t.Id)
-                .Index(t => t.Id);
+                .ForeignKey("dbo.Customers", t => t.Customer_Id, cascadeDelete: true)
+                .Index(t => t.Customer_Id);
             
             CreateTable(
                 "dbo.Hats",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Price = c.Int(nullable: false),
+                        Price = c.Double(nullable: false),
                         Comment = c.String(),
-                        AmountOfDecorations = c.Int(),
-                        ImagePath = c.String(),
-                        Discriminator = c.String(nullable: false, maxLength: 128),
-                        Order_Id = c.Int(),
+                        size = c.Int(nullable: false),
+                        color = c.String(),
+                        itemName = c.String(),
+                        order_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Orders", t => t.Order_Id)
-                .Index(t => t.Order_Id);
+                .ForeignKey("dbo.Orders", t => t.order_Id)
+                .Index(t => t.order_Id);
             
             CreateTable(
                 "dbo.Employees",
@@ -76,11 +77,10 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.HatStocks",
+                "dbo.Fabrics",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        HatSize = c.Int(nullable: false),
                         ItemName = c.String(),
                         Price = c.Double(nullable: false),
                         AmountInStock = c.Double(nullable: false),
@@ -115,18 +115,6 @@
                 .Index(t => t.Order_Id);
             
             CreateTable(
-                "dbo.FabricStocks",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        ItemName = c.String(),
-                        Price = c.Double(nullable: false),
-                        AmountInStock = c.Double(nullable: false),
-                        Colour = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
                 "dbo.ShippingLabels",
                 c => new
                     {
@@ -139,27 +127,45 @@
                 .ForeignKey("dbo.Addresses", t => t.Address_Id)
                 .Index(t => t.Address_Id);
             
+            CreateTable(
+                "dbo.SpecialHats",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Price = c.Double(nullable: false),
+                        Comment = c.String(),
+                        AmountOfDecorations = c.Int(nullable: false),
+                        ImagePath = c.String(),
+                        Name = c.String(),
+                        Order_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Orders", t => t.Order_Id)
+                .Index(t => t.Order_Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.SpecialHats", "Order_Id", "dbo.Orders");
             DropForeignKey("dbo.ShippingLabels", "Address_Id", "dbo.Addresses");
             DropForeignKey("dbo.Invoices", "Order_Id", "dbo.Orders");
             DropForeignKey("dbo.Invoices", "InvoiceAddress_Id", "dbo.Addresses");
-            DropForeignKey("dbo.Hats", "Order_Id", "dbo.Orders");
-            DropForeignKey("dbo.Orders", "Id", "dbo.Customers");
+            DropForeignKey("dbo.Hats", "order_Id", "dbo.Orders");
+            DropForeignKey("dbo.Orders", "Customer_Id", "dbo.Customers");
             DropForeignKey("dbo.Customers", "Id", "dbo.Addresses");
+            DropIndex("dbo.SpecialHats", new[] { "Order_Id" });
             DropIndex("dbo.ShippingLabels", new[] { "Address_Id" });
             DropIndex("dbo.Invoices", new[] { "Order_Id" });
             DropIndex("dbo.Invoices", new[] { "InvoiceAddress_Id" });
-            DropIndex("dbo.Hats", new[] { "Order_Id" });
-            DropIndex("dbo.Orders", new[] { "Id" });
+            DropIndex("dbo.Hats", new[] { "order_Id" });
+            DropIndex("dbo.Orders", new[] { "Customer_Id" });
             DropIndex("dbo.Customers", new[] { "Id" });
+            DropTable("dbo.SpecialHats");
             DropTable("dbo.ShippingLabels");
-            DropTable("dbo.FabricStocks");
             DropTable("dbo.Invoices");
             DropTable("dbo.IncomingInvoices");
-            DropTable("dbo.HatStocks");
+            DropTable("dbo.Fabrics");
             DropTable("dbo.Employees");
             DropTable("dbo.Hats");
             DropTable("dbo.Orders");
