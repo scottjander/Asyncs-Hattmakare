@@ -215,5 +215,10 @@ namespace DataLayer
             hatDbContext.Fabrics.Add(fabric3);
             hatDbContext.SaveChanges();
         }
+
+        public void FillInvoices()
+        {
+
+        }
     }
 }
