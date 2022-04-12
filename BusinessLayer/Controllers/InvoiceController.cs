@@ -16,5 +16,10 @@ namespace BusinessLayer.Controllers
         {
             return invoiceRepository.GetAllInvoices();
         }
+
+        public List<InvoiceFromSupplier> GetAllInvoicesFromSuppliers()
+        {
+            return invoiceRepository.GetAllInvoicesFromSuppliers();
+        }
     }
 }

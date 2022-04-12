@@ -13,6 +13,7 @@ namespace DataLayer.Models
         public double SumToPay { get; set; }
         public Order Order { get; set; }
         public bool IsPaid { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 
     public class InvoiceFromSupplier

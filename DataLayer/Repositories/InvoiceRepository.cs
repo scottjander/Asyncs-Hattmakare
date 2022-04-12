@@ -21,5 +21,10 @@ namespace DataLayer.Repositories
             return _context.Invoices.ToList();
         }
 
+        public List<InvoiceFromSupplier> GetAllInvoicesFromSuppliers()
+        {
+            return _context.InvoiceFromSuppliers.ToList();
+        }
+
     }
 }

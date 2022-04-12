@@ -18,21 +18,45 @@ namespace AsyncHattprojekt
         public TaxesSummary()
         {
             InitializeComponent();
+            FillInvoicesFromSuppliers();
+            FillInvoies();
         }
 
-        public void FillIncommingInvoices()
+        public void FillInvoies()
         {
-            //listView1.Items.Clear();
-            //foreach (Invoice invoice in invoiceController.GetAllInvoices()) {
-            //    ListViewItem lvi = new ListViewItem(invoiceToString());
-            //    lvi.SubItems.Add(fabric.ItemName);
-            //    lvi.SubItems.Add(fabric.Colour);
-            //    lvi.SubItems.Add(fabric.AmountInStock.ToString());
-            //    listView1.Items.Add(lvi);
-            //}
+            listView1.Items.Clear();
+            double totalAmount = 0;
+            foreach (Invoice invoice in invoiceController.GetAllInvoices()) {
+                totalAmount += invoice.SumToPay;
+                ListViewItem lvi = new ListViewItem(invoice.DateCreated.ToString());
+                lvi.SubItems.Add(invoice.SumToPay.ToString());
+                listView1.Items.Add(lvi);
+            }
+            txtBoxTotalAmountOut.Text = totalAmount.ToString() + "kr";
+            txtBoxTaxAmountOut.Text = (totalAmount * 0.25).ToString() + "kr";
+
+        }
+        public void FillInvoicesFromSuppliers()
+        {
+            listView1.Items.Clear();
+            double totalAmount = 0;
+            foreach (InvoiceFromSupplier invoice in invoiceController.GetAllInvoicesFromSuppliers()) {
+                totalAmount += invoice.SumToPay;
+                ListViewItem lvi = new ListViewItem(invoice.DateCreated.ToString());
+                lvi.SubItems.Add(invoice.SumToPay.ToString());
+                listView2.Items.Add(lvi);
+            }
+            txtBoxTotalAmountIn.Text = totalAmount.ToString() + "kr";
+            txtBoxTaxAmountIn.Text = (totalAmount * 0.25).ToString() + "kr";
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
