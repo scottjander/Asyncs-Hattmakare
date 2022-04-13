@@ -25,6 +25,19 @@ namespace DataLayer.Repositories
             }
         }
 
+        public void SkapaNyAnvandare(string namn)
+        {
+            using (var context = new HatDbContext())
+            {
+                var anvandare = new Employees()
+                {
+                    Name = namn,
+                };
+                context.Employees.Add(anvandare);
+                context.SaveChanges();
+            }
+        }
+
 
     }
 }

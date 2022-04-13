@@ -22,6 +22,11 @@ namespace BusinessLayer
 
         }
 
+        public void LaggTillAnstalld(string namn)
+        {
+            AnvandareRepository.SkapaNyAnvandare(namn);
+        }
+
 
     }
 }
