@@ -32,7 +32,7 @@ namespace AsyncHattprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
 
@@ -40,9 +40,20 @@ namespace AsyncHattprojekt
         {
             listView1.Items.Clear();
             foreach (Order orders in orderControllerScottRobin.GetCreatedOrders()) {
+
+
+
                 ListViewItem lvi = new ListViewItem(orders.Id.ToString());
                 lvi.SubItems.Add(orders.TotalPrice.ToString());
+                lvi.SubItems.Add(orders.Customer.ToString());
+                lvi.SubItems.Add(orders.Comment.ToString());
                 listView1.Items.Add(lvi);
+
+
+
+
+
+
             }
         }
     }

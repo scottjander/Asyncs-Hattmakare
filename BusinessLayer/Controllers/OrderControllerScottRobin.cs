@@ -51,10 +51,10 @@ namespace BusinessLayer.Controllers
             var returnCreatedOrders = new List<Order>();
             foreach (var o in repository.GetAllOrders())
             {
-                if  (o.OrderStatus == 0)
+              /*  if(o.OrderStatus == 0)
                 {
                     continue;
-                }
+                } */
                 returnCreatedOrders.Add(o);
             }
             return returnCreatedOrders;

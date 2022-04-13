@@ -49,7 +49,7 @@ namespace DataLayer
 
         public List<Order> GetAllOrders()
         {
-            var query = from Order in _context.Orders select Order;
+            var query = from Orders in _context.Orders select Orders;
             return query.ToList();
         }
 
