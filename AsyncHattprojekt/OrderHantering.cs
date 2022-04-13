@@ -15,12 +15,12 @@ namespace AsyncHattprojekt
     public partial class OrderHantering : Form
     {
         private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
-
+        private Order order;
         public OrderHantering(int Id)
         {
             InitializeComponent();
             cbStatusEnum.DataSource = Enum.GetValues(typeof(OrderStatus));
-            var order = controller.getOrderOnId(Id);
+            order = controller.getOrderOnId(Id);
 
             var customer = order.Customer;
             var address = customer.Address;
@@ -45,8 +45,14 @@ namespace AsyncHattprojekt
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //skicka in för att ändra i order
+            order.Comment = richTxtBoxComment.Text;
             OrderStatus enumValue = (OrderStatus)cbStatusEnum.SelectedItem;
+            controller.EditOrderStatus(order, enumValue);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

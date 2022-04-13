@@ -45,12 +45,13 @@ namespace AsyncHattprojekt
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(595, 613);
+            this.btnPrint.Location = new System.Drawing.Point(724, 613);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(119, 48);
             this.btnPrint.TabIndex = 0;
             this.btnPrint.Text = "Skriv ut fraktsedel";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnSave
             // 
@@ -115,6 +116,7 @@ namespace AsyncHattprojekt
             // 
             // richTxtBoxComment
             // 
+            this.richTxtBoxComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBoxComment.Location = new System.Drawing.Point(46, 387);
             this.richTxtBoxComment.Name = "richTxtBoxComment";
             this.richTxtBoxComment.Size = new System.Drawing.Size(303, 177);
