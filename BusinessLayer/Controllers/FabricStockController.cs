@@ -1,4 +1,5 @@
-﻿using DataLayer.Repository;
+﻿using DataLayer.Models;
+using DataLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,16 @@ namespace BusinessLayer.Controllers
         {
             get { return new FabricRepository(); }
         }
+
+        public List<Fabric> GetAllFabric ()
+        {
+            List<Fabric> fabrics = FabricRepository.GetAllFabric();
+            return fabrics;
+
+        }
+
+
+
+
     }
 }

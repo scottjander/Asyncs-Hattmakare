@@ -20,7 +20,6 @@ namespace DataLayer.Repository
 
             return _context.Fabrics.ToList();
         }
-
         public void DecreaseAmountInStorage(double amountToDecrease, Fabric fabric)
         {
             fabric.AmountInStock -= amountToDecrease;
