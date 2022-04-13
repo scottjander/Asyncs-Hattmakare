@@ -30,6 +30,7 @@ namespace AsyncHattprojekt
             lblAddress.Text = address.StreetName;
             lblTownPost.Text = address.PostalCode + " " + address.TownName;
             richTxtBoxComment.Text = order.Comment;
+            cbStatusEnum.SelectedItem = order.OrderStatus;
         }
 
         private void lblMail_Click(object sender, EventArgs e)
