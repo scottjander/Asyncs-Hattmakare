@@ -37,7 +37,7 @@ namespace AsyncHattprojekt
                 var hamtaorderobjekt = fakturaController.HamtaOrderObjektPaOrderId(OrderId);
                 
 
-                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, InvoiceAddress = hamtaadressobjekt, };
+                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, /*InvoiceAddress = hamtaadressobjekt,*/ };
                 context.Invoices.Add(nyfaktura);
                 context.SaveChanges();
             }
