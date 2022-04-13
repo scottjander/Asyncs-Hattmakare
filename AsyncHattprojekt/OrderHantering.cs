@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer.Controllers;
 using DataLayer.Models;
 
 namespace AsyncHattprojekt
 {
     public partial class OrderHantering : Form
     {
-        public OrderHantering(/* Customer customer, Order order*/)
+        private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
+
+        public OrderHantering(int Id)
         {
             InitializeComponent();
             cbStatusEnum.DataSource = Enum.GetValues(typeof(OrderStatus));
+            var order = controller.getOrderOnId(Id);
+
+            var customer = order.Customer;
         }
 
         private void lblMail_Click(object sender, EventArgs e)
@@ -31,7 +37,8 @@ namespace AsyncHattprojekt
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            //skicka in för att ändra i order
+            OrderStatus enumValue = (OrderStatus)cbStatusEnum.SelectedItem;
         }
     }
 }
