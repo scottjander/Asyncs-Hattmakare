@@ -13,9 +13,10 @@ namespace DataLayer.Models
         public double SumToPay { get; set; }
         public Order Order { get; set; }
         public bool IsPaid { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 
-    public class IncomingInvoice
+    public class InvoiceFromSupplier
     {
         public int Id { get; set; }
         public double SumToPay { get; set; }

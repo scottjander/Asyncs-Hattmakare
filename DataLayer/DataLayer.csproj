@@ -55,6 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
+    <Compile Include="Migrations\202204121819450_invoice.cs" />
+    <Compile Include="Migrations\202204121819450_invoice.designer.cs">
+      <DependentUpon>202204121819450_invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -69,6 +73,7 @@
     <Compile Include="Models\Enums\OrderStatus.cs" />
     <Compile Include="Models\ShippingLabel.cs" />
     <Compile Include="Models\Fabric.cs" />
+    <Compile Include="Repositories\InvoiceRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
@@ -86,6 +91,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204121819450_invoice.resx">
+      <DependentUpon>202204121819450_invoice.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

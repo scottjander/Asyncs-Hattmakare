@@ -215,5 +215,75 @@ namespace DataLayer
             hatDbContext.Fabrics.Add(fabric3);
             hatDbContext.SaveChanges();
         }
+
+        public void FillInvoices()
+        {
+            DateTime date1 = new DateTime(2021, 1, 1);
+            DateTime date2 = new DateTime(2021, 2, 1);
+            DateTime date3 = new DateTime(2022, 3, 1);
+            DateTime date4 = new DateTime(2022, 4, 1);
+            DateTime date5 = new DateTime(2022, 5, 1);
+            var outInvoice1 = new Invoice()
+            {
+                SumToPay = 199.99,
+                DateCreated = date1
+            };
+            var outInvoice2 = new Invoice()
+            {
+                SumToPay = 210.00,
+                DateCreated = date2
+            };
+            var outInvoice3 = new Invoice()
+            {
+                SumToPay = 19.99,
+                DateCreated = date3
+            };
+            var outInvoice4 = new Invoice()
+            {
+                SumToPay = 9.99,
+                DateCreated = date4
+            };
+            var outInvoice5 = new Invoice()
+            {
+                SumToPay = 99.99,
+                DateCreated = date5
+            };
+            var inInvoice1 = new InvoiceFromSupplier()
+            {
+                SumToPay = 199.99,
+                DateCreated = date1
+            };
+            var inInvoice2 = new InvoiceFromSupplier()
+            {
+                SumToPay = 210.00,
+                DateCreated = date2
+            };
+            var inInvoice3 = new InvoiceFromSupplier()
+            {
+                SumToPay = 19.99,
+                DateCreated = date3
+            };
+            var inInvoice4 = new InvoiceFromSupplier()
+            {
+                SumToPay = 9.99,
+                DateCreated = date4
+            };
+            var inInvoice5 = new InvoiceFromSupplier()
+            {
+                SumToPay = 99.99,
+                DateCreated = date5
+            };
+            hatDbContext.Invoices.Add(outInvoice1);
+            hatDbContext.Invoices.Add(outInvoice2);
+            hatDbContext.Invoices.Add(outInvoice3);
+            hatDbContext.Invoices.Add(outInvoice4);
+            hatDbContext.Invoices.Add(outInvoice5);
+            hatDbContext.InvoiceFromSuppliers.Add(inInvoice1);
+            hatDbContext.InvoiceFromSuppliers.Add(inInvoice2);
+            hatDbContext.InvoiceFromSuppliers.Add(inInvoice3);
+            hatDbContext.InvoiceFromSuppliers.Add(inInvoice4);
+            hatDbContext.InvoiceFromSuppliers.Add(inInvoice5);
+            hatDbContext.SaveChanges();
+        }
     }
 }

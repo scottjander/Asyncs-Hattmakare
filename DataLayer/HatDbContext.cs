@@ -16,7 +16,7 @@ namespace DataLayer
         public DbSet<Fabric> Fabrics { get; set; }
         public DbSet<ShippingLabel> ShippingLabels { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
-        //public DbSet<InvoiceFromSupplier> IncomingInvoices { get; set; }
+        public DbSet<InvoiceFromSupplier> InvoiceFromSuppliers { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
         // Your context has been configured to use a 'HatDbContext' connection string from your application's 
