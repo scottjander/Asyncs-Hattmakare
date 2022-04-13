@@ -26,6 +26,11 @@ namespace BusinessLayer.Controllers
             return repository.getallcustomers();
         }
 
+        public Order getOrderOnId(int Id)
+        {
+            return repository.GetOrderOnId(Id);
+        }
+
 
     }
 }
