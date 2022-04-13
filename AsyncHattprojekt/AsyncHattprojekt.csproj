@@ -70,6 +70,12 @@
     <Compile Include="CreateInvoiceFromSupplier.Designer.cs">
       <DependentUpon>CreateInvoiceFromSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="SkapaAnvändare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkapaAnvändare.Designer.cs">
+      <DependentUpon>SkapaAnvändare.cs</DependentUpon>
+     </Compile>
     <Compile Include="TaxesSummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkapaAnvändare.resx">
+      <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaxesSummary.resx">
       <DependentUpon>TaxesSummary.cs</DependentUpon>
