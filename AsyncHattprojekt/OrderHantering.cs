@@ -23,6 +23,12 @@ namespace AsyncHattprojekt
             var order = controller.getOrderOnId(Id);
 
             var customer = order.Customer;
+            var address = customer.Address;
+            lblName.Text = customer.DisplayName;
+            lblPhone.Text = customer.Phone;
+            lblAddress.Text = address.StreetName;
+            lblTownPost.Text = address.PostalCode + " " + address.TownName;
+            richTxtBoxComment.Text = order.Comment;
         }
 
         private void lblMail_Click(object sender, EventArgs e)
