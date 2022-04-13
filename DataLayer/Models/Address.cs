@@ -13,6 +13,7 @@ namespace DataLayer.Models
         public string StreetNumber { get; set; }
         public string TownName { get; set; }
         public string PostalCode { get; set; }
+        public virtual Customer Customer { get; set; }  
 
     }
 }

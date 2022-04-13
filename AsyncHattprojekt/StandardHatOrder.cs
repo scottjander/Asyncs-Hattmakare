@@ -24,7 +24,7 @@ namespace AsyncHattprojekt
         public StandardHatOrder(int orderID)
         {
             InitializeComponent();
-            testklassen.testmetoden3();
+            //testklassen.testmetoden3();
             FillListView();
             this.orderID = orderID;
         }
@@ -36,8 +36,10 @@ namespace AsyncHattprojekt
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            var hat = new Hat();
             standardHatController.OrderStandardHat(orderID, hatID);
+            this.Close();
+            OrderForm orderform = new OrderForm(orderID);
+            orderform.Show();
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)
