@@ -26,6 +26,17 @@ namespace BusinessLayer.Controllers
             return repository.getallcustomers();
         }
 
+        public Order getOrderOnId(int Id)
+        {
+            return repository.GetOrderOnId(Id);
+        }
+
+        public void EditOrderStatus(Order order, OrderStatus orderStatus)
+        {
+            order.OrderStatus = orderStatus;
+            repository.EditOrder(order);
+        }
+
 
     }
 }

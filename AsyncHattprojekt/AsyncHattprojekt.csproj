@@ -64,6 +64,19 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FraktsedelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FraktsedelForm.Designer.cs">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHantering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderHantering.Designer.cs">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
+      </Compile>
+
     <Compile Include="CreateInvoiceFromSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +142,6 @@
     <Compile Include="SpecialHatForm.Designer.cs">
       <DependentUpon>SpecialHatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShippingLabelForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="StartPage.Designer.cs">
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
@@ -147,6 +157,9 @@
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FraktsedelForm.resx">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+      </EmbeddedResource>
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderHantering.resx">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialHatForm.resx">
       <DependentUpon>SpecialHatForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShippingLabelForm.resx">
-      <DependentUpon>ShippingLabelForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
