@@ -35,6 +35,7 @@
             this.btnLoggaUt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNamn = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSeKundRegister
@@ -108,11 +109,22 @@
             this.lblNamn.Text = "Namn!";
             this.lblNamn.Click += new System.EventHandler(this.lblNamn_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(841, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(236, 85);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Momssammanställning";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1541, 766);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblNamn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoggaUt);
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Button btnLoggaUt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNamn;
+        private System.Windows.Forms.Button button1;
     }
 }

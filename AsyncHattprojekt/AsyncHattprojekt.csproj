@@ -64,6 +64,12 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaxesSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxesSummary.Designer.cs">
+      <DependentUpon>TaxesSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandardHatOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxesSummary.resx">
+      <DependentUpon>TaxesSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FärdigFaktura.resx">
       <DependentUpon>FärdigFaktura.cs</DependentUpon>

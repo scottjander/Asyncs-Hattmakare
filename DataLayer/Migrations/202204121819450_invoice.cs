@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class test : DbMigration
+    public partial class invoice : DbMigration
     {
         public override void Up()
         {
@@ -89,7 +89,7 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.IncomingInvoices",
+                "dbo.InvoiceFromSuppliers",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -105,6 +105,7 @@
                         Id = c.Int(nullable: false, identity: true),
                         SumToPay = c.Double(nullable: false),
                         IsPaid = c.Boolean(nullable: false),
+                        DateCreated = c.DateTime(nullable: false),
                         InvoiceAddress_Id = c.Int(),
                         Order_Id = c.Int(),
                     })
@@ -164,7 +165,7 @@
             DropTable("dbo.SpecialHats");
             DropTable("dbo.ShippingLabels");
             DropTable("dbo.Invoices");
-            DropTable("dbo.IncomingInvoices");
+            DropTable("dbo.InvoiceFromSuppliers");
             DropTable("dbo.Fabrics");
             DropTable("dbo.Employees");
             DropTable("dbo.Hats");

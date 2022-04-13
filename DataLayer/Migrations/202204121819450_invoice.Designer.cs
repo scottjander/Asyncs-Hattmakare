@@ -7,13 +7,13 @@ namespace DataLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class test : IMigrationMetadata
+    public sealed partial class invoice : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(invoice));
         
         string IMigrationMetadata.Id
         {
-            get { return "202204121003127_test"; }
+            get { return "202204121819450_invoice"; }
         }
         
         string IMigrationMetadata.Source

@@ -21,6 +21,7 @@ namespace AsyncHattprojekt
             InitializeComponent();
             //var testklassen = new Testklassen();
             //testklassen.FillHat();
+            //testklassen.FillInvoices();
             lblNamn.Text = InitialPage.username;
         }
 
@@ -75,6 +76,12 @@ namespace AsyncHattprojekt
         private void lblNamn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TaxesSummary taxesSummary = new TaxesSummary();
+            taxesSummary.Show();
         }
     }
 }
