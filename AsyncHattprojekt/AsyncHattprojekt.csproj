@@ -82,6 +82,12 @@
     <Compile Include="ListOfStartedOrders.Designer.cs">
       <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderLists.Designer.cs">
+      <DependentUpon>OrderLists.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaxesSummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListOfStartedOrders.resx">
       <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderLists.resx">
+      <DependentUpon>OrderLists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaxesSummary.resx">
       <DependentUpon>TaxesSummary.cs</DependentUpon>

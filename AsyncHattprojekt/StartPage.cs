@@ -39,7 +39,7 @@ namespace AsyncHattprojekt
         private void btnSeOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ListOfCreatedOrders f = new ListOfCreatedOrders();
+            OrderLists f = new OrderLists();
             f.ShowDialog();
             f = null;
             this.Show();

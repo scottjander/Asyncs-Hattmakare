@@ -49,15 +49,34 @@ namespace BusinessLayer.Controllers
         public List<Order> GetCreatedOrders()
         {
             var returnCreatedOrders = new List<Order>();
-            foreach (var o in repository.GetAllOrders())
+            foreach (var o in repository.GetAllCreatedOrders())
             {
-              /*  if(o.OrderStatus == 0)
-                {
-                    continue;
-                } */
                 returnCreatedOrders.Add(o);
             }
             return returnCreatedOrders;
         }
+
+        public List<Order> GetStartedOrders()
+        {
+            var returnCreatedOrders = new List<Order>();
+            foreach (var o in repository.GetAllStartedOrders())
+            {
+                returnCreatedOrders.Add(o);
+            }
+            return returnCreatedOrders;
+        }
+
+        public List<Order> GetFinishedOrders()
+        {
+            var returnCreatedOrders = new List<Order>();
+            foreach (var o in repository.GetAllFinishedOrders())
+            {
+                returnCreatedOrders.Add(o);
+            }
+            return returnCreatedOrders;
+        }
+
+
+
     }
 }

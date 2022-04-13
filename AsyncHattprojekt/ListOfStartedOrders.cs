@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer.Controllers;
+using DataLayer;
+using DataLayer.Models;
 
 namespace AsyncHattprojekt
 {
     public partial class ListOfStartedOrders : Form
     {
+        public HatDbContext HatDbContext = new HatDbContext();
+        public OrderControllerScottRobin orderControllerScottRobin = new OrderControllerScottRobin();
         public ListOfStartedOrders()
         {
             InitializeComponent();
+            FillStartedOrders();
         }
 
         private void ListOfStartedOrders_Load(object sender, EventArgs e)
@@ -34,7 +40,21 @@ namespace AsyncHattprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void FillStartedOrders()
+        {
+            listView1.Items.Clear();
+            foreach (Order orders in orderControllerScottRobin.GetStartedOrders()) {
+                ListViewItem lvi = new ListViewItem(orders.Id.ToString());
+                lvi.SubItems.Add(orders.TotalPrice.ToString());
+                lvi.SubItems.Add(orders.Customer.FirstName.ToString() + " " + orders.Customer.LastName.ToString());
+                lvi.SubItems.Add(orders.StartDate.ToString());
+                lvi.SubItems.Add(orders.Comment.ToString());
+
+                listView1.Items.Add(lvi);
+            }
         }
     }
 }

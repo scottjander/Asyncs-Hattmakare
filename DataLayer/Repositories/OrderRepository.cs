@@ -47,11 +47,24 @@ namespace DataLayer
             return _context;
         }
 
-        public List<Order> GetAllOrders()
+        public List<Order> GetAllCreatedOrders()
         {
-            var query = from Orders in _context.Orders select Orders;
+             var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Created select Orders;
+             return query.ToList();
+        }
+
+        public List<Order> GetAllStartedOrders()
+        {
+             var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Started select Orders;
+             return query.ToList();
+        }
+
+        public List<Order> GetAllFinishedOrders()
+        {
+            var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Finished select Orders;
             return query.ToList();
         }
+
 
     }
 }
