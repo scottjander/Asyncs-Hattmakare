@@ -46,5 +46,12 @@ namespace DataLayer
         {
             return _context;
         }
+
+        public List<Order> GetAllOrders()
+        {
+            var query = from Order in _context.Orders select Order;
+            return query.ToList();
+        }
+
     }
 }
