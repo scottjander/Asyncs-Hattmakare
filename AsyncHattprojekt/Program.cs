@@ -16,7 +16,7 @@ namespace AsyncHattprojekt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderHantering(1));
+            Application.Run(new InitialPage());
         }
     }
 }
