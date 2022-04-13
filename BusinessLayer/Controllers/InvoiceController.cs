@@ -21,5 +21,11 @@ namespace BusinessLayer.Controllers
         {
             return invoiceRepository.GetAllInvoicesFromSuppliers();
         }
+
+        public void CreateInvoiceFromSuppplier(DateTime dateTime, double sum)
+        {
+            invoiceRepository.CreateInvoiceFromSupplierSupplier(dateTime, sum);
+        }
     }
+
 }
