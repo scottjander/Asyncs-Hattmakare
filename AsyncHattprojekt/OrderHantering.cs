@@ -16,13 +16,14 @@ namespace AsyncHattprojekt
     {
         private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
         private Order order;
+        private Customer customer;
         public OrderHantering(int Id)
         {
             InitializeComponent();
             cbStatusEnum.DataSource = Enum.GetValues(typeof(OrderStatus));
             order = controller.getOrderOnId(Id);
+            customer = order.Customer;
 
-            var customer = order.Customer;
             var address = customer.Address;
             lblName.Text = customer.DisplayName;
             lblPhone.Text = customer.Phone;
@@ -52,7 +53,10 @@ namespace AsyncHattprojekt
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            FraktsedelForm f = new FraktsedelForm(customer, customer.Address);
+            f.ShowDialog();
+            f = null;
+            this.Show();
         }
     }
 }

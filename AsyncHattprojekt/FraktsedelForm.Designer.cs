@@ -33,6 +33,7 @@ namespace AsyncHattprojekt
             this.lblTown = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@ namespace AsyncHattprojekt
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(608, 366);
+            this.lblDate.Location = new System.Drawing.Point(484, 646);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(82, 29);
             this.lblDate.TabIndex = 3;
@@ -78,17 +79,29 @@ namespace AsyncHattprojekt
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(28, 398);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 692);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(774, 179);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(679, 1093);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(116, 43);
+            this.btnPrint.TabIndex = 5;
+            this.btnPrint.Text = "Skriv ut";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
+            // 
             // FraktsedelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 747);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(819, 1148);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTown);
@@ -109,5 +122,6 @@ namespace AsyncHattprojekt
         private System.Windows.Forms.Label lblTown;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
