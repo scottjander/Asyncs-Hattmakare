@@ -26,5 +26,14 @@ namespace DataLayer.Repositories
             return _context.InvoiceFromSuppliers.ToList();
         }
 
+        public void CreateInvoiceFromSupplierSupplier(DateTime date, double sum)
+        {
+            var invoice = new InvoiceFromSupplier() { DateCreated = date, SumToPay = sum };
+
+            _context.InvoiceFromSuppliers.Add(invoice);
+
+            _context.SaveChanges();
+        }
+
     }
 }
