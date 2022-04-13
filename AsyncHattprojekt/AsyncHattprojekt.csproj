@@ -64,6 +64,12 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderHantering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderHantering.Designer.cs">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandardHatOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderHantering.resx">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
