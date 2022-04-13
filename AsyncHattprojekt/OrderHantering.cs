@@ -26,6 +26,7 @@ namespace AsyncHattprojekt
             var address = customer.Address;
             lblName.Text = customer.DisplayName;
             lblPhone.Text = customer.Phone;
+            lblMail.Text = customer.Email;
             lblAddress.Text = address.StreetName;
             lblTownPost.Text = address.PostalCode + " " + address.TownName;
             richTxtBoxComment.Text = order.Comment;
