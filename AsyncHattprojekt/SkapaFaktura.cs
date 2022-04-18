@@ -26,6 +26,15 @@ namespace AsyncHattprojekt
             fakturaController = new FakturaController();
         }
 
+        public SkapaFaktura(Customer customer, Order order)
+        {
+            InitializeComponent();
+            kundController = new KundController();
+            orderController = new OrderController();
+            fakturaController = new FakturaController();
+            FillInvoice(customer, order);
+        }
+
         private void btnSkapaFaktura_Click(object sender, EventArgs e)
         {
             using (var context = new HatDbContext())
@@ -101,6 +110,16 @@ namespace AsyncHattprojekt
             f.ShowDialog();
             f = null;
             this.Show();
+        }
+
+        private void FillInvoice(Customer customer, Order order)
+        {
+            tbOrderID.Text = order.Id.ToString();
+            tbForNamn.Text = customer.FirstName;
+            tbEfterNamn.Text = customer.LastName;
+            tbFaktureringsadress.Text = customer.Address.TownName + ", " + customer.Address.StreetName + " " +
+                                        customer.Address.StreetNumber;
+            tbSummaAttBetala.Text = order.TotalPrice.ToString();
         }
     }
 }
