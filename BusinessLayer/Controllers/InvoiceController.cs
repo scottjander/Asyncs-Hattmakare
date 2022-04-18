@@ -26,6 +26,18 @@ namespace BusinessLayer.Controllers
         {
             invoiceRepository.CreateInvoiceFromSupplierSupplier(dateTime, sum);
         }
+
+        public List<int> GetFiveLatestYears()
+        {
+            List<int> returnList = new List<int>();
+            int currentYear = DateTime.Now.Year;
+            for (int i = currentYear; i >= currentYear - 5; i--)
+            {
+                returnList.Add(i);
+            }
+            return returnList;
+
+        }
     }
 
 }

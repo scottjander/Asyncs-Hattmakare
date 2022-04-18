@@ -44,6 +44,8 @@ namespace AsyncHattprojekt
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxTaxAmountOut = new System.Windows.Forms.TextBox();
             this.txtBoxTaxAmountIn = new System.Windows.Forms.TextBox();
+            this.cbYears = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -182,11 +184,31 @@ namespace AsyncHattprojekt
             this.txtBoxTaxAmountIn.Size = new System.Drawing.Size(70, 20);
             this.txtBoxTaxAmountIn.TabIndex = 11;
             // 
+            // cbYears
+            // 
+            this.cbYears.FormattingEnabled = true;
+            this.cbYears.Location = new System.Drawing.Point(413, 32);
+            this.cbYears.Name = "cbYears";
+            this.cbYears.Size = new System.Drawing.Size(121, 21);
+            this.cbYears.TabIndex = 12;
+            this.cbYears.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(341, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Filter by year";
+            // 
             // TaxesSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 499);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbYears);
             this.Controls.Add(this.txtBoxTaxAmountIn);
             this.Controls.Add(this.txtBoxTaxAmountOut);
             this.Controls.Add(this.label6);
@@ -224,5 +246,7 @@ namespace AsyncHattprojekt
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxTaxAmountOut;
         private System.Windows.Forms.TextBox txtBoxTaxAmountIn;
+        private System.Windows.Forms.ComboBox cbYears;
+        private System.Windows.Forms.Label label7;
     }
 }
