@@ -54,6 +54,12 @@ namespace DataLayer
             _context.SaveChanges();
         }
 
+        public void ApplyDiscount(Order order, double newPrice)
+        {
+            order.TotalPrice = newPrice;
+            _context.SaveChanges();
+        }
+
 
     }
 }

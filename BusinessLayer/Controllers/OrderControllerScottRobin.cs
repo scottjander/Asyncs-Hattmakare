@@ -40,6 +40,28 @@ namespace BusinessLayer.Controllers
             repository.EditOrder(order);
         }
 
+        public double GetDiscount(int customerPoints)
+        {
+            switch (customerPoints)
+            {
+                case 0:
+                    return 1;
+                case 1:
+                    return 0.95;
+                case 2:
+                    return 0.9;
+                case 3: return 0.85;
+                case 4: return 0.8;
+                case 5: return 0.75;
+                default: return 1;
+            }
+        }
+
+        public void ApplyDiscount(Order order, double newPrice)
+        {
+            repository.ApplyDiscount(order, newPrice);
+        }
+
 
     }
 }
