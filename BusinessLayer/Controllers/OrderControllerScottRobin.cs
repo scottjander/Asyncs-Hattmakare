@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
 using DataLayer.Models;
+using DataLayer.Repositories;
 
 namespace BusinessLayer.Controllers
 {
     public class OrderControllerScottRobin
     {
         private readonly OrderRepository repository = new OrderRepository();
+        private readonly KundController customerController = new KundController();
         public int CreateOrder(string comment, Customer customer)
         {
             var order = new Order()
@@ -19,6 +21,7 @@ namespace BusinessLayer.Controllers
                 DateFinished = DateTime.Now.AddDays(21), OrderStatus = 0, TotalPrice = 0
             };
             repository.SaveOrder(order);
+            customerController.UpdateCustomerPoints(customer.Id);
             return repository.GetLatestOrderId();
         }
         public List<Customer> GetAllCustomers()
