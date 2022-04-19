@@ -64,14 +64,18 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="CustomerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRegisterForm.Designer.cs">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialVy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MaterialVy.Designer.cs">
       <DependentUpon>MaterialVy.cs</DependentUpon>
     </Compile>
-
     <Compile Include="FraktsedelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +87,7 @@
     </Compile>
     <Compile Include="OrderHantering.Designer.cs">
       <DependentUpon>OrderHantering.cs</DependentUpon>
-      </Compile>
-
+    </Compile>
     <Compile Include="CreateInvoiceFromSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,7 +168,12 @@
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
-
+    <EmbeddedResource Include="CustomerRegisterForm.resx">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FraktsedelForm.resx">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MaterialVy.resx">
       <DependentUpon>MaterialVy.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,7 +181,6 @@
     <EmbeddedResource Include="FraktsedelForm.resx">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
       </EmbeddedResource>
-
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>

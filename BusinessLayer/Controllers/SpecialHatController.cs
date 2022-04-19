@@ -1,5 +1,6 @@
 ﻿using DataLayer.Models;
 using DataLayer.Models.Enums;
+using DataLayer.Repositories;
 using DataLayer.Repository;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,14 @@ namespace BusinessLayer.Controllers
 {
     public class SpecialHatController
     {
+        private HatRepository HatRepository;
         private SpecialHatRepository SpecialHatRepository;
         private FabricRepository FabricRepository;
         public SpecialHatController()
         {
             SpecialHatRepository = new SpecialHatRepository();
             FabricRepository = new FabricRepository();
+            HatRepository = new HatRepository();
         }
 
         public void AddSpecialHat(string name, Fabric fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
@@ -60,5 +63,15 @@ namespace BusinessLayer.Controllers
         {
             return FabricRepository.GetFabricOnId(id);
         }
+        public List<SpecialHat> GetSpecialHatsOnOrderId(int id)
+        {
+            return SpecialHatRepository.GetHatsOnOrderId(id);
+        }
+
+        public List<Hat> GetHatsOnOrderId(int id)
+        {
+            return HatRepository.GetHatsOnOrderId(id);
+        }
+
     }
 }

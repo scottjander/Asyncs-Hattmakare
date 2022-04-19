@@ -43,6 +43,11 @@ namespace DataLayer.Repository
                 true);
             return folderPath + "\\" + fileName;
         }
+        public List<SpecialHat> GetHatsOnOrderId(int id)
+        {
+            var listOfHats = from hat in _context.SpecialHats where hat.Order.Id == id select hat;
+            return listOfHats.ToList();
+        }
 
     }
 
