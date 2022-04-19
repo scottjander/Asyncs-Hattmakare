@@ -22,8 +22,17 @@ namespace BusinessLayer.Controllers
 
         }
 
-
-
+        public void IncreaseAmountInStorage(double amountToIncrease, int fabricid)
+        {
+            FabricRepository.IncreaseAmountInStorage(amountToIncrease, fabricid);
+        }
+        
+        public Fabric GetFabricOnId(int id)
+        {
+            var fabric = FabricRepository.GetFabricOnId(id);
+            return fabric;
+            
+        }
 
     }
 }

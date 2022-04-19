@@ -40,12 +40,11 @@ namespace AsyncHattprojekt
 
         private void btnSkapaAnvändare_Click(object sender, EventArgs e)
         {
-            //SkapaAnvändare f = new SkapaAnvändare();
-            MaterialVy f = new MaterialVy();
+            SkapaAnvändare f = new SkapaAnvändare();
             f.ShowDialog();
             f = null;
-            //cbVäljAnvändare.Items.Clear();
-            //cbVäljAnvändare_fyllcbx();
+            cbVäljAnvändare.Items.Clear();
+            cbVäljAnvändare_fyllcbx();
         }
 
         private void btnLoggaIn_Click_1(object sender, EventArgs e)
