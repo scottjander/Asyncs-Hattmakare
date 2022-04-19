@@ -40,7 +40,7 @@ namespace DataLayer.Repositories
             return _context.Hats.ToList();
         }
 
-        public List<Hat> GetAllAvalibleHats()
+        public List<Hat> GetAllAvailableHats()
         {
             var query = from Hat in _context.Hats where Hat.order == null select Hat;
             return query.ToList();

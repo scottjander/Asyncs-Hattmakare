@@ -47,7 +47,7 @@ namespace BusinessLayer
             var returnList = new List<Hat>();
             var forbiddenListSize = new List<int>();
             var forbiddenListColor = new List<string>();
-            foreach (var hat in HatRepository.GetAllAvalibleHats())
+            foreach (var hat in HatRepository.GetAllAvailableHats())
             {
                 if (forbiddenListSize.Contains(hat.size) && forbiddenListColor.Contains(hat.color))
                 {
@@ -60,5 +60,19 @@ namespace BusinessLayer
             return returnList;
 
         }
+
+        public int GetSizeOfHats(int size)
+        {
+            int count=0;
+            foreach (var hat in HatRepository.GetAllAvailableHats())
+            {
+                if (hat.size == size)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
     }
 }
