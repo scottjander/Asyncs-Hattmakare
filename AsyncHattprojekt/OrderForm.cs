@@ -16,6 +16,7 @@ namespace AsyncHattprojekt
     public partial class OrderForm : Form
     {
         private OrderRepository orderRepository = new OrderRepository();
+        private OrderControllerScottRobin orderController = new OrderControllerScottRobin();
         private int orderID;
         public OrderForm(int orderId)
         {
@@ -26,8 +27,13 @@ namespace AsyncHattprojekt
 
         public void UpdatePrice()
         {
-            var currentOrder = orderRepository.GetOrderOnId(orderID);
+            var currentOrder = orderController.getOrderOnId(orderID);
             lblTotalPrice.Text = currentOrder.TotalPrice.ToString() + ":-" ?? "0.00:-";
+            var customerPoints = currentOrder.Customer.CustomerBonusPoints;
+            var discount = orderController.GetDiscount(customerPoints);
+            lblSuggestedDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString() + ":-";
+            txtBoxDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString();
+
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -51,6 +57,19 @@ namespace AsyncHattprojekt
         private void lblTotalPrice_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCreateInvoice_Click(object sender, EventArgs e)
+        {
+            var currentOrder = orderController.getOrderOnId(orderID);
+            var customer = currentOrder.Customer;
+            var discount = Convert.ToDouble(txtBoxDiscount.Text);
+            double finalPrice = currentOrder.TotalPrice - discount;
+            orderController.ApplyDiscount(currentOrder, finalPrice);
+            this.Hide();
+            SkapaFaktura invoice = new SkapaFaktura(customer, currentOrder);
+            invoice.ShowDialog();
+            this.Show();
         }
 
 

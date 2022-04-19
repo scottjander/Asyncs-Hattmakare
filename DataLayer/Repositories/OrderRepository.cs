@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,5 +47,19 @@ namespace DataLayer
         {
             return _context;
         }
+
+        public void EditOrder(Order order)
+        {
+            _context.Orders.AddOrUpdate(order);
+            _context.SaveChanges();
+        }
+
+        public void ApplyDiscount(Order order, double newPrice)
+        {
+            order.TotalPrice = newPrice;
+            _context.SaveChanges();
+        }
+
+
     }
 }

@@ -18,15 +18,22 @@ namespace AsyncHattprojekt
         public TaxesSummary()
         {
             InitializeComponent();
-            FillInvoicesFromSuppliers();
-            FillInvoies();
+            FillAvalibleYears();
+            FillInvoicesFromSuppliers(cbYears.Text);
+            FillInvoies(cbYears.Text);
+            
         }
 
-        public void FillInvoies()
+        public void FillInvoies(string filteredYear)
         {
             listView1.Items.Clear();
+            int selectedYear = Convert.ToInt32(filteredYear);
             double totalAmount = 0;
             foreach (Invoice invoice in invoiceController.GetAllInvoices()) {
+                if (invoice.DateCreated.Year != selectedYear) {
+                    continue;
+                }
+
                 totalAmount += invoice.SumToPay;
                 ListViewItem lvi = new ListViewItem(invoice.DateCreated.ToString());
                 lvi.SubItems.Add(invoice.SumToPay.ToString());
@@ -36,11 +43,15 @@ namespace AsyncHattprojekt
             txtBoxTaxAmountOut.Text = (totalAmount * 0.25).ToString() + "kr";
 
         }
-        public void FillInvoicesFromSuppliers()
+        public void FillInvoicesFromSuppliers(string filteredYear)
         {
-            listView1.Items.Clear();
+            listView2.Items.Clear();
+            int selectedYear = Convert.ToInt32(filteredYear);
             double totalAmount = 0;
             foreach (InvoiceFromSupplier invoice in invoiceController.GetAllInvoicesFromSuppliers()) {
+                if (invoice.DateCreated.Year != selectedYear) {
+                    continue;
+                }
                 totalAmount += invoice.SumToPay;
                 ListViewItem lvi = new ListViewItem(invoice.DateCreated.ToString());
                 lvi.SubItems.Add(invoice.SumToPay.ToString());
@@ -51,6 +62,11 @@ namespace AsyncHattprojekt
 
         }
 
+        public void FillAvalibleYears()
+        {
+            cbYears.DataSource = invoiceController.GetFiveLatestYears();
+        }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -59,6 +75,12 @@ namespace AsyncHattprojekt
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillInvoicesFromSuppliers(cbYears.Text);
+            FillInvoies(cbYears.Text);
         }
     }
 }
