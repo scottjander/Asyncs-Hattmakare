@@ -177,10 +177,6 @@
     <EmbeddedResource Include="MaterialVy.resx">
       <DependentUpon>MaterialVy.cs</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="FraktsedelForm.resx">
-      <DependentUpon>FraktsedelForm.cs</DependentUpon>
-      </EmbeddedResource>
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>
