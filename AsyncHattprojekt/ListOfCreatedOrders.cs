@@ -48,5 +48,17 @@ namespace AsyncHattprojekt
                 listView1.Items.Add(lvi);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0) {
+                var item = listView1.SelectedItems[0];
+                this.Hide();
+                // ListOfStartedOrders f = new ListOfStartedOrders();
+                // f.ShowDialog();
+                // f = null;
+                this.Show();
+            }
+        }
     }
 }
