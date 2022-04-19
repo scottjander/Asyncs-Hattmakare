@@ -20,15 +20,15 @@ namespace DataLayer.Repository
 
             return _context.Fabrics.ToList();
         }
-
         public void DecreaseAmountInStorage(double amountToDecrease, Fabric fabric)
         {
             fabric.AmountInStock -= amountToDecrease;
             _context.SaveChanges();
         }
-        public void IncreaseAmountInStorage(double amountToIncrease, Fabric fabric)
+        public void IncreaseAmountInStorage(double amountToIncrease, int fabricid)
         {
-            fabric.AmountInStock += -amountToIncrease;
+            var currentFabric = GetFabricOnId(fabricid);
+            currentFabric.AmountInStock += amountToIncrease;
             _context.SaveChanges();
         }
 

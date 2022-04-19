@@ -70,6 +70,12 @@
     <Compile Include="CustomerRegisterForm.Designer.cs">
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaterialVy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialVy.Designer.cs">
+      <DependentUpon>MaterialVy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FraktsedelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,13 @@
     <EmbeddedResource Include="FraktsedelForm.resx">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MaterialVy.resx">
+      <DependentUpon>MaterialVy.cs</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="FraktsedelForm.resx">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+      </EmbeddedResource>
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>
