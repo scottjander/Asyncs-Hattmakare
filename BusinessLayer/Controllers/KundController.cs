@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataLayer.Models;
 using DataLayer.Repositories;
 
 namespace BusinessLayer.Controllers
@@ -54,7 +55,10 @@ namespace BusinessLayer.Controllers
 
         }
 
-
+        public List<Customer> GetAllCustomers()
+        {
+            return CustomerRepository.GetAllCustomers();
+        }
 
     }
 }

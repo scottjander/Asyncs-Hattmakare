@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer.Controllers;
 using DataLayer.Models;
+using DataLayer.Repositories;
+using DataLayer.Repository;
 
 namespace AsyncHattprojekt
 {
     public partial class OrderHantering : Form
     {
+        private readonly SpecialHatController hatController = new SpecialHatController();
         private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
         private Order order;
         private Customer customer;
@@ -32,6 +35,20 @@ namespace AsyncHattprojekt
             lblTownPost.Text = address.PostalCode + " " + address.TownName;
             richTxtBoxComment.Text = order.Comment;
             cbStatusEnum.SelectedItem = order.OrderStatus;
+
+            //Det här går säkert att bryta ut i controllern för att göra det snyggare.
+            var specialhattar = hatController.GetSpecialHatsOnOrderId(Id);
+            foreach (var hat in specialhattar) {
+                ListViewItem specialhatToAdd = new ListViewItem(hat.Name, 0);
+                specialhatToAdd.SubItems.Add(hat.Price.ToString());
+                listViewHat.Items.Add(specialhatToAdd);
+            }
+            var hattar = hatController.GetHatsOnOrderId(Id);
+            foreach (var hat in hattar) {
+                ListViewItem hatToAdd = new ListViewItem(hat.itemName, 0);
+                hatToAdd.SubItems.Add(hat.Price.ToString());
+                listViewHat.Items.Add(hatToAdd);
+            }
         }
 
         private void lblMail_Click(object sender, EventArgs e)

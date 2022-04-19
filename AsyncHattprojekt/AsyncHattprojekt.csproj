@@ -64,6 +64,12 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRegisterForm.Designer.cs">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FraktsedelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,8 +81,7 @@
     </Compile>
     <Compile Include="OrderHantering.Designer.cs">
       <DependentUpon>OrderHantering.cs</DependentUpon>
-      </Compile>
-
+    </Compile>
     <Compile Include="CreateInvoiceFromSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,7 +93,7 @@
     </Compile>
     <Compile Include="SkapaAnvändare.Designer.cs">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
-     </Compile>
+    </Compile>
     <Compile Include="TaxesSummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +162,12 @@
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRegisterForm.resx">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FraktsedelForm.resx">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
     </EmbeddedResource>

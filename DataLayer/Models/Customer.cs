@@ -22,6 +22,6 @@ namespace DataLayer.Models
 
         public virtual ICollection<Order> Order { get; set; }
       
-        public string DisplayName => FirstName + " fult fult " + LastName;
+        public string DisplayName => FirstName + LastName;
     }
 }
