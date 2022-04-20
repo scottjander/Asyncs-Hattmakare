@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,18 @@ namespace DataLayer
         {
             var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Finished select Orders;
             return query.ToList();
+        }
+        public void EditOrder(Order order)
+        {
+            _context.Orders.AddOrUpdate(order);
+            _context.SaveChanges();
+        }
+
+        public void ApplyDiscount(Order order, double newPrice)
+        {
+            order.TotalPrice = newPrice;
+            _context.SaveChanges();
+
         }
 
 
