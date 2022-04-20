@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Controllers\FabricStockController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\Serializer.cs" />
     <Compile Include="CustomerController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StandardHatController.cs" />
