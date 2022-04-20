@@ -44,8 +44,20 @@ namespace DataLayer.Repositories
         {
             var query = from Hat in _context.Hats where Hat.order == null select Hat;
             return query.ToList();
-
         }
+
+        public List<string> GetAllAvailableColors()
+        {
+            var query = from Hat in _context.Hats select Hat.color;
+            return query.ToList();
+        }
+
+        public List<int> GetAllAvailableSizes()
+        {
+            var query = from Hat in _context.Hats select Hat.size;
+            return query.ToList();
+        }
+
         public Hat GetHatOnID(int ID)
         {
             return _context.Hats.FirstOrDefault(hat => hat.Id == ID);

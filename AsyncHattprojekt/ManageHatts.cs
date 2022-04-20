@@ -20,27 +20,30 @@ namespace AsyncHattprojekt
         public ManageHatts()
         {
             InitializeComponent();
-            Testklassen testklassen = new Testklassen();
-            testklassen.FillHat();
             ShowHatStock();
+            FillCmbBoxColors();
+            FillComboBoxSize();
+        }
+
+        public void FillComboBoxSize()
+        {
+            cmbBoxSize.DataSource = standardHatController.GetUniqueSizes();
+        }
+        public void FillCmbBoxColors()
+        {
+            cmbBoxColor.DataSource = standardHatController.GetUniqueColors();
         }
 
         private void ShowHatStock()
         {
-            int size = (int) HatSize.S52;
-            lbl52Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
+            int size = (int) HatSize.S54;
+            lblSizeAmount.Text = standardHatController.GetSizeOfHats(size).ToString();
             size = (int) HatSize.S54;
-            lbl54Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int) HatSize.S56;
-            lbl56Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int) HatSize.S58;
-            lbl58Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int)HatSize.S60;
-            lbl60Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int)HatSize.S62;
-            lbl62Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int)HatSize.S64;
-            lbl64Amount.Text = standardHatController.GetSizeOfHats(size).ToString();
+        }
+
+        private void btnRemove52_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

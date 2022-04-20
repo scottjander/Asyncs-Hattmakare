@@ -74,5 +74,29 @@ namespace BusinessLayer
             return count;
         }
 
+        public List<string> GetUniqueColors()
+        {
+            var returnList=new List<string>();
+            foreach (var color in HatRepository.GetAllAvailableColors())
+            {
+                if (returnList.Contains(color)) continue;
+                returnList.Add(color);
+            }
+
+            return returnList;
+        }
+
+        public List<int> GetUniqueSizes()
+        {
+            var returnList = new List<int>();
+            foreach (var size in HatRepository.GetAllAvailableSizes())
+            {
+                if (returnList.Contains(size)) continue;
+                returnList.Add(size);
+            }
+
+            return returnList;
+        }
+
     }
 }
