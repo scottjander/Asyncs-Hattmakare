@@ -14,6 +14,7 @@ namespace DataLayer.Models
         public DateTime DateFinished { get; set; }
         public string Comment { get; set; }
         public double TotalPrice { get; set; }
+        public string SkapareAvOrder { get; set; }
         public ICollection<Hat> Hats { get; set; }
         [Required]
         public virtual Customer Customer { get; set; }
