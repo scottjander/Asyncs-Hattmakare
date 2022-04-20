@@ -13,12 +13,13 @@ namespace BusinessLayer.Controllers
     {
         private readonly OrderRepository repository = new OrderRepository();
         private readonly KundController customerController = new KundController();
-        public int CreateOrder(string comment, Customer customer)
+        public int CreateOrder(string comment,Customer customer, string skapare)
         {
             var order = new Order()
-            {
+            {             
                 Comment = comment, Customer = customer, StartDate = DateTime.Now,
-                DateFinished = DateTime.Now.AddDays(21), OrderStatus = 0, TotalPrice = 0
+                DateFinished = DateTime.Now.AddDays(21), OrderStatus = 0, TotalPrice = 0,
+                SkapareAvOrder = skapare
             };
             repository.SaveOrder(order);
             customerController.UpdateCustomerPoints(customer.Id);

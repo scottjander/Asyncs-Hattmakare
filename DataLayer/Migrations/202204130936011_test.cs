@@ -46,7 +46,8 @@
                         TotalPrice = c.Double(nullable: false),
                         OrderStatus = c.Int(nullable: false),
                         Customer_Id = c.Int(nullable: false),
-                    })
+                        SkapareAvOrder = c.String(),
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Customers", t => t.Customer_Id, cascadeDelete: true)
                 .Index(t => t.Customer_Id);
