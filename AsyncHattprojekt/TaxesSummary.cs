@@ -86,7 +86,9 @@ namespace AsyncHattprojekt
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-           _serializer.SerializeTaxes();
+
+            int year = Int32.Parse(cbYears.SelectedItem.ToString());
+           _serializer.SerializeTaxes(year);
             
 
 

@@ -14,10 +14,10 @@ namespace BusinessLayer.Controllers
     {
         private readonly HatDbContext _context = new HatDbContext();
         private readonly InvoiceController _invoices = new InvoiceController();
-        public void SerializeTaxes()
+        public void SerializeTaxes(int year)
         {
-            var invoices = _invoices.GetAllInvoices();
-            var invoicesToPayArray = _invoices.GetAllInvoicesFromSuppliers();
+            var invoices = _invoices.GetAllInvoices().Where(x=> x.DateCreated.Year == year);
+            var invoicesToPayArray = _invoices.GetAllInvoicesFromSuppliers().Where(x => x.DateCreated.Year == year);
             double totalSummaIn = 0;
             double totalSummaUt = 0;
 
@@ -57,20 +57,13 @@ namespace BusinessLayer.Controllers
             };
              XmlSerializer serializer = new XmlSerializer(typeof(InvoicesToSerializeFinal));
 
-             using (FileStream fs = new FileStream(DateTime.Now.ToString(), FileMode.Create))
+             using (FileStream fs = new FileStream("XMLFiles\\" + DateTime.Now.ToString("mmddyyyyhhmmss"), FileMode.Create))
             {
                 serializer.Serialize(fs, SerializedItem);
                 fs.Close();
             }
             
 
-            //string currentDirectory = Directory.GetCurrentDirectory();
-
-            //string folderPath = currentDirectory.Substring(0, currentDirectory.Length - 26) + "DataLayer\\XMLFiles";
-            //if (!Directory.Exists(folderPath))
-            //{
-            //    Directory.CreateDirectory(folderPath);
-            //}
 
         }
 
