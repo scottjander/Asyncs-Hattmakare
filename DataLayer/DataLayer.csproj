@@ -59,6 +59,7 @@
     <Compile Include="Migrations\202204130936011_test.designer.cs">
       <DependentUpon>202204130936011_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\InvoicesToSerialize.cs" />
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />

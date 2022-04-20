@@ -15,6 +15,7 @@ namespace AsyncHattprojekt
     public partial class TaxesSummary : Form
     {
         private InvoiceController invoiceController = new InvoiceController();
+        private readonly Serializer _serializer = new Serializer();
         public TaxesSummary()
         {
             InitializeComponent();
@@ -81,6 +82,16 @@ namespace AsyncHattprojekt
         {
             FillInvoicesFromSuppliers(cbYears.Text);
             FillInvoies(cbYears.Text);
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+            int year = Int32.Parse(cbYears.SelectedItem.ToString());
+           _serializer.SerializeTaxes(year);
+            
+
+
         }
     }
 }
