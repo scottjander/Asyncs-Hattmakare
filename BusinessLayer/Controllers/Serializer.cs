@@ -57,7 +57,7 @@ namespace BusinessLayer.Controllers
             };
              XmlSerializer serializer = new XmlSerializer(typeof(InvoicesToSerializeFinal));
 
-             using (FileStream fs = new FileStream("DataTestHittaMig.Xml", FileMode.Create))
+             using (FileStream fs = new FileStream(DateTime.Now.ToString(), FileMode.Create))
             {
                 serializer.Serialize(fs, SerializedItem);
                 fs.Close();
