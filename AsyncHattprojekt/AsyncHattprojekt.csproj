@@ -70,6 +70,12 @@
     <Compile Include="CustomerRegisterForm.Designer.cs">
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialVy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="FraktsedelForm.Designer.cs">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUI.Designer.cs">
+      <DependentUpon>NewUI.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderHantering.cs">
       <SubType>Form</SubType>
@@ -174,8 +186,14 @@
     <EmbeddedResource Include="FraktsedelForm.resx">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MaterialVy.resx">
       <DependentUpon>MaterialVy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUI.resx">
+      <DependentUpon>NewUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SkapaAnvändare.resx">
       <DependentUpon>SkapaAnvändare.cs</DependentUpon>
