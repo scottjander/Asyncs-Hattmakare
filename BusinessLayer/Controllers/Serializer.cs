@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,20 +17,26 @@ namespace BusinessLayer.Controllers
         private readonly InvoiceController _invoices = new InvoiceController();
         public void SerializeTaxes(int year)
         {
+
+            //Hämta alla fakturor baserat på årtal valt från comboboxen
             var invoices = _invoices.GetAllInvoices().Where(x=> x.DateCreated.Year == year);
             var invoicesToPayArray = _invoices.GetAllInvoicesFromSuppliers().Where(x => x.DateCreated.Year == year);
             double totalSummaIn = 0;
             double totalSummaUt = 0;
 
-            OrdinaryInvoiceToSerialize[] invoiceArray = new OrdinaryInvoiceToSerialize[invoices.Count()];
-            InvoiceToPayToSerialize[] invoiceToPayArray = new InvoiceToPayToSerialize[invoicesToPayArray.Count()];
+            //Vi kan inte serialisera våra vanliga Invoice-klasser då de har andra objekt refererade i sig, så här skapar vi arrayer med nya modeller
+            InvoiceToSerialize[] invoiceArray = new InvoiceToSerialize[invoices.Count()];
+            IncomingInvoiceToSerialize[] invoiceToPayArray = new IncomingInvoiceToSerialize[invoicesToPayArray.Count()];
 
+
+            //Fyll arrayerna med objekt, + addera på totalsummain/ut.
             int i = 0;
             foreach (var invoice in invoices)
             {
-                invoiceArray[i++] = new OrdinaryInvoiceToSerialize()
+                invoiceArray[i++] = new InvoiceToSerialize()
                 {
-                    SumToPay = invoice.SumToPay
+                    SumToPay = invoice.SumToPay,
+                    InvoiceCreated = invoice.DateCreated
                 };
                 totalSummaIn += invoice.SumToPay;
 
@@ -38,14 +45,16 @@ namespace BusinessLayer.Controllers
             i = 0;
             foreach (var invoice in invoicesToPayArray)
             {
-                invoiceToPayArray[i++] = new InvoiceToPayToSerialize()
+                invoiceToPayArray[i++] = new IncomingInvoiceToSerialize()
                 {
-                    SumToPay = invoice.SumToPay
+                    SumToPay = invoice.SumToPay,
+                    InvoiceCreated = invoice.DateCreated
                 };
                 totalSummaUt += invoice.SumToPay;
 
             }
 
+            //Skapa objektet som faktiskt serialiseras
             InvoicesToSerializeFinal SerializedItem = new InvoicesToSerializeFinal()
             {
                 InvoiceFromSupplier = invoiceToPayArray,
@@ -55,14 +64,19 @@ namespace BusinessLayer.Controllers
                 Vinst = totalSummaIn - totalSummaUt
 
             };
+
+            //Serialisera och öppna filen.
              XmlSerializer serializer = new XmlSerializer(typeof(InvoicesToSerializeFinal));
 
-             using (FileStream fs = new FileStream("XMLFiles\\" + DateTime.Now.ToString("mmddyyyyhhmmss"), FileMode.Create))
+             var filepath = "XMLFiles\\" + DateTime.Now.ToString("mmddyyyyhhmmss") + ".xml";
+             using (FileStream fs = new FileStream(filepath, FileMode.Create))
             {
                 serializer.Serialize(fs, SerializedItem);
                 fs.Close();
+
             }
-            
+
+            Process.Start(filepath);
 
 
         }

@@ -24,11 +24,13 @@ namespace DataLayer.Models
     public class OrdinaryInvoiceToSerialize
     {
         public double SumToPay { get; set; }
+        public DateTime InvoiceCreated { get; set; }
     }
 
     public class InvoiceToPayToSerialize
     {
         public double SumToPay { get; set; }
+        public DateTime InvoiceCreated { get; set; }
     }
 
 }
