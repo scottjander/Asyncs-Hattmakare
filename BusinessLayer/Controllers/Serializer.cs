@@ -25,15 +25,15 @@ namespace BusinessLayer.Controllers
             double totalSummaUt = 0;
 
             //Vi kan inte serialisera våra vanliga Invoice-klasser då de har andra objekt refererade i sig, så här skapar vi arrayer med nya modeller
-            InvoiceToSerialize[] invoiceArray = new InvoiceToSerialize[invoices.Count()];
-            IncomingInvoiceToSerialize[] invoiceToPayArray = new IncomingInvoiceToSerialize[invoicesToPayArray.Count()];
+            OrdinaryInvoiceToSerialize[] invoiceArray = new OrdinaryInvoiceToSerialize[invoices.Count()];
+            InvoiceToPayToSerialize[] invoiceToPayArray = new InvoiceToPayToSerialize[invoicesToPayArray.Count()];
 
 
             //Fyll arrayerna med objekt, + addera på totalsummain/ut.
             int i = 0;
             foreach (var invoice in invoices)
             {
-                invoiceArray[i++] = new InvoiceToSerialize()
+                invoiceArray[i++] = new OrdinaryInvoiceToSerialize()
                 {
                     SumToPay = invoice.SumToPay,
                     InvoiceCreated = invoice.DateCreated
@@ -45,7 +45,7 @@ namespace BusinessLayer.Controllers
             i = 0;
             foreach (var invoice in invoicesToPayArray)
             {
-                invoiceToPayArray[i++] = new IncomingInvoiceToSerialize()
+                invoiceToPayArray[i++] = new InvoiceToPayToSerialize()
                 {
                     SumToPay = invoice.SumToPay,
                     InvoiceCreated = invoice.DateCreated
