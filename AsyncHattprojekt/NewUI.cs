@@ -17,6 +17,7 @@ namespace AsyncHattprojekt
         {
             InitializeComponent();
             customizeDesign();
+            OpenChildForm(new Home());
             new CustomerRegisterForm();
         }
 

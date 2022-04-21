@@ -29,15 +29,10 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnEconomy = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
             this.panelPurchaseSubmenu = new System.Windows.Forms.Panel();
             this.btnSHat = new System.Windows.Forms.Button();
             this.btnDHat = new System.Windows.Forms.Button();
-            this.btnPurchase = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.PanelBoarder = new System.Windows.Forms.Panel();
             this.panelOrder = new System.Windows.Forms.Panel();
@@ -45,6 +40,11 @@
             this.lblCustomer = new System.Windows.Forms.Label();
             this.txtOrders = new System.Windows.Forms.TextBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnEconomy = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPurchaseSubmenu.SuspendLayout();
             this.panelOrder.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::AsyncHattprojekt.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(0, 560);
             this.btnLogout.Name = "btnLogout";
@@ -84,40 +85,6 @@
             this.btnLogout.Text = "Logga ut";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnEconomy
-            // 
-            this.btnEconomy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(205)))), ((int)(((byte)(144)))));
-            this.btnEconomy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEconomy.FlatAppearance.BorderSize = 0;
-            this.btnEconomy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEconomy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEconomy.ForeColor = System.Drawing.Color.White;
-            this.btnEconomy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEconomy.Location = new System.Drawing.Point(0, 510);
-            this.btnEconomy.Name = "btnEconomy";
-            this.btnEconomy.Size = new System.Drawing.Size(250, 50);
-            this.btnEconomy.TabIndex = 20;
-            this.btnEconomy.Text = "Ekonomi";
-            this.btnEconomy.UseVisualStyleBackColor = false;
-            this.btnEconomy.Click += new System.EventHandler(this.btnHistory_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(53)))), ((int)(((byte)(90)))));
-            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 460);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(250, 50);
-            this.btnCustomer.TabIndex = 19;
-            this.btnCustomer.Text = "Kunder";
-            this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnStock
             // 
@@ -135,23 +102,6 @@
             this.btnStock.Text = "Lager";
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 360);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(250, 50);
-            this.btnOrder.TabIndex = 14;
-            this.btnOrder.Text = "Ordrar";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // panelPurchaseSubmenu
             // 
@@ -193,39 +143,6 @@
             this.btnDHat.Text = "Doktorhatt";
             this.btnDHat.UseVisualStyleBackColor = true;
             this.btnDHat.Click += new System.EventHandler(this.btnDHat_Click);
-            // 
-            // btnPurchase
-            // 
-            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(73)))));
-            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(0, 210);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(250, 50);
-            this.btnPurchase.TabIndex = 8;
-            this.btnPurchase.Text = "Ny beställning";
-            this.btnPurchase.UseVisualStyleBackColor = false;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 150);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(250, 60);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Hem";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
@@ -297,6 +214,95 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1082, 883);
             this.panelChildForm.TabIndex = 3;
+            // 
+            // btnEconomy
+            // 
+            this.btnEconomy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(205)))), ((int)(((byte)(144)))));
+            this.btnEconomy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEconomy.FlatAppearance.BorderSize = 0;
+            this.btnEconomy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEconomy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEconomy.ForeColor = System.Drawing.Color.White;
+            this.btnEconomy.Image = global::AsyncHattprojekt.Properties.Resources.graph;
+            this.btnEconomy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEconomy.Location = new System.Drawing.Point(0, 510);
+            this.btnEconomy.Name = "btnEconomy";
+            this.btnEconomy.Size = new System.Drawing.Size(250, 50);
+            this.btnEconomy.TabIndex = 20;
+            this.btnEconomy.Text = "Ekonomi";
+            this.btnEconomy.UseVisualStyleBackColor = false;
+            this.btnEconomy.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(53)))), ((int)(((byte)(90)))));
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Image = global::AsyncHattprojekt.Properties.Resources.gentleman;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 460);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(250, 50);
+            this.btnCustomer.TabIndex = 19;
+            this.btnCustomer.Text = "Kunder";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Image = global::AsyncHattprojekt.Properties.Resources.tall_hat;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(0, 360);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(250, 50);
+            this.btnOrder.TabIndex = 14;
+            this.btnOrder.Text = "Ordrar";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(73)))));
+            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Image = global::AsyncHattprojekt.Properties.Resources.SC1;
+            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchase.Location = new System.Drawing.Point(0, 210);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(250, 50);
+            this.btnPurchase.TabIndex = 8;
+            this.btnPurchase.Text = "Ny beställning";
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::AsyncHattprojekt.Properties.Resources.home;
+            this.btnHome.Location = new System.Drawing.Point(0, 150);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(250, 60);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Hem";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // NewUI
             // 
