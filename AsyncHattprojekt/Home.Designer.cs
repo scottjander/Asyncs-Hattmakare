@@ -34,7 +34,7 @@
             // 
             this.lblHome.AutoSize = true;
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHome.Location = new System.Drawing.Point(230, 201);
+            this.lblHome.Location = new System.Drawing.Point(166, 506);
             this.lblHome.Name = "lblHome";
             this.lblHome.Size = new System.Drawing.Size(108, 39);
             this.lblHome.TabIndex = 0;
