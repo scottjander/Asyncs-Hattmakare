@@ -21,19 +21,20 @@ namespace BusinessLayer
           HatRepository = new HatRepository();
         }
 
-        public void addHats()
+        public void AddHats(int amountToAdd, int size, string color)
         {
-            HatRepository.AddHatsToStock(10, "plommonHatt", 19.99, null, 25, "svart");
-            HatRepository.AddHatsToStock(5, "HampusHatt", 12.99, "vad", 25, "gul");
-            HatRepository.AddHatsToStock(9, "GilHatt", 15.99, "vad", 25, "lila");
+            HatRepository.AddHatsToStock(amountToAdd, "Doktorshatt", 19.99, null, size, color);
         }
 
-        public void deleteHats()
+        public void DeleteHats(int amountToDelete, int size, string color)
         {
-            HatRepository.DeleteHatsFromStock(11, "plommonHatt", 19.99, "vad", 25, "svart");
-            HatRepository.DeleteHatsFromStock(4, "HampusHatt", 12.99, "vad", 25, "gul");
-            HatRepository.DeleteHatsFromStock(1, "GilHatt", 15.99, "vad", 25, "lila");
+            HatRepository.DeleteHatsFromStock(amountToDelete, size, color);
 
+        }
+
+        public void ChangeHatPrice(double newPrice)
+        {
+            HatRepository.ChangeHatPriceInStock(newPrice);
         }
 
 
@@ -61,12 +62,12 @@ namespace BusinessLayer
 
         }
 
-        public int GetSizeOfHats(int size)
+        public int GetAmountOfHats(int size, string color)
         {
             int count=0;
             foreach (var hat in HatRepository.GetAllAvailableHats())
             {
-                if (hat.size == size)
+                if (hat.size == size && hat.color==color)
                 {
                     count++;
                 }

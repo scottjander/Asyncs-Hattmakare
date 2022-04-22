@@ -20,29 +20,67 @@ namespace AsyncHattprojekt
         public ManageHatts()
         {
             InitializeComponent();
-            ShowHatStock();
             FillCmbBoxColors();
             FillComboBoxSize();
+            ShowHatStock();
         }
 
         public void FillComboBoxSize()
         {
+            this.cmbBoxSize.SelectedIndexChanged -= new EventHandler(cmbBoxSize_SelectedIndexChanged);
             cmbBoxSize.DataSource = standardHatController.GetUniqueSizes();
+            this.cmbBoxSize.SelectedIndexChanged += new EventHandler(cmbBoxSize_SelectedIndexChanged);
         }
         public void FillCmbBoxColors()
         {
+            this.cmbBoxColor.SelectedIndexChanged -= new EventHandler(cmbBoxColor_SelectedIndexChanged);
             cmbBoxColor.DataSource = standardHatController.GetUniqueColors();
+            this.cmbBoxColor.SelectedIndexChanged += new EventHandler(cmbBoxColor_SelectedIndexChanged);
         }
 
         private void ShowHatStock()
         {
-            int size = (int) HatSize.S54;
-            lblSizeAmount.Text = standardHatController.GetSizeOfHats(size).ToString();
-            size = (int) HatSize.S54;
+            int size = Convert.ToInt32(cmbBoxSize.Text);
+            string color = cmbBoxColor.Text;
+            lblSizeAmount.Text = standardHatController.GetAmountOfHats(size, color).ToString();
         }
 
-        private void btnRemove52_Click(object sender, EventArgs e)
+        private void cmbBoxSize_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ShowHatStock();
+        }
+
+        private void cmbBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHatStock();
+        }
+
+        private void btnAddHats_Click(object sender, EventArgs e)
+        {
+            int amountToDelete = Convert.ToInt32(txtBoxAddHats.Text);
+            int size = Convert.ToInt32(cmbBoxSize.Text);
+            string color = cmbBoxColor.Text;
+
+            standardHatController.AddHats(amountToDelete, size, color);
+            ShowHatStock();
+        }
+
+        private void btnRemoveHats_Click(object sender, EventArgs e)
+        {
+            int amountToDelete = Convert.ToInt32(txtBoxAddHats.Text);
+            int size = Convert.ToInt32(cmbBoxSize.Text);
+            string color = cmbBoxColor.Text;
+            
+            standardHatController.DeleteHats(amountToDelete, size, color);
+            ShowHatStock();
+        }
+
+        private void btnChangePrice_Click(object sender, EventArgs e)
+        {
+            double newPrice = Convert.ToDouble(txtBoxPrice.Text);
+
+            standardHatController.ChangeHatPrice(newPrice);
+            MessageBox.Show("Pris har ändrats");
 
         }
     }

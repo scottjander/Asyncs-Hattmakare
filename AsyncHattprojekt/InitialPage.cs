@@ -59,12 +59,12 @@ namespace AsyncHattprojekt
 
         //private void button4_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.addHats();
+        //    StandardHatController.AddHats();
         //}
 
         //private void button5_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.deleteHats();
+        //    StandardHatController.DeleteHats();
         //}
 
         //private void button6_Click(object sender, EventArgs e)

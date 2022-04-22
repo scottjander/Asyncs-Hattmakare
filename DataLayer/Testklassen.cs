@@ -180,7 +180,7 @@ namespace DataLayer
             var hat5 = new Hat()
             {
                 Price = 150,
-                size = 60,
+                size = 62,
                 color = "Gul",
                 itemName = "Doktorshatt"
             };
