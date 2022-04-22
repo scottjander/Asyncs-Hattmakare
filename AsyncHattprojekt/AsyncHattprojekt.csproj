@@ -106,6 +106,12 @@
     <Compile Include="FraktsedelForm.Designer.cs">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageHatts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageHatts.Designer.cs">
+      <DependentUpon>ManageHatts.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderHantering.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <EmbeddedResource Include="FraktsedelForm.resx">
       <DependentUpon>FraktsedelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageHatts.resx">
+      <DependentUpon>ManageHatts.cs</DependentUpon>
+</EmbeddedResource>
     <EmbeddedResource Include="MaterialVy.resx">
       <DependentUpon>MaterialVy.cs</DependentUpon>
     </EmbeddedResource>
