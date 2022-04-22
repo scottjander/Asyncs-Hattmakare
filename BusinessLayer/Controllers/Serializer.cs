@@ -68,7 +68,7 @@ namespace BusinessLayer.Controllers
             //Serialisera och öppna filen.
              XmlSerializer serializer = new XmlSerializer(typeof(InvoicesToSerializeFinal));
 
-             var filepath = "XMLFiles\\" + DateTime.Now.ToString("mmddyyyyhhmmss") + ".xml";
+             var filepath = DateTime.Now.ToString("mmddyyyyhhmmss") + ".xml";
              using (FileStream fs = new FileStream(filepath, FileMode.Create))
             {
                 serializer.Serialize(fs, SerializedItem);
