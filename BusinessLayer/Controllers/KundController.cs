@@ -31,11 +31,9 @@ namespace BusinessLayer.Controllers
             int customerPoints;
             switch (orderCount)
             {
+                case 1:
                 case 0:
                     customerPoints = 0;
-                    break;
-                case 1:
-                    customerPoints = 1;
                     break;
                 case 2:
                     customerPoints = 2;

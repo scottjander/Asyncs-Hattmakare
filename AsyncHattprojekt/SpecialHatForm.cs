@@ -59,6 +59,8 @@ namespace AsyncHattprojekt
             string fileName = txtBoxFileName.Text;
             specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID, fileName, filePath);
             this.Close();
+            OrderForm orderform = new OrderForm(orderID);
+            orderform.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

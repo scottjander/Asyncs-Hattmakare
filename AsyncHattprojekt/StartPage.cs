@@ -20,6 +20,7 @@ namespace AsyncHattprojekt
         {
             InitializeComponent();
             //var testklassen = new Testklassen();
+            //testklassen.testmetoden3();
             //testklassen.FillHat();
             //testklassen.FillInvoices();
             lblNamn.Text = InitialPage.username;
@@ -48,7 +49,7 @@ namespace AsyncHattprojekt
         private void btnLagerStatus_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Testform f = new Testform();
+            MaterialVy f = new MaterialVy();
             f.ShowDialog();
             f = null;
             this.Show();
@@ -58,7 +59,7 @@ namespace AsyncHattprojekt
         {
             this.Hide();
             //Testform f = new Testform();
-            SkapaFaktura f = new SkapaFaktura();
+            CreateInvoiceFromSupplier f = new CreateInvoiceFromSupplier();
             f.ShowDialog();
             f = null;
             this.Show();

@@ -50,8 +50,8 @@ namespace AsyncHattprojekt
 
         private void btnCreateSpecial_Click(object sender, EventArgs e)
         {
-            //SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
-            //specialHatForm.Show();
+            SpecialHatForm specialHatForm = new SpecialHatForm(orderID);
+            specialHatForm.Show();
         }
 
         private void lblTotalPrice_Click(object sender, EventArgs e)
