@@ -28,7 +28,7 @@ namespace AsyncHattprojekt
                 this.Close();
             }
             else {
-                MessageBox.Show("Du måste använda bokstäver");
+                MessageBox.Show("Fylla i textrutan");
             }
         }
     }
