@@ -37,19 +37,20 @@ namespace AsyncHattprojekt
 
         private void btnSkapaFaktura_Click(object sender, EventArgs e)
         {
-            using (var context = new HatDbContext())
-            {
+           
                 double summa = Convert.ToDouble(tbSummaAttBetala.Text);
               
                 int OrderId = Convert.ToInt32(tbOrderID.Text);
-                var hamtaadressobjekt = fakturaController.HamtaAdressObjekt(OrderId);  
-                var hamtaorderobjekt = fakturaController.HamtaOrderObjektPaOrderId(OrderId);
-                
-
-                var nyfaktura = new Invoice() { SumToPay = summa, IsPaid = chbBetald.Checked, InvoiceAddress = hamtaadressobjekt, };
-                context.Invoices.Add(nyfaktura);
-                context.SaveChanges();
-            }
+                bool betald;
+                if (chbBetald.Checked) 
+                    {
+                    betald = true;
+                    }
+                else {
+                    betald = false;
+                    }
+                fakturaController.SkapaFaktura(betald, OrderId, summa);
+            
 
         }
 

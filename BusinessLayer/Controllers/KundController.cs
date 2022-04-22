@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataLayer.Models;
 using DataLayer.Repositories;
 
 namespace BusinessLayer.Controllers
@@ -30,11 +31,9 @@ namespace BusinessLayer.Controllers
             int customerPoints;
             switch (orderCount)
             {
+                case 1:
                 case 0:
                     customerPoints = 0;
-                    break;
-                case 1:
-                    customerPoints = 1;
                     break;
                 case 2:
                     customerPoints = 2;
@@ -54,7 +53,10 @@ namespace BusinessLayer.Controllers
 
         }
 
-
+        public List<Customer> GetAllCustomers()
+        {
+            return CustomerRepository.GetAllCustomers();
+        }
 
     }
 }

@@ -48,6 +48,23 @@ namespace DataLayer
             return _context;
         }
 
+        public List<Order> GetAllCreatedOrders()
+        {
+             var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Created select Orders;
+             return query.ToList();
+        }
+
+        public List<Order> GetAllStartedOrders()
+        {
+             var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Started select Orders;
+             return query.ToList();
+        }
+
+        public List<Order> GetAllFinishedOrders()
+        {
+            var query = from Orders in _context.Orders where Orders.OrderStatus == OrderStatus.Finished select Orders;
+            return query.ToList();
+        }
         public void EditOrder(Order order)
         {
             _context.Orders.AddOrUpdate(order);
@@ -58,6 +75,7 @@ namespace DataLayer
         {
             order.TotalPrice = newPrice;
             _context.SaveChanges();
+
         }
 
 

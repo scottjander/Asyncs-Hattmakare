@@ -39,10 +39,10 @@ namespace DataLayer
 
                 }
             }*/
-        //public void testmetoden3()
-        //{
-        //    using (var context = new HatDbContext())
-        //    {
+        public void testmetoden3()
+        {
+            using (var context = new HatDbContext())
+            {
                 //var stock = new stock();
                 //context.stock.add(stock);
                 //var customer = new customer()
@@ -62,90 +62,97 @@ namespace DataLayer
                 //DateTime tiden = DateTime.Now;
                 //List<Hat> list = new List<Hat>();
                 //var minorder = new Order()
-            //    {
-            //        StartDate = tiden,
-            //        DateFinished = tiden,
-            //        Hats = list
-            //    };
-            //    var enHatt = new Hat() {Comment = "Gjorde två hatt", Price = 100};
-            //    var tvaHatt = new SpecialHat() {Comment = "Gjorde specialhatt", Price = 570, AmountOfDecorations = 2};
-            //    var hattLista = new List<Hat>();
-            //    var hattLista2 = new List<SpecialHat>();
-            //    hattLista.Add(enHatt);
-            //    hattLista2.Add(tvaHatt);
-            //    DateTime tiden = DateTime.Now;
-            //    var minOrder = new Order()
-            //    {
-            //        Comment = "Joe", Customer = customer, Hats = hattLista, TotalPrice = hattLista.Sum(x => x.Price),
-            //        StartDate = tiden, DateFinished = tiden
-            //    };
-            //    context.Customers.Add(customer);
-            //    context.Hats.Add(enHatt);
-            //    context.SpecialHats.Add(tvaHatt);
-            //    context.Orders.Add(minOrder);
+                //{
+                //    StartDate = tiden,
+                //    DateFinished = tiden,
+                //    Hats = list
+                //};
+                //var enHatt = new Hat() { Comment = "Gjorde två hatt", Price = 100 };
+                //var tvaHatt = new SpecialHat() { Comment = "Gjorde specialhatt", Price = 570, AmountOfDecorations = 2 };
+                //var hattLista = new List<Hat>();
+                //var hattLista2 = new List<SpecialHat>();
+                //hattLista.Add(enHatt);
+                //hattLista2.Add(tvaHatt);
+                //DateTime tiden = DateTime.Now;
+                //var minOrder = new Order()
+                //{
+                //    Comment = "Joe",
+                //    Customer = customer,
+                //    Hats = hattLista,
+                //    TotalPrice = hattLista.Sum(x => x.Price),
+                //    StartDate = tiden,
+                //    DateFinished = tiden
+                //};
+                //context.Customers.Add(customer);
+                //context.Hats.Add(enHatt);
+                //context.SpecialHats.Add(tvaHatt);
+                //context.Orders.Add(minOrder);
 
-            //    var silke = new Fabric()
-            //    {
-            //        ItemName = "Silke", Price = 200, AmountInStock = 30, Colour = "Black"
-            //    };
+                var silke = new Fabric()
+                {
+                    ItemName = "Silke",
+                    Price = 200,
+                    AmountInStock = 30,
+                    Colour = "Black"
+                };
 
-            //    var filt = new Fabric()
-            //    {
-            //        ItemName = "Filt",
-            //        Price = 100,
-            //        AmountInStock = 40,
-            //        Colour = "Blue"
-            //    };
+                var filt = new Fabric()
+                {
+                    ItemName = "Filt",
+                    Price = 100,
+                    AmountInStock = 40,
+                    Colour = "Blue"
+                };
 
-            //    var polyester = new Fabric()
-            //    {
-            //        ItemName = "Polyester",
-            //        Price = 300,
-            //        AmountInStock = 50,
-            //        Colour = "Red"
-            //    };
+                var polyester = new Fabric()
+                {
+                    ItemName = "Polyester",
+                    Price = 300,
+                    AmountInStock = 50,
+                    Colour = "Red"
+                };
 
-            //    context.Fabrics.Add(filt);
-            //    context.Fabrics.Add(polyester);
-            //    context.Fabrics.Add(silke);
+                context.Fabrics.Add(filt);
+                context.Fabrics.Add(polyester);
+                context.Fabrics.Add(silke);
 
 
-            //    context.SaveChanges();
+                context.SaveChanges();
 
-            //}
-        //}
+            }
+        }
 
-        //public void dummydata()
-        //{
+        public void dummydata()
+        {
 
-        //    var address = new Address()
-        //    { StreetName = "Köpmangatan", StreetNumber = "13", PostalCode = "70210", TownName = "Örebro" };
-         
-        //    var customer = new Customer()
-        //    {
-        //        CustomerBonusPoints = 0,
-        //        Email = "bobin@aziz.com",
-        //        FirstName = "Robin",
-        //        LastName = "Aziz",
-        //        Phone = "07623424",
-        //        Address = address
-        //    };
-        //    var order = new Order()
-        //    {
-        //        StartDate = DateTime.Now,
-        //        DateFinished = DateTime.Now,
-        //        Comment = "Test",
-        //        TotalPrice = 799,
-        //        Customer = customer
-        //    };
-        //    using (var context = new HatDbContext())
-        //    {
-        //        context.Addresses.Add(address);
-        //        context.Customers.Add(customer);
-        //        context.Orders.Add(order);
-        //        context.SaveChanges();
-        //    }
-        //}
+            var address = new Address()
+            { StreetName = "Köpmangatan", StreetNumber = "13", PostalCode = "70210", TownName = "Örebro" };
+
+            var customer = new Customer()
+            {
+                CustomerBonusPoints = 0,
+                Email = "bobin@aziz.com",
+                FirstName = "Robin",
+                LastName = "Aziz",
+                Phone = "07623424",
+                Address = address
+            };
+            var order = new Order()
+            {
+                StartDate = DateTime.Now,
+                DateFinished = DateTime.Now,
+                Comment = "Test",
+                TotalPrice = 799,
+                Customer = customer
+            };
+            using (var context = new HatDbContext())
+            {
+                context.Addresses.Add(address);
+                context.Customers.Add(customer);
+                context.Orders.Add(order);
+                context.SaveChanges();
+            }
+        }
 
         public void FillHat()
         {

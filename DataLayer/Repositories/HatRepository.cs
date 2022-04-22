@@ -117,5 +117,10 @@ namespace DataLayer.Repositories
         {
             return _context.Orders.FirstOrDefault(o => o.Id == id); //går att förbättra
         }
+        public List<Hat> GetHatsOnOrderId(int id)
+        {
+            var listOfHats = from hat in _context.Hats where hat.order.Id == id select hat;
+            return listOfHats.ToList();
+        }
     }
 }

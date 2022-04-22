@@ -46,6 +46,7 @@ namespace AsyncHattprojekt
             this.txtBoxTaxAmountIn = new System.Windows.Forms.TextBox();
             this.cbYears = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -202,11 +203,22 @@ namespace AsyncHattprojekt
             this.label7.TabIndex = 13;
             this.label7.Text = "Filter by year";
             // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(757, 443);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "Exportera";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // TaxesSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 499);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbYears);
             this.Controls.Add(this.txtBoxTaxAmountIn);
@@ -248,5 +260,6 @@ namespace AsyncHattprojekt
         private System.Windows.Forms.TextBox txtBoxTaxAmountIn;
         private System.Windows.Forms.ComboBox cbYears;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnExport;
     }
 }

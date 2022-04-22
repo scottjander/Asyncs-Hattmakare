@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -31,5 +32,9 @@ namespace DataLayer.Repositories
             return orderCount;
         }
 
+        public List<Customer> GetAllCustomers()
+        {
+            return _context.Customers.ToList();
+        }
     }
 }

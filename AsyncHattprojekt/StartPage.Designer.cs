@@ -44,7 +44,7 @@
             this.btnSeKundRegister.Name = "btnSeKundRegister";
             this.btnSeKundRegister.Size = new System.Drawing.Size(236, 85);
             this.btnSeKundRegister.TabIndex = 10;
-            this.btnSeKundRegister.Text = "(Kundregister) tillfälligt faktura";
+            this.btnSeKundRegister.Text = "Registrera leverantörsfaktura";
             this.btnSeKundRegister.UseVisualStyleBackColor = true;
             this.btnSeKundRegister.Click += new System.EventHandler(this.btnSeKundRegister_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnBestall.Name = "btnBestall";
             this.btnBestall.Size = new System.Drawing.Size(236, 85);
             this.btnBestall.TabIndex = 7;
-            this.btnBestall.Text = "Beställ";
+            this.btnBestall.Text = "Ny order";
             this.btnBestall.UseVisualStyleBackColor = true;
             this.btnBestall.Click += new System.EventHandler(this.btnBestall_Click);
             // 

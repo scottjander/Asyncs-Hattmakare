@@ -55,10 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204130936011_test.cs" />
-    <Compile Include="Migrations\202204130936011_test.designer.cs">
-      <DependentUpon>202204130936011_test.cs</DependentUpon>
+    <Compile Include="Migrations\202204211119347_erik.cs" />
+    <Compile Include="Migrations\202204211119347_erik.designer.cs">
+      <DependentUpon>202204211119347_erik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\InvoicesToSerialize.cs" />
     <Compile Include="Repositories\AnvandareRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -93,8 +94,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204130936011_test.resx">
-      <DependentUpon>202204130936011_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204211119347_erik.resx">
+      <DependentUpon>202204211119347_erik.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

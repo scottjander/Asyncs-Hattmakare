@@ -10,10 +10,8 @@ namespace BusinessLayer.Controllers
 {
     public class FakturaController
     {
-        public FakturaRepository FakturaRepository
-        {
-            get { return new FakturaRepository(); }
-        }
+
+        private FakturaRepository FakturaRepository = new FakturaRepository();
 
         public int HamtaKundIdPaOrderId(int id)
         {
@@ -50,9 +48,14 @@ namespace BusinessLayer.Controllers
         public Address HamtaAdressObjekt(int id)
         {
             var kund = HamtaKundIdPaOrderId(id);
-            var adress = FakturaRepository.HamtaAdressObjekt(id);
+            var adress = FakturaRepository.HamtaAdressObjekt(kund);
             return adress;
         }
-
+        public void SkapaFaktura(bool betald, int orderid, double summa)
+        {
+            var adress = HamtaAdressObjekt(orderid);
+            var order = HamtaOrderObjektPaOrderId(orderid);
+            FakturaRepository.SkapaFaktura(adress, order, summa, betald);
+        }
     }
 }
