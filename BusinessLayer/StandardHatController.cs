@@ -39,6 +39,7 @@ namespace BusinessLayer
 
         public void OrderStandardHat(int orderID, int hatID)
         {
+
             HatRepository.AddHatToOrder(orderID, hatID);
         }
 

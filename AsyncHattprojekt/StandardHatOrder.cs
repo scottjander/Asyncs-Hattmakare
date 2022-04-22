@@ -36,10 +36,16 @@ namespace AsyncHattprojekt
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            standardHatController.OrderStandardHat(orderID, hatID);
-            this.Close();
-            OrderForm orderform = new OrderForm(orderID);
-            orderform.Show();
+            if (hatID != 0) {
+                standardHatController.OrderStandardHat(orderID, hatID);
+                this.Close();
+                OrderForm orderform = new OrderForm(orderID);
+                orderform.Show();
+            }
+            else {
+                MessageBox.Show("Var god välj en hatt.");
+            }
+
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)

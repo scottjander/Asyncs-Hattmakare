@@ -40,16 +40,22 @@ namespace AsyncHattprojekt
 
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
-            string skapare = InitialPage.username;
-            var comment = txtBoxComment.Text;
-            var Customer = (Customer)comboBox1.SelectedItem;
+            try {
+                string skapare = InitialPage.username;
+                var comment = txtBoxComment.Text;
+                var Customer = (Customer) comboBox1.SelectedItem;
 
-            if (Customer != null) {
-                var orderID = controller.CreateOrder(comment, Customer, skapare);
-                OrderForm orderForm = new OrderForm(orderID);
-                orderForm.Show();
-                this.Close();
+
+                    var orderID = controller.CreateOrder(comment, Customer, skapare);
+                    OrderForm orderForm = new OrderForm(orderID);
+                    orderForm.Show();
+                    this.Close();
+                
             }
+            catch (Exception ex) {
+                MessageBox.Show("Var god välj en kund.");
+            }
+
         }
     }
 }

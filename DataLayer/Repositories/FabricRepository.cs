@@ -22,8 +22,11 @@ namespace DataLayer.Repository
         }
         public void DecreaseAmountInStorage(double amountToDecrease, Fabric fabric)
         {
-            fabric.AmountInStock -= amountToDecrease;
-            _context.SaveChanges();
+            if (fabric != null)
+            {
+                fabric.AmountInStock -= amountToDecrease;
+                _context.SaveChanges();
+            }
         }
         public void IncreaseAmountInStorage(double amountToIncrease, int fabricid)
         {

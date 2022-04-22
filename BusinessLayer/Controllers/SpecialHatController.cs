@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BusinessLayer.Controllers
 {
@@ -25,25 +26,39 @@ namespace BusinessLayer.Controllers
 
         public void AddSpecialHat(string name, Fabric fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
         {
-            if (fabric.AmountInStock < fabricLength)
+
+            if (fabric == null)
             {
-                //gör validering
+                MessageBox.Show("Välj tyg");
                 return;
             }
-            FabricRepository.DecreaseAmountInStorage(fabricLength, fabric);
-            var price = CalculatePrice(fabric, fabricLength, decoration);
-            var imagePath= SpecialHatRepository.SaveHatPicture(filePath, fileName);
-            var newHat = new SpecialHat()
-            {
-                Name = name,
-                Price = price,
-                Comment = comment,
-                AmountOfDecorations = decoration,
-                ImagePath = imagePath,
 
-            };
-            newHat.Order = SpecialHatRepository.GetOrderOnId(orderId);
-            SpecialHatRepository.addSpecialHat(newHat, orderId);
+
+            if (fabric.AmountInStock < fabricLength)
+                {
+                    //gör validering
+                    return;
+                }
+            
+
+
+            FabricRepository.DecreaseAmountInStorage(fabricLength, fabric);
+                var price = CalculatePrice(fabric, fabricLength, decoration);
+                var imagePath = SpecialHatRepository.SaveHatPicture(filePath, fileName);
+                var newHat = new SpecialHat()
+                {
+                    Name = name,
+                    Price = price,
+                    Comment = comment,
+                    AmountOfDecorations = decoration,
+                    ImagePath = imagePath,
+
+                };
+                newHat.Order = SpecialHatRepository.GetOrderOnId(orderId);
+                SpecialHatRepository.addSpecialHat(newHat, orderId);
+            
+
+
         }
 
         private double CalculatePrice(Fabric fabric, double fabricLength, int decoration)
