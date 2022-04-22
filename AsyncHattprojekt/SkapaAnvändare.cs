@@ -23,7 +23,7 @@ namespace AsyncHattprojekt
         private void btnSkapaAnvandare_Click(object sender, EventArgs e)
         {
             string anvandare = txtNyAnvandare.Text;
-            if (anvandare.Contains(@" ^[a - zA - Z] + $")) {
+            if (anvandare.Length >= 1) {
                 anvandareController.LaggTillAnstalld(anvandare);
                 this.Close();
             }
