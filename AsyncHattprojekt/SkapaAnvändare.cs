@@ -23,9 +23,13 @@ namespace AsyncHattprojekt
         private void btnSkapaAnvandare_Click(object sender, EventArgs e)
         {
             string anvandare = txtNyAnvandare.Text;
-            anvandareController.LaggTillAnstalld(anvandare);
-            this.Close();
+            if (anvandare.Contains(@" ^[a - zA - Z] + $")) {
+                anvandareController.LaggTillAnstalld(anvandare);
+                this.Close();
+            }
+            else {
+                MessageBox.Show("Du måste använda bokstäver");
+            }
         }
-
     }
 }
