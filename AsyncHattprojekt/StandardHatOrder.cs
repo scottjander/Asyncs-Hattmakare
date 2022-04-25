@@ -28,6 +28,7 @@ namespace AsyncHattprojekt
             //testklassen.testmetoden3();
             FillListView();
             this.orderID = orderID;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

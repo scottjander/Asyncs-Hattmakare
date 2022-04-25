@@ -134,6 +134,7 @@ namespace AsyncHattprojekt
             hideSubMenu();
             setMenuColor(btnHome.BackColor);
             OpenChildForm(new Home());
+            lblPageName.Text = "Hem";
 
         }
 
@@ -147,6 +148,7 @@ namespace AsyncHattprojekt
         private void btnDHat_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            lblPageName.Text = "Ny beställning";
             setMenuColor(btnPurchase.BackColor);
             int id = Int32.Parse(lblOrder.Text);
             if (id != 0) {
@@ -164,6 +166,7 @@ namespace AsyncHattprojekt
         private void btnSpecial_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            lblPageName.Text = "Ny beställning";
             setMenuColor(btnPurchase.BackColor);
             int id = Int32.Parse(lblOrder.Text);
             if (id != 0) {
@@ -190,6 +193,7 @@ namespace AsyncHattprojekt
             ListOfCreatedOrders form = new ListOfCreatedOrders();
             form.parent = this;
             OpenChildForm(form);
+            lblPageName.Text = "Order";
 
 
         }
@@ -201,6 +205,7 @@ namespace AsyncHattprojekt
             ListOfStartedOrders form = new ListOfStartedOrders();
             form.parent = this;
             OpenChildForm(form);
+            lblPageName.Text = "Order";
 
         }
 
@@ -211,6 +216,7 @@ namespace AsyncHattprojekt
             ListOfFinishedOrders form = new ListOfFinishedOrders();
             form.parent = this;
             OpenChildForm(form);
+            lblPageName.Text = "Ordrar";
 
         }
 
@@ -218,6 +224,7 @@ namespace AsyncHattprojekt
         {
             hideSubMenu();
             setMenuColor(btnOrder.BackColor);
+            lblPageName.Text = "Ordrar";
             //OpenChildForm(new OrderHantering());
 
         }
@@ -233,6 +240,7 @@ namespace AsyncHattprojekt
             hideSubMenu();
             setMenuColor(btnStorage.BackColor);
             OpenChildForm(new MaterialVy());
+            lblPageName.Text = "Lager";
 
         }
 
@@ -240,6 +248,7 @@ namespace AsyncHattprojekt
         {
             hideSubMenu();
             setMenuColor(btnStorage.BackColor);
+            lblPageName.Text = "Lager";
 
         }
 
@@ -248,6 +257,7 @@ namespace AsyncHattprojekt
             hideSubMenu();
             setMenuColor(btnCustomer.BackColor);
             OpenChildForm(new CustomerRegisterForm());
+            lblPageName.Text = "Kunder";
 
         }
 
@@ -261,6 +271,7 @@ namespace AsyncHattprojekt
             hideSubMenu();
             setMenuColor(btnEconomy.BackColor);
             OpenChildForm(new CreateInvoiceFromSupplier());
+            lblPageName.Text = "Ekonomi";
 
         }
 
@@ -269,6 +280,7 @@ namespace AsyncHattprojekt
             hideSubMenu();
             setMenuColor(btnEconomy.BackColor);
             OpenChildForm(new TaxesSummary());
+            lblPageName.Text = "Ekonomi";
 
         }
 

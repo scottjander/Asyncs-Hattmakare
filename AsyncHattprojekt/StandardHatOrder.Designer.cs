@@ -31,16 +31,17 @@
             this.kommentarTxtBx = new System.Windows.Forms.RichTextBox();
             this.kommentarLbl = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // registerBtn
             // 
-            this.registerBtn.Location = new System.Drawing.Point(299, 361);
+            this.registerBtn.Location = new System.Drawing.Point(399, 444);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(99, 39);
+            this.registerBtn.Size = new System.Drawing.Size(132, 48);
             this.registerBtn.TabIndex = 0;
             this.registerBtn.Text = "Registrera";
             this.registerBtn.UseVisualStyleBackColor = true;
@@ -48,18 +49,20 @@
             // 
             // kommentarTxtBx
             // 
-            this.kommentarTxtBx.Location = new System.Drawing.Point(258, 235);
+            this.kommentarTxtBx.Location = new System.Drawing.Point(344, 289);
+            this.kommentarTxtBx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kommentarTxtBx.Name = "kommentarTxtBx";
-            this.kommentarTxtBx.Size = new System.Drawing.Size(165, 96);
+            this.kommentarTxtBx.Size = new System.Drawing.Size(219, 117);
             this.kommentarTxtBx.TabIndex = 1;
             this.kommentarTxtBx.Text = "";
             // 
             // kommentarLbl
             // 
             this.kommentarLbl.AutoSize = true;
-            this.kommentarLbl.Location = new System.Drawing.Point(307, 219);
+            this.kommentarLbl.Location = new System.Drawing.Point(409, 270);
+            this.kommentarLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.kommentarLbl.Name = "kommentarLbl";
-            this.kommentarLbl.Size = new System.Drawing.Size(60, 13);
+            this.kommentarLbl.Size = new System.Drawing.Size(75, 16);
             this.kommentarLbl.TabIndex = 2;
             this.kommentarLbl.Text = "Kommentar";
             this.kommentarLbl.Click += new System.EventHandler(this.label1_Click);
@@ -72,19 +75,14 @@
             this.columnHeader2});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(209, 38);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
+            this.listView1.Location = new System.Drawing.Point(279, 47);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(288, 139);
+            this.listView1.Size = new System.Drawing.Size(383, 170);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Pris";
-            this.columnHeader2.Width = 88;
             // 
             // columnHeader3
             // 
@@ -95,15 +93,21 @@
             // 
             this.columnHeader4.Text = "Färg";
             // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Pris";
+            this.columnHeader2.Width = 88;
+            // 
             // StandardHatOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 522);
+            this.ClientSize = new System.Drawing.Size(875, 642);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.kommentarLbl);
             this.Controls.Add(this.kommentarTxtBx);
             this.Controls.Add(this.registerBtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StandardHatOrder";
             this.Text = "Form1";
             this.ResumeLayout(false);

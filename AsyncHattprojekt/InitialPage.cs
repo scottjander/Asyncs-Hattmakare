@@ -18,9 +18,10 @@ namespace AsyncHattprojekt
             anvandareController = new AnvandareController();
             testklassen = new Testklassen();
             cbVäljAnvändare_fyllcbx();
-            testklassen.FillHat();
-            testklassen.testmetoden3();
-            testklassen.FillInvoices();
+            //testklassen.dummydata();
+            //testklassen.FillHat();
+            //testklassen.testmetoden3();
+            //testklassen.FillInvoices();
 
         }
 
@@ -65,6 +66,16 @@ namespace AsyncHattprojekt
             else {
                 MessageBox.Show("Välj en användare");
             }
+        }
+
+        private void InitialPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVäljAnvändare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         //private void button4_Click(object sender, EventArgs e)

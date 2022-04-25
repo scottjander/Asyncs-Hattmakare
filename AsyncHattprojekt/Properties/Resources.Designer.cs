@@ -113,6 +113,16 @@ namespace AsyncHattprojekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OJLOGO2 {
+            get {
+                object obj = ResourceManager.GetObject("OJLOGO2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SC1 {
             get {
                 object obj = ResourceManager.GetObject("SC1", resourceCulture);
