@@ -64,6 +64,12 @@
     <Compile Include="CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListOfCreatedOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +88,18 @@
     <Compile Include="ListOfStartedOrders.Designer.cs">
       <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUI.Designer.cs">
+      <DependentUpon>NewUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderLists.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderLists.Designer.cs">
       <DependentUpon>OrderLists.cs</DependentUpon>
-      </Compile>
+    </Compile>
     <Compile Include="CustomerRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListOfCreatedOrders.resx">
       <DependentUpon>ListOfCreatedOrders.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +222,12 @@
     <EmbeddedResource Include="ListOfStartedOrders.resx">
       <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUI.resx">
+      <DependentUpon>NewUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderLists.resx">
       <DependentUpon>OrderLists.cs</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegisterForm.resx">
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,7 +236,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageHatts.resx">
       <DependentUpon>ManageHatts.cs</DependentUpon>
-</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="MaterialVy.resx">
       <DependentUpon>MaterialVy.cs</DependentUpon>
     </EmbeddedResource>

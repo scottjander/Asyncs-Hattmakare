@@ -47,6 +47,9 @@ namespace AsyncHattprojekt
             if (Customer != null) {
                 var orderID = controller.CreateOrder(comment, Customer, skapare);
                 OrderForm orderForm = new OrderForm(orderID);
+                string stringOrderID = orderID.ToString();
+                string stringCustomer = Customer.ToString();
+                
                 orderForm.Show();
                 this.Close();
             }
