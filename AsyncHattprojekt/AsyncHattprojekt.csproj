@@ -266,6 +266,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegKund.resx">
       <DependentUpon>RegKund.cs</DependentUpon>
@@ -309,6 +310,27 @@
       <Project>{62266B2B-09ED-437E-9987-7BC4AAB5DC63}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tall-hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trolley copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gentleman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
