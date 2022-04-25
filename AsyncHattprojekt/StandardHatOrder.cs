@@ -39,7 +39,7 @@ namespace AsyncHattprojekt
         {
             standardHatController.OrderStandardHat(orderID, hatID);
             //parent.addTolistViewHats();
-            parent.UpdatePrice();
+            parent.UpdateOrder();
             //this.Close();            
             //OrderForm orderform = new OrderForm(orderID);            
             //orderform.Show();

@@ -16,6 +16,10 @@ namespace DataLayer.Repositories
         {
             _context = new HatDbContext();
         }
+        public HatRepository(HatDbContext context)
+        {
+            _context = context;
+        }
 
         public void AddHatsToStock(int amountToAdd, string itemName, double price, string comment, int size, string color )
         {

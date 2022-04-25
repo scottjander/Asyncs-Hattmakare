@@ -17,6 +17,7 @@ namespace AsyncHattprojekt
     {
         public HatDbContext HatDbContext = new HatDbContext();
         public OrderControllerScottRobin orderControllerScottRobin = new OrderControllerScottRobin();
+        public NewUI parent;
         public ListOfFinishedOrders()
         {
             InitializeComponent();

@@ -65,8 +65,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.panelBoarder = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelMenu.SuspendLayout();
             this.panelEconomySubMenu.SuspendLayout();
             this.panelStorageSubMenu.SuspendLayout();
@@ -94,9 +96,8 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 936);
+            this.panelMenu.Size = new System.Drawing.Size(188, 760);
             this.panelMenu.TabIndex = 3;
             // 
             // btnLogout
@@ -107,9 +108,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1150);
+            this.btnLogout.Location = new System.Drawing.Point(0, 936);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(229, 50);
+            this.btnLogout.Size = new System.Drawing.Size(171, 41);
             this.btnLogout.TabIndex = 15;
             this.btnLogout.Text = "Logga ut";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -121,9 +123,10 @@
             this.panelEconomySubMenu.Controls.Add(this.btnTaxSummary);
             this.panelEconomySubMenu.Controls.Add(this.btnCreateInvoiceFromSupplier);
             this.panelEconomySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEconomySubMenu.Location = new System.Drawing.Point(0, 1000);
+            this.panelEconomySubMenu.Location = new System.Drawing.Point(0, 814);
+            this.panelEconomySubMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelEconomySubMenu.Name = "panelEconomySubMenu";
-            this.panelEconomySubMenu.Size = new System.Drawing.Size(229, 150);
+            this.panelEconomySubMenu.Size = new System.Drawing.Size(171, 122);
             this.panelEconomySubMenu.TabIndex = 14;
             // 
             // btnTaxSummary
@@ -133,9 +136,10 @@
             this.btnTaxSummary.FlatAppearance.BorderSize = 0;
             this.btnTaxSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaxSummary.ForeColor = System.Drawing.Color.White;
-            this.btnTaxSummary.Location = new System.Drawing.Point(0, 50);
+            this.btnTaxSummary.Location = new System.Drawing.Point(0, 41);
+            this.btnTaxSummary.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaxSummary.Name = "btnTaxSummary";
-            this.btnTaxSummary.Size = new System.Drawing.Size(229, 50);
+            this.btnTaxSummary.Size = new System.Drawing.Size(171, 41);
             this.btnTaxSummary.TabIndex = 8;
             this.btnTaxSummary.Text = "Skatt";
             this.btnTaxSummary.UseVisualStyleBackColor = false;
@@ -149,8 +153,9 @@
             this.btnCreateInvoiceFromSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateInvoiceFromSupplier.ForeColor = System.Drawing.Color.White;
             this.btnCreateInvoiceFromSupplier.Location = new System.Drawing.Point(0, 0);
+            this.btnCreateInvoiceFromSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateInvoiceFromSupplier.Name = "btnCreateInvoiceFromSupplier";
-            this.btnCreateInvoiceFromSupplier.Size = new System.Drawing.Size(229, 50);
+            this.btnCreateInvoiceFromSupplier.Size = new System.Drawing.Size(171, 41);
             this.btnCreateInvoiceFromSupplier.TabIndex = 7;
             this.btnCreateInvoiceFromSupplier.Text = "Skapa faktura lev.";
             this.btnCreateInvoiceFromSupplier.UseVisualStyleBackColor = false;
@@ -164,9 +169,10 @@
             this.btnEconomy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEconomy.ForeColor = System.Drawing.Color.White;
             this.btnEconomy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEconomy.Location = new System.Drawing.Point(0, 950);
+            this.btnEconomy.Location = new System.Drawing.Point(0, 773);
+            this.btnEconomy.Margin = new System.Windows.Forms.Padding(2);
             this.btnEconomy.Name = "btnEconomy";
-            this.btnEconomy.Size = new System.Drawing.Size(229, 50);
+            this.btnEconomy.Size = new System.Drawing.Size(171, 41);
             this.btnEconomy.TabIndex = 13;
             this.btnEconomy.Text = "Ekonmi";
             this.btnEconomy.UseVisualStyleBackColor = false;
@@ -180,9 +186,10 @@
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 900);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 732);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(229, 50);
+            this.btnCustomer.Size = new System.Drawing.Size(171, 41);
             this.btnCustomer.TabIndex = 12;
             this.btnCustomer.Text = "Kunder";
             this.btnCustomer.UseVisualStyleBackColor = false;
@@ -194,9 +201,10 @@
             this.panelStorageSubMenu.Controls.Add(this.btnAddFabric);
             this.panelStorageSubMenu.Controls.Add(this.btlMatrialVy);
             this.panelStorageSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStorageSubMenu.Location = new System.Drawing.Point(0, 750);
+            this.panelStorageSubMenu.Location = new System.Drawing.Point(0, 610);
+            this.panelStorageSubMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelStorageSubMenu.Name = "panelStorageSubMenu";
-            this.panelStorageSubMenu.Size = new System.Drawing.Size(229, 150);
+            this.panelStorageSubMenu.Size = new System.Drawing.Size(171, 122);
             this.panelStorageSubMenu.TabIndex = 11;
             // 
             // btnAddFabric
@@ -206,9 +214,10 @@
             this.btnAddFabric.FlatAppearance.BorderSize = 0;
             this.btnAddFabric.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFabric.ForeColor = System.Drawing.Color.White;
-            this.btnAddFabric.Location = new System.Drawing.Point(0, 50);
+            this.btnAddFabric.Location = new System.Drawing.Point(0, 41);
+            this.btnAddFabric.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddFabric.Name = "btnAddFabric";
-            this.btnAddFabric.Size = new System.Drawing.Size(229, 50);
+            this.btnAddFabric.Size = new System.Drawing.Size(171, 41);
             this.btnAddFabric.TabIndex = 6;
             this.btnAddFabric.Text = "Lägg till nytt matrial";
             this.btnAddFabric.UseVisualStyleBackColor = false;
@@ -222,8 +231,9 @@
             this.btlMatrialVy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlMatrialVy.ForeColor = System.Drawing.Color.White;
             this.btlMatrialVy.Location = new System.Drawing.Point(0, 0);
+            this.btlMatrialVy.Margin = new System.Windows.Forms.Padding(2);
             this.btlMatrialVy.Name = "btlMatrialVy";
-            this.btlMatrialVy.Size = new System.Drawing.Size(229, 50);
+            this.btlMatrialVy.Size = new System.Drawing.Size(171, 41);
             this.btlMatrialVy.TabIndex = 5;
             this.btlMatrialVy.Text = "Öka matrial";
             this.btlMatrialVy.UseVisualStyleBackColor = false;
@@ -237,9 +247,10 @@
             this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStorage.ForeColor = System.Drawing.Color.White;
             this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStorage.Location = new System.Drawing.Point(0, 700);
+            this.btnStorage.Location = new System.Drawing.Point(0, 569);
+            this.btnStorage.Margin = new System.Windows.Forms.Padding(2);
             this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(229, 50);
+            this.btnStorage.Size = new System.Drawing.Size(171, 41);
             this.btnStorage.TabIndex = 10;
             this.btnStorage.Text = "Lager";
             this.btnStorage.UseVisualStyleBackColor = false;
@@ -253,9 +264,10 @@
             this.panelOrderSubMenu.Controls.Add(this.btnListOfStartedOrders);
             this.panelOrderSubMenu.Controls.Add(this.btnListOfCreatedOrders);
             this.panelOrderSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOrderSubMenu.Location = new System.Drawing.Point(0, 450);
+            this.panelOrderSubMenu.Location = new System.Drawing.Point(0, 366);
+            this.panelOrderSubMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelOrderSubMenu.Name = "panelOrderSubMenu";
-            this.panelOrderSubMenu.Size = new System.Drawing.Size(229, 250);
+            this.panelOrderSubMenu.Size = new System.Drawing.Size(171, 203);
             this.panelOrderSubMenu.TabIndex = 5;
             // 
             // btnOrderHantering
@@ -265,9 +277,10 @@
             this.btnOrderHantering.FlatAppearance.BorderSize = 0;
             this.btnOrderHantering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderHantering.ForeColor = System.Drawing.Color.White;
-            this.btnOrderHantering.Location = new System.Drawing.Point(0, 150);
+            this.btnOrderHantering.Location = new System.Drawing.Point(0, 123);
+            this.btnOrderHantering.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderHantering.Name = "btnOrderHantering";
-            this.btnOrderHantering.Size = new System.Drawing.Size(229, 50);
+            this.btnOrderHantering.Size = new System.Drawing.Size(171, 41);
             this.btnOrderHantering.TabIndex = 4;
             this.btnOrderHantering.Text = "Hantera ordrar";
             this.btnOrderHantering.UseVisualStyleBackColor = false;
@@ -280,9 +293,10 @@
             this.btnListOfFinishedOrders.FlatAppearance.BorderSize = 0;
             this.btnListOfFinishedOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListOfFinishedOrders.ForeColor = System.Drawing.Color.White;
-            this.btnListOfFinishedOrders.Location = new System.Drawing.Point(0, 100);
+            this.btnListOfFinishedOrders.Location = new System.Drawing.Point(0, 82);
+            this.btnListOfFinishedOrders.Margin = new System.Windows.Forms.Padding(2);
             this.btnListOfFinishedOrders.Name = "btnListOfFinishedOrders";
-            this.btnListOfFinishedOrders.Size = new System.Drawing.Size(229, 50);
+            this.btnListOfFinishedOrders.Size = new System.Drawing.Size(171, 41);
             this.btnListOfFinishedOrders.TabIndex = 3;
             this.btnListOfFinishedOrders.Text = "Färdiga ordrar";
             this.btnListOfFinishedOrders.UseVisualStyleBackColor = false;
@@ -295,9 +309,10 @@
             this.btnListOfStartedOrders.FlatAppearance.BorderSize = 0;
             this.btnListOfStartedOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListOfStartedOrders.ForeColor = System.Drawing.Color.White;
-            this.btnListOfStartedOrders.Location = new System.Drawing.Point(0, 50);
+            this.btnListOfStartedOrders.Location = new System.Drawing.Point(0, 41);
+            this.btnListOfStartedOrders.Margin = new System.Windows.Forms.Padding(2);
             this.btnListOfStartedOrders.Name = "btnListOfStartedOrders";
-            this.btnListOfStartedOrders.Size = new System.Drawing.Size(229, 50);
+            this.btnListOfStartedOrders.Size = new System.Drawing.Size(171, 41);
             this.btnListOfStartedOrders.TabIndex = 2;
             this.btnListOfStartedOrders.Text = "Startade Ordrar";
             this.btnListOfStartedOrders.UseVisualStyleBackColor = false;
@@ -311,8 +326,9 @@
             this.btnListOfCreatedOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListOfCreatedOrders.ForeColor = System.Drawing.Color.White;
             this.btnListOfCreatedOrders.Location = new System.Drawing.Point(0, 0);
+            this.btnListOfCreatedOrders.Margin = new System.Windows.Forms.Padding(2);
             this.btnListOfCreatedOrders.Name = "btnListOfCreatedOrders";
-            this.btnListOfCreatedOrders.Size = new System.Drawing.Size(229, 50);
+            this.btnListOfCreatedOrders.Size = new System.Drawing.Size(171, 41);
             this.btnListOfCreatedOrders.TabIndex = 1;
             this.btnListOfCreatedOrders.Text = "Skapade ordrar";
             this.btnListOfCreatedOrders.UseVisualStyleBackColor = false;
@@ -326,9 +342,10 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 400);
+            this.btnOrder.Location = new System.Drawing.Point(0, 325);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(229, 50);
+            this.btnOrder.Size = new System.Drawing.Size(171, 41);
             this.btnOrder.TabIndex = 4;
             this.btnOrder.Text = "Ordrar";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -340,9 +357,10 @@
             this.panelPurchaseSubmenu.Controls.Add(this.btnSpecial);
             this.panelPurchaseSubmenu.Controls.Add(this.btnDHat);
             this.panelPurchaseSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPurchaseSubmenu.Location = new System.Drawing.Point(0, 300);
+            this.panelPurchaseSubmenu.Location = new System.Drawing.Point(0, 244);
+            this.panelPurchaseSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelPurchaseSubmenu.Name = "panelPurchaseSubmenu";
-            this.panelPurchaseSubmenu.Size = new System.Drawing.Size(229, 100);
+            this.panelPurchaseSubmenu.Size = new System.Drawing.Size(171, 81);
             this.panelPurchaseSubmenu.TabIndex = 3;
             // 
             // btnSpecial
@@ -352,9 +370,10 @@
             this.btnSpecial.FlatAppearance.BorderSize = 0;
             this.btnSpecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpecial.ForeColor = System.Drawing.Color.White;
-            this.btnSpecial.Location = new System.Drawing.Point(0, 50);
+            this.btnSpecial.Location = new System.Drawing.Point(0, 41);
+            this.btnSpecial.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpecial.Name = "btnSpecial";
-            this.btnSpecial.Size = new System.Drawing.Size(229, 50);
+            this.btnSpecial.Size = new System.Drawing.Size(171, 41);
             this.btnSpecial.TabIndex = 1;
             this.btnSpecial.Text = "Special";
             this.btnSpecial.UseVisualStyleBackColor = false;
@@ -368,8 +387,9 @@
             this.btnDHat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDHat.ForeColor = System.Drawing.Color.White;
             this.btnDHat.Location = new System.Drawing.Point(0, 0);
+            this.btnDHat.Margin = new System.Windows.Forms.Padding(2);
             this.btnDHat.Name = "btnDHat";
-            this.btnDHat.Size = new System.Drawing.Size(229, 50);
+            this.btnDHat.Size = new System.Drawing.Size(171, 41);
             this.btnDHat.TabIndex = 0;
             this.btnDHat.Text = "Doktorshatt";
             this.btnDHat.UseVisualStyleBackColor = false;
@@ -383,9 +403,10 @@
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(0, 250);
+            this.btnPurchase.Location = new System.Drawing.Point(0, 203);
+            this.btnPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(229, 50);
+            this.btnPurchase.Size = new System.Drawing.Size(171, 41);
             this.btnPurchase.TabIndex = 2;
             this.btnPurchase.Text = "Ny beställning";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -399,9 +420,10 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 200);
+            this.btnHome.Location = new System.Drawing.Point(0, 162);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(229, 50);
+            this.btnHome.Size = new System.Drawing.Size(171, 41);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Hem";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -412,8 +434,9 @@
             this.panelLogo.BackColor = System.Drawing.Color.White;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(229, 200);
+            this.panelLogo.Size = new System.Drawing.Size(171, 162);
             this.panelLogo.TabIndex = 0;
             // 
             // panelOrder
@@ -433,16 +456,18 @@
             this.panelOrder.Controls.Add(this.label1);
             this.panelOrder.Controls.Add(this.btnCreateInvoice);
             this.panelOrder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOrder.Location = new System.Drawing.Point(1367, 150);
+            this.panelOrder.Location = new System.Drawing.Point(1025, 122);
+            this.panelOrder.Margin = new System.Windows.Forms.Padding(2);
             this.panelOrder.Name = "panelOrder";
-            this.panelOrder.Size = new System.Drawing.Size(320, 786);
+            this.panelOrder.Size = new System.Drawing.Size(240, 638);
             this.panelOrder.TabIndex = 5;
             // 
             // btnChoseCustomer
             // 
-            this.btnChoseCustomer.Location = new System.Drawing.Point(182, 88);
+            this.btnChoseCustomer.Location = new System.Drawing.Point(136, 72);
+            this.btnChoseCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoseCustomer.Name = "btnChoseCustomer";
-            this.btnChoseCustomer.Size = new System.Drawing.Size(126, 40);
+            this.btnChoseCustomer.Size = new System.Drawing.Size(94, 32);
             this.btnChoseCustomer.TabIndex = 15;
             this.btnChoseCustomer.Text = "Välj kund";
             this.btnChoseCustomer.UseVisualStyleBackColor = true;
@@ -453,9 +478,10 @@
             this.lblOrder.AutoSize = true;
             this.lblOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrder.ForeColor = System.Drawing.Color.White;
-            this.lblOrder.Location = new System.Drawing.Point(93, 64);
+            this.lblOrder.Location = new System.Drawing.Point(70, 52);
+            this.lblOrder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(18, 20);
+            this.lblOrder.Size = new System.Drawing.Size(16, 17);
             this.lblOrder.TabIndex = 14;
             this.lblOrder.Text = "0";
             // 
@@ -464,29 +490,36 @@
             this.lblCustomer.AutoSize = true;
             this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomer.ForeColor = System.Drawing.Color.White;
-            this.lblCustomer.Location = new System.Drawing.Point(93, 100);
+            this.lblCustomer.Location = new System.Drawing.Point(70, 81);
+            this.lblCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(47, 20);
+            this.lblCustomer.Size = new System.Drawing.Size(41, 17);
             this.lblCustomer.TabIndex = 13;
             this.lblCustomer.Text = "Kund";
             // 
             // listViewHats
             // 
+            this.listViewHats.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.listViewHats.HideSelection = false;
-            this.listViewHats.Location = new System.Drawing.Point(9, 134);
+            this.listViewHats.Location = new System.Drawing.Point(7, 109);
+            this.listViewHats.Margin = new System.Windows.Forms.Padding(2);
             this.listViewHats.Name = "listViewHats";
-            this.listViewHats.Size = new System.Drawing.Size(299, 333);
+            this.listViewHats.Size = new System.Drawing.Size(225, 271);
             this.listViewHats.TabIndex = 12;
             this.listViewHats.UseCompatibleStateImageBehavior = false;
+            this.listViewHats.View = System.Windows.Forms.View.Details;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(5, 64);
+            this.label7.Location = new System.Drawing.Point(4, 52);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Order:";
             // 
@@ -495,17 +528,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(5, 100);
+            this.label6.Location = new System.Drawing.Point(4, 81);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
+            this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Kund:";
             // 
             // txtBoxDiscount
             // 
-            this.txtBoxDiscount.Location = new System.Drawing.Point(154, 588);
+            this.txtBoxDiscount.Location = new System.Drawing.Point(116, 478);
+            this.txtBoxDiscount.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDiscount.Name = "txtBoxDiscount";
-            this.txtBoxDiscount.Size = new System.Drawing.Size(112, 22);
+            this.txtBoxDiscount.Size = new System.Drawing.Size(85, 20);
             this.txtBoxDiscount.TabIndex = 9;
             // 
             // label5
@@ -513,9 +548,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(5, 590);
+            this.label5.Location = new System.Drawing.Point(4, 479);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 20);
+            this.label5.Size = new System.Drawing.Size(78, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Rabatt (Kr)";
             // 
@@ -524,9 +560,10 @@
             this.lblSuggestedDiscount.AutoSize = true;
             this.lblSuggestedDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuggestedDiscount.ForeColor = System.Drawing.Color.White;
-            this.lblSuggestedDiscount.Location = new System.Drawing.Point(151, 540);
+            this.lblSuggestedDiscount.Location = new System.Drawing.Point(113, 439);
+            this.lblSuggestedDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuggestedDiscount.Name = "lblSuggestedDiscount";
-            this.lblSuggestedDiscount.Size = new System.Drawing.Size(51, 20);
+            this.lblSuggestedDiscount.Size = new System.Drawing.Size(45, 17);
             this.lblSuggestedDiscount.TabIndex = 7;
             this.lblSuggestedDiscount.Text = "0,00:-";
             // 
@@ -535,9 +572,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 540);
+            this.label3.Location = new System.Drawing.Point(4, 439);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 20);
+            this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Föreslagen rabatt";
             // 
@@ -546,9 +584,10 @@
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPrice.Location = new System.Drawing.Point(153, 486);
+            this.lblTotalPrice.Location = new System.Drawing.Point(115, 395);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(51, 20);
+            this.lblTotalPrice.Size = new System.Drawing.Size(45, 17);
             this.lblTotalPrice.TabIndex = 5;
             this.lblTotalPrice.Text = "0,00:-";
             // 
@@ -557,17 +596,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 486);
+            this.label1.Location = new System.Drawing.Point(4, 395);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ordinarrie Pris";
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.Location = new System.Drawing.Point(154, 650);
+            this.btnCreateInvoice.Location = new System.Drawing.Point(116, 528);
+            this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
-            this.btnCreateInvoice.Size = new System.Drawing.Size(154, 48);
+            this.btnCreateInvoice.Size = new System.Drawing.Size(116, 39);
             this.btnCreateInvoice.TabIndex = 3;
             this.btnCreateInvoice.Text = "Skapa faktura";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
@@ -578,19 +619,11 @@
             this.panelBoarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
             this.panelBoarder.Controls.Add(this.lblUser);
             this.panelBoarder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBoarder.Location = new System.Drawing.Point(250, 0);
+            this.panelBoarder.Location = new System.Drawing.Point(188, 0);
+            this.panelBoarder.Margin = new System.Windows.Forms.Padding(2);
             this.panelBoarder.Name = "panelBoarder";
-            this.panelBoarder.Size = new System.Drawing.Size(1437, 150);
+            this.panelBoarder.Size = new System.Drawing.Size(1077, 122);
             this.panelBoarder.TabIndex = 4;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.White;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 150);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1117, 786);
-            this.panelChildForm.TabIndex = 6;
             // 
             // lblUser
             // 
@@ -598,22 +631,43 @@
             this.lblUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(1293, 0);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(15);
+            this.lblUser.Location = new System.Drawing.Point(960, 0);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(144, 29);
+            this.lblUser.Size = new System.Drawing.Size(117, 25);
             this.lblUser.TabIndex = 16;
             this.lblUser.Text = "Användare";
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.White;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(188, 122);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(837, 638);
+            this.panelChildForm.TabIndex = 6;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Hat";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.DisplayIndex = 1;
+            this.columnHeader2.Text = "Price";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // NewUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1687, 936);
+            this.ClientSize = new System.Drawing.Size(1265, 760);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelOrder);
             this.Controls.Add(this.panelBoarder);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewUI";
             this.Text = "NewUI";
             this.Load += new System.EventHandler(this.NewUI_Load);
@@ -672,5 +726,7 @@
         private System.Windows.Forms.Button btnTaxSummary;
         private System.Windows.Forms.Button btnCreateInvoiceFromSupplier;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
