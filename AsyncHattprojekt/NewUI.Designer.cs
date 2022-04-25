@@ -464,7 +464,7 @@
             // 
             // btnChoseCustomer
             // 
-            this.btnChoseCustomer.Location = new System.Drawing.Point(136, 72);
+            this.btnChoseCustomer.Location = new System.Drawing.Point(7, 110);
             this.btnChoseCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoseCustomer.Name = "btnChoseCustomer";
             this.btnChoseCustomer.Size = new System.Drawing.Size(94, 32);
@@ -503,7 +503,7 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listViewHats.HideSelection = false;
-            this.listViewHats.Location = new System.Drawing.Point(7, 109);
+            this.listViewHats.Location = new System.Drawing.Point(7, 163);
             this.listViewHats.Margin = new System.Windows.Forms.Padding(2);
             this.listViewHats.Name = "listViewHats";
             this.listViewHats.Size = new System.Drawing.Size(225, 271);
@@ -537,7 +537,7 @@
             // 
             // txtBoxDiscount
             // 
-            this.txtBoxDiscount.Location = new System.Drawing.Point(116, 478);
+            this.txtBoxDiscount.Location = new System.Drawing.Point(116, 529);
             this.txtBoxDiscount.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxDiscount.Name = "txtBoxDiscount";
             this.txtBoxDiscount.Size = new System.Drawing.Size(85, 20);
@@ -548,7 +548,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(4, 479);
+            this.label5.Location = new System.Drawing.Point(4, 529);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 17);
@@ -560,7 +560,7 @@
             this.lblSuggestedDiscount.AutoSize = true;
             this.lblSuggestedDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuggestedDiscount.ForeColor = System.Drawing.Color.White;
-            this.lblSuggestedDiscount.Location = new System.Drawing.Point(113, 439);
+            this.lblSuggestedDiscount.Location = new System.Drawing.Point(133, 500);
             this.lblSuggestedDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuggestedDiscount.Name = "lblSuggestedDiscount";
             this.lblSuggestedDiscount.Size = new System.Drawing.Size(45, 17);
@@ -572,7 +572,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 439);
+            this.label3.Location = new System.Drawing.Point(4, 500);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
@@ -584,7 +584,7 @@
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPrice.Location = new System.Drawing.Point(115, 395);
+            this.lblTotalPrice.Location = new System.Drawing.Point(133, 471);
             this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(45, 17);
@@ -596,7 +596,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 395);
+            this.label1.Location = new System.Drawing.Point(4, 471);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 17);
@@ -605,7 +605,7 @@
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.Location = new System.Drawing.Point(116, 528);
+            this.btnCreateInvoice.Location = new System.Drawing.Point(114, 571);
             this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
             this.btnCreateInvoice.Size = new System.Drawing.Size(116, 39);
