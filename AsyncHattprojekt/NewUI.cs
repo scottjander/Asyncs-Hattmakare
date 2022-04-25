@@ -75,11 +75,11 @@ namespace AsyncHattprojekt
             childForm.Show();
         }
 
-        public static void SetOrderInfo(string orderID,string customer)
-        {
-            lblOrder.Text = orderID;
-            lblCustomer.Text = customer;
-        }
+        //public static void SetOrderInfo(string orderID,string customer)
+        //{
+        //    lblOrder.Text = orderID;
+        //    lblCustomer.Text = customer;
+        //}
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -205,7 +205,15 @@ namespace AsyncHattprojekt
 
         private void btnChoseCustomer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CreateOrder());
+            CreateOrder form = new CreateOrder();
+            form.parent = this;
+            OpenChildForm(form);
+        }
+
+        public void updateOrderAndCustomer(string orderId, string customerName)
+        {
+            lblOrder.Text = orderId;
+            lblCustomer.Text = customerName;
         }
     }
 }
