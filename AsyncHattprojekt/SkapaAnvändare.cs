@@ -23,9 +23,13 @@ namespace AsyncHattprojekt
         private void btnSkapaAnvandare_Click(object sender, EventArgs e)
         {
             string anvandare = txtNyAnvandare.Text;
-            anvandareController.LaggTillAnstalld(anvandare);
-            this.Close();
+            if (anvandare.Length >= 1 && anvandare.Length <= 15) {
+                anvandareController.LaggTillAnstalld(anvandare);
+                this.Close();
+            }
+            else {
+                MessageBox.Show("Använd mellan 1 och 15 karaktärer");
+            }
         }
-
     }
 }

@@ -54,15 +54,18 @@ namespace AsyncHattprojekt
         private void btnLoggaIn_Click_1(object sender, EventArgs e)
         {
             //testklassen.dummydata();
-            this.Hide();
+            if (cbVäljAnvändare.SelectedIndex >= 0) {
+                 this.Hide();
             username = cbVäljAnvändare.Text;
             NewUI f = new NewUI();
             f.ShowDialog();
             f = null;
             this.Show();
-
+            }
+            else {
+                MessageBox.Show("Välj en användare");
+            }
         }
-
 
         //private void button4_Click(object sender, EventArgs e)
         //{
