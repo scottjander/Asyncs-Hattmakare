@@ -20,21 +20,28 @@ namespace BusinessLayer
         }
         public void RegisterCustomer(string firstName, string lastName, string phone, string email, Address address, string comment)
         {
-            var customer = new Customer()
+            try
             {
-                FirstName = firstName,
-                LastName = lastName,
-                Phone = phone,
-                Email = email,
-                Address = address,
-                Comment = comment,
-            };
+                var customer = new Customer()
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Phone = phone,
+                    Email = email,
+                    Address = address,
+                    Comment = comment,
+                };
 
-            var a = address;
+                var a = address;
 
-            HatDbContext.Addresses.Add(a);
-            HatDbContext.Customers.Add(customer);
-            HatDbContext.SaveChanges();
+                HatDbContext.Addresses.Add(a);
+                HatDbContext.Customers.Add(customer);
+                HatDbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

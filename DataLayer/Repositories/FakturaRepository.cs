@@ -39,12 +39,13 @@ namespace DataLayer.Repositories
 
         public string HamtaForNamn (int id)
         {
-            
-                var customer = context.Customers.Find(id);
-                var namn = customer.FirstName;
-                return namn;
 
-            
+            var customer = context.Customers.Find(id);
+            var namn = customer.FirstName;
+            return namn;
+       
+
+
         }
         public string HamtaEfterNamn(int id)
         {

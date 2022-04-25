@@ -44,7 +44,6 @@
             this.txtBoxFileName = new System.Windows.Forms.TextBox();
             this.lblFabric = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,7 +57,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(53, 33);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(51, 20);
+            this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Namn";
             // 
@@ -67,7 +66,7 @@
             this.lblSize.AutoSize = true;
             this.lblSize.Location = new System.Drawing.Point(52, 304);
             this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(59, 20);
+            this.lblSize.Size = new System.Drawing.Size(40, 13);
             this.lblSize.TabIndex = 2;
             this.lblSize.Text = "Storlek";
             // 
@@ -76,7 +75,7 @@
             this.lblDecoration.AutoSize = true;
             this.lblDecoration.Location = new System.Drawing.Point(52, 275);
             this.lblDecoration.Name = "lblDecoration";
-            this.lblDecoration.Size = new System.Drawing.Size(125, 20);
+            this.lblDecoration.Size = new System.Drawing.Size(84, 13);
             this.lblDecoration.TabIndex = 3;
             this.lblDecoration.Text = "Antal dekoration";
             // 
@@ -84,21 +83,21 @@
             // 
             this.txtBoxName.Location = new System.Drawing.Point(233, 33);
             this.txtBoxName.Name = "txtBoxName";
-            this.txtBoxName.Size = new System.Drawing.Size(100, 26);
+            this.txtBoxName.Size = new System.Drawing.Size(100, 20);
             this.txtBoxName.TabIndex = 4;
             // 
             // txtBoxDecoration
             // 
             this.txtBoxDecoration.Location = new System.Drawing.Point(233, 268);
             this.txtBoxDecoration.Name = "txtBoxDecoration";
-            this.txtBoxDecoration.Size = new System.Drawing.Size(40, 26);
+            this.txtBoxDecoration.Size = new System.Drawing.Size(40, 20);
             this.txtBoxDecoration.TabIndex = 5;
             // 
             // txtBoxSize
             // 
             this.txtBoxSize.Location = new System.Drawing.Point(233, 301);
             this.txtBoxSize.Name = "txtBoxSize";
-            this.txtBoxSize.Size = new System.Drawing.Size(40, 26);
+            this.txtBoxSize.Size = new System.Drawing.Size(40, 20);
             this.txtBoxSize.TabIndex = 6;
             // 
             // btnAddHat
@@ -134,7 +133,7 @@
             this.lblComment.AutoSize = true;
             this.lblComment.Location = new System.Drawing.Point(53, 385);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(91, 20);
+            this.lblComment.Size = new System.Drawing.Size(60, 13);
             this.lblComment.TabIndex = 11;
             this.lblComment.Text = "Kommentar";
             // 
@@ -143,7 +142,7 @@
             this.lblFabricLength.AutoSize = true;
             this.lblFabricLength.Location = new System.Drawing.Point(52, 234);
             this.lblFabricLength.Name = "lblFabricLength";
-            this.lblFabricLength.Size = new System.Drawing.Size(158, 20);
+            this.lblFabricLength.Size = new System.Drawing.Size(106, 13);
             this.lblFabricLength.TabIndex = 12;
             this.lblFabricLength.Text = "Tygföbrukningsmeter";
             // 
@@ -151,7 +150,7 @@
             // 
             this.txtBoxFabricLength.Location = new System.Drawing.Point(233, 231);
             this.txtBoxFabricLength.Name = "txtBoxFabricLength";
-            this.txtBoxFabricLength.Size = new System.Drawing.Size(40, 26);
+            this.txtBoxFabricLength.Size = new System.Drawing.Size(40, 20);
             this.txtBoxFabricLength.TabIndex = 13;
             // 
             // pictureBox
@@ -171,7 +170,7 @@
             this.txtBoxFileName.Location = new System.Drawing.Point(620, 268);
             this.txtBoxFileName.Name = "txtBoxFileName";
             this.txtBoxFileName.ReadOnly = true;
-            this.txtBoxFileName.Size = new System.Drawing.Size(255, 26);
+            this.txtBoxFileName.Size = new System.Drawing.Size(255, 20);
             this.txtBoxFileName.TabIndex = 16;
             this.txtBoxFileName.Text = "Filväg";
             this.txtBoxFileName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -181,17 +180,17 @@
             this.lblFabric.AutoSize = true;
             this.lblFabric.Location = new System.Drawing.Point(53, 70);
             this.lblFabric.Name = "lblFabric";
-            this.lblFabric.Size = new System.Drawing.Size(65, 20);
+            this.lblFabric.Size = new System.Drawing.Size(44, 13);
             this.lblFabric.TabIndex = 18;
             this.lblFabric.Text = "Material";
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(233, 70);
             this.listView1.Name = "listView1";
@@ -200,11 +199,6 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Id";
-            this.columnHeader4.Width = 26;
             // 
             // columnHeader1
             // 
@@ -226,7 +220,7 @@
             this.lblChosenFabric.AutoSize = true;
             this.lblChosenFabric.Location = new System.Drawing.Point(53, 200);
             this.lblChosenFabric.Name = "lblChosenFabric";
-            this.lblChosenFabric.Size = new System.Drawing.Size(97, 20);
+            this.lblChosenFabric.Size = new System.Drawing.Size(64, 13);
             this.lblChosenFabric.TabIndex = 20;
             this.lblChosenFabric.Text = "Valt material";
             // 
@@ -235,7 +229,7 @@
             this.txtBoxChosenFabric.Location = new System.Drawing.Point(233, 197);
             this.txtBoxChosenFabric.Name = "txtBoxChosenFabric";
             this.txtBoxChosenFabric.ReadOnly = true;
-            this.txtBoxChosenFabric.Size = new System.Drawing.Size(100, 26);
+            this.txtBoxChosenFabric.Size = new System.Drawing.Size(100, 20);
             this.txtBoxChosenFabric.TabIndex = 21;
             // 
             // SpecialHatForm
@@ -289,7 +283,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label lblChosenFabric;
         private System.Windows.Forms.TextBox txtBoxChosenFabric;
     }

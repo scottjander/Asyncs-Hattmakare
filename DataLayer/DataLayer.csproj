@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HatDbContext.cs" />
-    <Compile Include="Migrations\202204211119347_erik.cs" />
-    <Compile Include="Migrations\202204211119347_erik.designer.cs">
-      <DependentUpon>202204211119347_erik.cs</DependentUpon>
+    <Compile Include="Migrations\202204250839290_tt.cs" />
+    <Compile Include="Migrations\202204250839290_tt.designer.cs">
+      <DependentUpon>202204250839290_tt.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\InvoicesToSerialize.cs" />
     <Compile Include="Repositories\AnvandareRepository.cs" />
@@ -94,8 +94,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204211119347_erik.resx">
-      <DependentUpon>202204211119347_erik.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204250839290_tt.resx">
+      <DependentUpon>202204250839290_tt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -50,7 +50,8 @@ namespace AsyncHattprojekt
                     betald = false;
                     }
                 fakturaController.SkapaFaktura(betald, OrderId, summa);
-            
+                MessageBox.Show("Faktura skapad åt ordernr: " + OrderId);
+
 
         }
 

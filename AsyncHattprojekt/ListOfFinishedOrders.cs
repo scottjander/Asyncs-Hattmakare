@@ -17,6 +17,8 @@ namespace AsyncHattprojekt
     {
         public HatDbContext HatDbContext = new HatDbContext();
         public OrderControllerScottRobin orderControllerScottRobin = new OrderControllerScottRobin();
+        public int orderID;
+        public NewUI parent;
         public ListOfFinishedOrders()
         {
             InitializeComponent();
@@ -57,11 +59,17 @@ namespace AsyncHattprojekt
             if (listView1.SelectedItems.Count > 0) {
                 var item = listView1.SelectedItems[0];
                 this.Hide();
-                // ListOfStartedOrders f = new ListOfStartedOrders();
-                // f.ShowDialog();
-                // f = null;
-                this.Show();
+                OrderHantering f = new OrderHantering(orderID);
+                f.ShowDialog();
             }
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0) {
+                orderID = Convert.ToInt32(listView1.SelectedItems[0].Text);
+            }
+
         }
     }
 }

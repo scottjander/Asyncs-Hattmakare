@@ -33,7 +33,6 @@ namespace AsyncHattprojekt
             var discount = orderController.GetDiscount(customerPoints);
             lblSuggestedDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString() + ":-";
             txtBoxDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString();
-
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
@@ -61,15 +60,20 @@ namespace AsyncHattprojekt
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
-            var currentOrder = orderController.getOrderOnId(orderID);
-            var customer = currentOrder.Customer;
-            var discount = Convert.ToDouble(txtBoxDiscount.Text);
-            double finalPrice = currentOrder.TotalPrice - discount;
-            orderController.ApplyDiscount(currentOrder, finalPrice);
-            this.Hide();
-            SkapaFaktura invoice = new SkapaFaktura(customer, currentOrder);
-            invoice.ShowDialog();
-            this.Show();
+            try {
+                var currentOrder = orderController.getOrderOnId(orderID);
+                var customer = currentOrder.Customer;
+                var discount = Convert.ToDouble(txtBoxDiscount.Text);
+                double finalPrice = currentOrder.TotalPrice - discount;
+                orderController.ApplyDiscount(currentOrder, finalPrice);
+                this.Hide();
+                SkapaFaktura invoice = new SkapaFaktura(customer, currentOrder);
+                invoice.ShowDialog();
+                this.Show();
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Rabbaten får enbart innehålla siffror");
+            }
         }
 
 

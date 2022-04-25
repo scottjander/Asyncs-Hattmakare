@@ -18,6 +18,10 @@ namespace AsyncHattprojekt
             anvandareController = new AnvandareController();
             testklassen = new Testklassen();
             cbVäljAnvändare_fyllcbx();
+            testklassen.FillHat();
+            testklassen.testmetoden3();
+            testklassen.FillInvoices();
+
         }
 
         private void cbVäljAnvändare_fyllcbx()
@@ -51,27 +55,26 @@ namespace AsyncHattprojekt
         {
             //testklassen.dummydata();
             if (cbVäljAnvändare.SelectedIndex >= 0) {
-                this.Hide();
-                username = cbVäljAnvändare.Text;
-                StartPage f = new StartPage();
-                f.ShowDialog();
-                f = null;
-                this.Show();
+                 this.Hide();
+            username = cbVäljAnvändare.Text;
+            NewUI f = new NewUI();
+            f.ShowDialog();
+            f = null;
+            this.Show();
             }
             else {
                 MessageBox.Show("Välj en användare");
             }
         }
 
-
         //private void button4_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.addHats();
+        //    StandardHatController.AddHats();
         //}
 
         //private void button5_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.deleteHats();
+        //    StandardHatController.DeleteHats();
         //}
 
         //private void button6_Click(object sender, EventArgs e)

@@ -159,35 +159,35 @@ namespace DataLayer
             var hat1 = new Hat()
             {
                 Price = 150,
-                size = 20,
+                size = 52,
                 color = "Svart",
                 itemName = "Doktorshatt"
             };
             var hat2 = new Hat()
             {
                 Price = 150,
-                size = 100,
+                size = 54,
                 color = "Blå",
                 itemName = "Doktorshatt"
             };
             var hat3 = new Hat()
             {
                 Price = 150,
-                size = 33,
+                size = 56,
                 color = "Grön",
                 itemName = "Doktorshatt"
             };
             var hat4 = new Hat()
             {
                 Price = 150,
-                size = 45,
+                size = 52,
                 color = "Lila",
                 itemName = "Doktorshatt"
             };
             var hat5 = new Hat()
             {
                 Price = 150,
-                size = 25,
+                size = 62,
                 color = "Gul",
                 itemName = "Doktorshatt"
             };

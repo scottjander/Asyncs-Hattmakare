@@ -17,6 +17,7 @@ namespace AsyncHattprojekt
     {
         private readonly OrderRepository repository = new OrderRepository();
         private readonly OrderControllerScottRobin controller = new OrderControllerScottRobin();
+        public NewUI parent { get; set; }
 
         public CreateOrder()
         {
@@ -40,16 +41,27 @@ namespace AsyncHattprojekt
 
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
+
+            try {
             string skapare = InitialPage.username;
             var comment = txtBoxComment.Text;
             var Customer = (Customer)comboBox1.SelectedItem;
 
-            if (Customer != null) {
+            
                 var orderID = controller.CreateOrder(comment, Customer, skapare);
                 OrderForm orderForm = new OrderForm(orderID);
-                orderForm.Show();
+                string stringOrderID = orderID.ToString();
+                string stringCustomer = Customer.FirstName + " " + Customer.LastName;
+                parent.updateOrderAndCustomer(stringOrderID, stringCustomer);
+                parent.OpenChildForm(new Home());
+                //orderForm.Show();
                 this.Close();
+
             }
+            catch (Exception ex) {
+                MessageBox.Show("Var god välj en kund.");
+            }
+
         }
     }
 }
