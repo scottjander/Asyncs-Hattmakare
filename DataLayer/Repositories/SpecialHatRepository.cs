@@ -49,6 +49,10 @@ namespace DataLayer.Repository
             return listOfHats.ToList();
         }
 
+        public HatDbContext GetContext()
+        {
+            return _context;
+        }
     }
 
 }

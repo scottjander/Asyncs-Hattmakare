@@ -20,7 +20,7 @@ namespace BusinessLayer.Controllers
         {
             SpecialHatRepository = new SpecialHatRepository();
             FabricRepository = new FabricRepository();
-            HatRepository = new HatRepository();
+            HatRepository = new HatRepository(SpecialHatRepository.GetContext());
         }
 
         public void AddSpecialHat(string name, Fabric fabric,double fabricLength ,int decoration, int size, string comment, int orderId, string filePath , string fileName)
