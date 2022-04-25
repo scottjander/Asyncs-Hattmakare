@@ -37,13 +37,18 @@ namespace AsyncHattprojekt
         private void FillListView()
         {
             listView1.Items.Clear();
-            foreach (Fabric fabric in specialHatController.GetAllFabrics())
-            {
-                ListViewItem lvi = new ListViewItem(fabric.Id.ToString());
-                lvi.SubItems.Add(fabric.ItemName);
-                lvi.SubItems.Add(fabric.Colour);
-                lvi.SubItems.Add(fabric.AmountInStock.ToString());
-                listView1.Items.Add(lvi);
+            //foreach (Fabric fabric in specialHatController.GetAllFabrics())
+            //{
+            //    ListViewItem lvi = new ListViewItem(fabric.Id.ToString());
+            //    lvi.SubItems.Add(fabric.ItemName);
+            //    lvi.SubItems.Add(fabric.Colour);
+            //    lvi.SubItems.Add(fabric.AmountInStock.ToString());
+            //    listView1.Items.Add(lvi);
+            //}
+            foreach (Fabric fabric in specialHatController.GetAllFabrics()) {
+
+                ListViewItem items = new ListViewItem(new[] { fabric.ItemName, fabric.Colour, fabric.Price.ToString(), fabric.Id.ToString() });
+                listView1.Items.Add(items);
             }
         }
 
@@ -82,11 +87,11 @@ namespace AsyncHattprojekt
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                fabricID = Convert.ToInt32(listView1.SelectedItems[0].Text);
-                txtBoxChosenFabric.Text = listView1.SelectedItems[0].SubItems[1].Text + "\t " +
-                                          listView1.SelectedItems[0].SubItems[2].Text;
+            if (listView1.SelectedItems.Count > 0) {
+                var fabric = listView1.SelectedItems[0];
+                fabricID = Convert.ToInt32(fabric.SubItems[3].Text);
+                txtBoxChosenFabric.Text = fabric.SubItems[0].Text + "\t " +
+                                          fabric.SubItems[1].Text;
             }
         }
 
