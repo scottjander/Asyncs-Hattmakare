@@ -16,13 +16,13 @@ namespace AsyncHattprojekt
     public partial class SkapaFaktura : Form
     {
         KundController kundController;
-        OrderController orderController;
+        OrderControllerScottRobin orderController;
         FakturaController fakturaController;
         public SkapaFaktura()
         {
             InitializeComponent();
             kundController = new KundController();
-            orderController = new OrderController();
+            orderController = new OrderControllerScottRobin();
             fakturaController = new FakturaController();
         }
 
@@ -30,8 +30,18 @@ namespace AsyncHattprojekt
         {
             InitializeComponent();
             kundController = new KundController();
-            orderController = new OrderController();
+            orderController = new OrderControllerScottRobin();
             fakturaController = new FakturaController();
+            FillInvoice(customer, order);
+        }
+        public SkapaFaktura(int orderID)
+        {
+            InitializeComponent();
+            kundController = new KundController();
+            orderController = new OrderControllerScottRobin();
+            fakturaController = new FakturaController();
+            Order order = orderController.getOrderOnId(orderID);
+            Customer customer = kundController.GetCustomerOnID(order.Customer.Id);
             FillInvoice(customer, order);
         }
 

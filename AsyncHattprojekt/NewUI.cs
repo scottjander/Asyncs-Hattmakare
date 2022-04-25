@@ -17,6 +17,7 @@ namespace AsyncHattprojekt
     {
 
         private Form activeForm = null;
+        public int activeOrderId { get; set; }
         private OrderControllerScottRobin orderController = new OrderControllerScottRobin();
         private SpecialHatController specialHatController = new SpecialHatController();
 
@@ -296,7 +297,14 @@ namespace AsyncHattprojekt
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
+            SkapaFaktura form = new SkapaFaktura(activeOrderId);
+            form.Show();
             UpdatePrice();
+        }
+
+        private void panelBoarder_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

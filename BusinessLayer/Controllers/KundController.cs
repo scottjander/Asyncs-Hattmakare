@@ -58,5 +58,10 @@ namespace BusinessLayer.Controllers
             return CustomerRepository.GetAllCustomers();
         }
 
+        public Customer GetCustomerOnID(int id)
+        {
+            return CustomerRepository.GetCustomerOnID(id);
+        }
+
     }
 }

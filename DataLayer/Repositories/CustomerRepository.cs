@@ -36,5 +36,10 @@ namespace DataLayer.Repositories
         {
             return _context.Customers.ToList();
         }
+
+        public Customer GetCustomerOnID(int id)
+        {
+            return _context.Customers.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

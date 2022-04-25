@@ -26,10 +26,11 @@ namespace DataLayer.Repositories
         }
         public string HamtaAdressPaKundID(int id)
         {
-            
 
-                var customer = context.Customers.Find(id);
-                var gatunr = customer.Address.StreetNumber;
+
+            var order = context.Orders.Find(id);
+            var customer = order.Customer;
+            var gatunr = customer.Address.StreetNumber;
                 var zip = customer.Address.PostalCode;
                 var stad = customer.Address.TownName;
                 var adress = customer.Address.StreetName;
@@ -39,8 +40,8 @@ namespace DataLayer.Repositories
 
         public string HamtaForNamn (int id)
         {
-
-            var customer = context.Customers.Find(id);
+            var order = context.Orders.Find(id);
+            var customer = order.Customer;
             var namn = customer.FirstName;
             return namn;
        
@@ -49,8 +50,8 @@ namespace DataLayer.Repositories
         }
         public string HamtaEfterNamn(int id)
         {
-            
-                var customer = context.Customers.Find(id);
+            var order = context.Orders.Find(id);
+            var customer = order.Customer;
                 var namn = customer.LastName;
                 return namn;
             
