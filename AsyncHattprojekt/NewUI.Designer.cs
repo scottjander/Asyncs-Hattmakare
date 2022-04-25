@@ -28,28 +28,20 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.panelEconomySubMenu = new System.Windows.Forms.Panel();
             this.btnTaxSummary = new System.Windows.Forms.Button();
             this.btnCreateInvoiceFromSupplier = new System.Windows.Forms.Button();
-            this.btnEconomy = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.panelStorageSubMenu = new System.Windows.Forms.Panel();
             this.btnAddFabric = new System.Windows.Forms.Button();
             this.btlMatrialVy = new System.Windows.Forms.Button();
-            this.btnStorage = new System.Windows.Forms.Button();
             this.panelOrderSubMenu = new System.Windows.Forms.Panel();
             this.btnOrderHantering = new System.Windows.Forms.Button();
             this.btnListOfFinishedOrders = new System.Windows.Forms.Button();
             this.btnListOfStartedOrders = new System.Windows.Forms.Button();
             this.btnListOfCreatedOrders = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
             this.panelPurchaseSubmenu = new System.Windows.Forms.Panel();
             this.btnSpecial = new System.Windows.Forms.Button();
             this.btnDHat = new System.Windows.Forms.Button();
-            this.btnPurchase = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelOrder = new System.Windows.Forms.Panel();
             this.btnChoseCustomer = new System.Windows.Forms.Button();
             this.lblOrder = new System.Windows.Forms.Label();
@@ -68,8 +60,17 @@
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.panelBoarder = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.lblPageName = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnShowOrderBoarder = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnEconomy = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnStorage = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelEconomySubMenu.SuspendLayout();
             this.panelStorageSubMenu.SuspendLayout();
@@ -101,24 +102,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(251, 935);
             this.panelMenu.TabIndex = 3;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(62)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::AsyncHattprojekt.Properties.Resources.logout;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1100);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(230, 50);
-            this.btnLogout.TabIndex = 15;
-            this.btnLogout.Text = "Logga ut";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelEconomySubMenu
             // 
@@ -164,42 +147,6 @@
             this.btnCreateInvoiceFromSupplier.UseVisualStyleBackColor = false;
             this.btnCreateInvoiceFromSupplier.Click += new System.EventHandler(this.btnCreateInvoiceFromSupplier_Click);
             // 
-            // btnEconomy
-            // 
-            this.btnEconomy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(205)))), ((int)(((byte)(144)))));
-            this.btnEconomy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEconomy.FlatAppearance.BorderSize = 0;
-            this.btnEconomy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEconomy.ForeColor = System.Drawing.Color.White;
-            this.btnEconomy.Image = global::AsyncHattprojekt.Properties.Resources.graph;
-            this.btnEconomy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEconomy.Location = new System.Drawing.Point(0, 900);
-            this.btnEconomy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEconomy.Name = "btnEconomy";
-            this.btnEconomy.Size = new System.Drawing.Size(230, 50);
-            this.btnEconomy.TabIndex = 13;
-            this.btnEconomy.Text = "Ekonmi";
-            this.btnEconomy.UseVisualStyleBackColor = false;
-            this.btnEconomy.Click += new System.EventHandler(this.btnEconomy_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(53)))), ((int)(((byte)(90)))));
-            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.Image = global::AsyncHattprojekt.Properties.Resources.gentleman;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 850);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(230, 50);
-            this.btnCustomer.TabIndex = 12;
-            this.btnCustomer.Text = "Kunder";
-            this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
             // panelStorageSubMenu
             // 
             this.panelStorageSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(126)))), ((int)(((byte)(124)))));
@@ -243,24 +190,6 @@
             this.btlMatrialVy.Text = "Öka matrial";
             this.btlMatrialVy.UseVisualStyleBackColor = false;
             this.btlMatrialVy.Click += new System.EventHandler(this.btlMatrialVy_Click);
-            // 
-            // btnStorage
-            // 
-            this.btnStorage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
-            this.btnStorage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStorage.FlatAppearance.BorderSize = 0;
-            this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStorage.ForeColor = System.Drawing.Color.White;
-            this.btnStorage.Image = global::AsyncHattprojekt.Properties.Resources.trolley_copy;
-            this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStorage.Location = new System.Drawing.Point(0, 650);
-            this.btnStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(230, 50);
-            this.btnStorage.TabIndex = 10;
-            this.btnStorage.Text = "Lager";
-            this.btnStorage.UseVisualStyleBackColor = false;
-            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
             // 
             // panelOrderSubMenu
             // 
@@ -340,24 +269,6 @@
             this.btnListOfCreatedOrders.UseVisualStyleBackColor = false;
             this.btnListOfCreatedOrders.Click += new System.EventHandler(this.btnListOfCreatedOrders_Click);
             // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Image = global::AsyncHattprojekt.Properties.Resources.SC1;
-            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 350);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(230, 50);
-            this.btnOrder.TabIndex = 4;
-            this.btnOrder.Text = "Ordrar";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
             // panelPurchaseSubmenu
             // 
             this.panelPurchaseSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(124)))), ((int)(((byte)(48)))));
@@ -401,54 +312,6 @@
             this.btnDHat.Text = "Doktorshatt";
             this.btnDHat.UseVisualStyleBackColor = false;
             this.btnDHat.Click += new System.EventHandler(this.btnDHat_Click);
-            // 
-            // btnPurchase
-            // 
-            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(73)))));
-            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Image = global::AsyncHattprojekt.Properties.Resources.tall_hat;
-            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(0, 200);
-            this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(230, 50);
-            this.btnPurchase.TabIndex = 2;
-            this.btnPurchase.Text = "Ny beställning";
-            this.btnPurchase.UseVisualStyleBackColor = false;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::AsyncHattprojekt.Properties.Resources.home;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 150);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(230, 50);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Hem";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.White;
-            this.panelLogo.BackgroundImage = global::AsyncHattprojekt.Properties.Resources.OJLOGO2;
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(230, 150);
-            this.panelLogo.TabIndex = 0;
             // 
             // panelOrder
             // 
@@ -628,6 +491,7 @@
             // panelBoarder
             // 
             this.panelBoarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
+            this.panelBoarder.Controls.Add(this.btnShowOrderBoarder);
             this.panelBoarder.Controls.Add(this.lblPageName);
             this.panelBoarder.Controls.Add(this.lblUser);
             this.panelBoarder.Dock = System.Windows.Forms.DockStyle.Top;
@@ -651,6 +515,17 @@
             this.lblUser.TabIndex = 16;
             this.lblUser.Text = "Användare";
             // 
+            // lblPageName
+            // 
+            this.lblPageName.AutoSize = true;
+            this.lblPageName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageName.ForeColor = System.Drawing.Color.White;
+            this.lblPageName.Location = new System.Drawing.Point(7, 93);
+            this.lblPageName.Name = "lblPageName";
+            this.lblPageName.Size = new System.Drawing.Size(92, 39);
+            this.lblPageName.TabIndex = 17;
+            this.lblPageName.Text = "Hem";
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
@@ -663,16 +538,157 @@
             this.panelChildForm.Size = new System.Drawing.Size(1116, 785);
             this.panelChildForm.TabIndex = 6;
             // 
-            // lblPageName
+            // btnShowOrderBoarder
             // 
-            this.lblPageName.AutoSize = true;
-            this.lblPageName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageName.ForeColor = System.Drawing.Color.White;
-            this.lblPageName.Location = new System.Drawing.Point(7, 93);
-            this.lblPageName.Name = "lblPageName";
-            this.lblPageName.Size = new System.Drawing.Size(92, 39);
-            this.lblPageName.TabIndex = 17;
-            this.lblPageName.Text = "Hem";
+            this.btnShowOrderBoarder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowOrderBoarder.BackgroundImage = global::AsyncHattprojekt.Properties.Resources.Menu;
+            this.btnShowOrderBoarder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowOrderBoarder.FlatAppearance.BorderSize = 0;
+            this.btnShowOrderBoarder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowOrderBoarder.Location = new System.Drawing.Point(1374, 82);
+            this.btnShowOrderBoarder.Name = "btnShowOrderBoarder";
+            this.btnShowOrderBoarder.Size = new System.Drawing.Size(50, 50);
+            this.btnShowOrderBoarder.TabIndex = 18;
+            this.btnShowOrderBoarder.UseVisualStyleBackColor = true;
+            this.btnShowOrderBoarder.Click += new System.EventHandler(this.btnShowOrderBoarder_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(62)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::AsyncHattprojekt.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 1100);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(230, 50);
+            this.btnLogout.TabIndex = 15;
+            this.btnLogout.Text = "Logga ut";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnEconomy
+            // 
+            this.btnEconomy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(205)))), ((int)(((byte)(144)))));
+            this.btnEconomy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEconomy.FlatAppearance.BorderSize = 0;
+            this.btnEconomy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEconomy.ForeColor = System.Drawing.Color.White;
+            this.btnEconomy.Image = global::AsyncHattprojekt.Properties.Resources.graph;
+            this.btnEconomy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEconomy.Location = new System.Drawing.Point(0, 900);
+            this.btnEconomy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEconomy.Name = "btnEconomy";
+            this.btnEconomy.Size = new System.Drawing.Size(230, 50);
+            this.btnEconomy.TabIndex = 13;
+            this.btnEconomy.Text = "Ekonmi";
+            this.btnEconomy.UseVisualStyleBackColor = false;
+            this.btnEconomy.Click += new System.EventHandler(this.btnEconomy_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(53)))), ((int)(((byte)(90)))));
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Image = global::AsyncHattprojekt.Properties.Resources.gentleman;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 850);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(230, 50);
+            this.btnCustomer.TabIndex = 12;
+            this.btnCustomer.Text = "Kunder";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // btnStorage
+            // 
+            this.btnStorage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(190)))), ((int)(((byte)(187)))));
+            this.btnStorage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStorage.FlatAppearance.BorderSize = 0;
+            this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStorage.ForeColor = System.Drawing.Color.White;
+            this.btnStorage.Image = global::AsyncHattprojekt.Properties.Resources.trolley_copy;
+            this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStorage.Location = new System.Drawing.Point(0, 650);
+            this.btnStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStorage.Name = "btnStorage";
+            this.btnStorage.Size = new System.Drawing.Size(230, 50);
+            this.btnStorage.TabIndex = 10;
+            this.btnStorage.Text = "Lager";
+            this.btnStorage.UseVisualStyleBackColor = false;
+            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Image = global::AsyncHattprojekt.Properties.Resources.SC1;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(0, 350);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(230, 50);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "Ordrar";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(186)))), ((int)(((byte)(73)))));
+            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Image = global::AsyncHattprojekt.Properties.Resources.tall_hat;
+            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchase.Location = new System.Drawing.Point(0, 200);
+            this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(230, 50);
+            this.btnPurchase.TabIndex = 2;
+            this.btnPurchase.Text = "Ny beställning";
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::AsyncHattprojekt.Properties.Resources.home;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 150);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(230, 50);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Hem";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.White;
+            this.panelLogo.BackgroundImage = global::AsyncHattprojekt.Properties.Resources.OJLOGO2;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(230, 150);
+            this.panelLogo.TabIndex = 0;
             // 
             // NewUI
             // 
@@ -745,5 +761,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label lblPageName;
+        private System.Windows.Forms.Button btnShowOrderBoarder;
     }
 }

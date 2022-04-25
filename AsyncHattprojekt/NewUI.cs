@@ -318,5 +318,16 @@ namespace AsyncHattprojekt
         {
 
         }
+
+        private void btnShowOrderBoarder_Click(object sender, EventArgs e)
+        {
+            if (panelOrder.Visible == false) {
+                hideSubMenu();
+                panelOrder.Visible = true;
+            }
+            else
+                panelOrder.Visible = false;
+
+        }
     }
 }
