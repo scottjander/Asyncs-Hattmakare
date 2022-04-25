@@ -28,7 +28,7 @@ namespace AsyncHattprojekt
             lblName.Text = customer.FirstName + " " + customer.LastName;
             lblStreet.Text = address.StreetName + " " + address.StreetNumber;
             lblTown.Text = address.PostalCode + " " + address.TownName;
-            pictureBox1.Image = controller.GenerateBarCode(address.StreetName);
+            pictureBox1.Image = controller.GenerateBarCode("placeholderstring");
             lblDate.Text = DateTime.Now.ToString();
         }
 

@@ -37,15 +37,19 @@ namespace AsyncHattprojekt
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems[0] == null) return;
-            var hat = listView1.SelectedItems[0];
+            if (listView1.SelectedItems[0] != null) {
+                 var hat = listView1.SelectedItems[0];
             hatID = Convert.ToInt32(hat.SubItems[3].Text);
             standardHatController.OrderStandardHat(orderID, hatID);
             //parent.addTolistViewHats();
             parent.UpdateOrder();
             this.Close();
-            //OrderForm orderform = new OrderForm(orderID);            
-            //orderform.Show();
+            }
+            else {
+                MessageBox.Show("Var god välj en hatt.");
+            }
+
+
         }
 
         private void prisTxtBx_TextChanged(object sender, EventArgs e)

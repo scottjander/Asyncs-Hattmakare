@@ -41,11 +41,13 @@ namespace AsyncHattprojekt
 
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
+
+            try {
             string skapare = InitialPage.username;
             var comment = txtBoxComment.Text;
             var Customer = (Customer)comboBox1.SelectedItem;
 
-            if (Customer != null) {
+            
                 var orderID = controller.CreateOrder(comment, Customer, skapare);
                 OrderForm orderForm = new OrderForm(orderID);
                 string stringOrderID = orderID.ToString();
@@ -54,7 +56,12 @@ namespace AsyncHattprojekt
                 parent.OpenChildForm(new Home());
                 //orderForm.Show();
                 this.Close();
+
             }
+            catch (Exception ex) {
+                MessageBox.Show("Var god välj en kund.");
+            }
+
         }
     }
 }

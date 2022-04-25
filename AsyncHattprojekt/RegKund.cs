@@ -38,14 +38,30 @@ namespace AsyncHattprojekt
 
         private void RegistreraBtn_Click(object sender, EventArgs e)
         {
-            var nyAddress = new Address() { StreetName = AdrNamTxd.Text, StreetNumber = AdrNmrTxd.Text, TownName = StadTxd.Text, PostalCode = PostNmrTxd.Text};
+            //Den här valideringen är fantastiskt ful och ineffektiv men det blev den snabba lösningen vi fick göra nu. Too bad!
+            if (AdrNamTxd.Text != String.Empty && AdrNmrTxd.Text != String.Empty && StadTxd.Text != String.Empty && PostNmrTxd.Text != String.Empty) {
+                var nyAddress = new Address() {
+                    StreetName = AdrNamTxd.Text, StreetNumber = AdrNmrTxd.Text, TownName = StadTxd.Text,
+                    PostalCode = PostNmrTxd.Text
+                };
 
-            customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, PhoneTxd.Text, EmailTxd.Text, nyAddress, CommentTxt.Text);
-            // string firstName, string lastName, int phone, string email, Address address, string comment
-            MessageBox.Show("Kund registrerad.");
-            CreateOrder orderfrom = new CreateOrder();
-            orderfrom.Show();
-            Close();
+
+                if (FirstNameTxd.Text != String.Empty && LastNameTxd.Text != String.Empty &&
+                    PhoneTxd.Text != String.Empty && EmailTxd.Text != String.Empty) {
+                    customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, PhoneTxd.Text,
+                        EmailTxd.Text,
+                        nyAddress, CommentTxt.Text);
+                    MessageBox.Show("Kund registrerad.");
+                    CreateOrder orderfrom = new CreateOrder();
+                    orderfrom.Show();
+                }
+                else {
+                    MessageBox.Show("Vänligen fyll i all information.");
+                }
+            }
+            else {
+                MessageBox.Show("Vänligen fyll i all information.");
+            }
         }
     }
 }

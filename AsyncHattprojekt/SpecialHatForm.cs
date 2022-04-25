@@ -55,17 +55,28 @@ namespace AsyncHattprojekt
 
         private void btnAddHat_Click(object sender, EventArgs e)
         {
-            //validera fält
-            Fabric fabric = specialHatController.GetFabricOnId(fabricID);
-            string name = txtBoxName.Text;
-            double length = Convert.ToDouble(txtBoxFabricLength.Text);
-            int decoration = Convert.ToInt32(txtBoxDecoration.Text);
-            int size = Convert.ToInt32(txtBoxSize.Text);
-            string comment = txtBoxComment.Text;
-            string fileName = txtBoxFileName.Text;
-            specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID, fileName, filePath);
-            this.Close();
-            parent.UpdateOrder();
+            try {
+                Fabric fabric = specialHatController.GetFabricOnId(fabricID);
+                string name = txtBoxName.Text;
+                double length = Convert.ToDouble(txtBoxFabricLength.Text);
+                int decoration = Convert.ToInt32(txtBoxDecoration.Text);
+                int size = Convert.ToInt32(txtBoxSize.Text);
+                string comment = txtBoxComment.Text;
+                string fileName = txtBoxFileName.Text;
+                if (fabric != null && length != 0 ) {
+                    specialHatController.AddSpecialHat(name, fabric, length, decoration, size, comment, orderID,
+                        fileName,
+                        filePath);
+                    this.Close();
+                     parent.UpdateOrder();
+                }
+                else {
+                    MessageBox.Show("Fyll i all information");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message + " Dubbelkolla att fälten är korrekt ifyllda.");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
