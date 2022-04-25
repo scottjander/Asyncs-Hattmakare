@@ -18,6 +18,10 @@ namespace AsyncHattprojekt
             anvandareController = new AnvandareController();
             testklassen = new Testklassen();
             cbVäljAnvändare_fyllcbx();
+            testklassen.FillHat();
+            testklassen.testmetoden3();
+            testklassen.FillInvoices();
+
         }
 
         private void cbVäljAnvändare_fyllcbx()
@@ -52,7 +56,7 @@ namespace AsyncHattprojekt
             //testklassen.dummydata();
             this.Hide();
             username = cbVäljAnvändare.Text;
-            StartPage f = new StartPage();
+            NewUI f = new NewUI();
             f.ShowDialog();
             f = null;
             this.Show();

@@ -22,6 +22,7 @@ namespace AsyncHattprojekt
         private int orderID;
         private string filePath;
         private int fabricID;
+        public NewUI parent { get; set; }
 
         public SpecialHatForm(int orderId)
         {
@@ -61,6 +62,7 @@ namespace AsyncHattprojekt
             this.Close();
             OrderForm orderform = new OrderForm(orderID);
             orderform.Show();
+            parent.UpdatePrice();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

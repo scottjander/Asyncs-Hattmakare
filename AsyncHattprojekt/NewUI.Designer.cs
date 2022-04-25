@@ -66,12 +66,14 @@
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.panelBoarder = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelEconomySubMenu.SuspendLayout();
             this.panelStorageSubMenu.SuspendLayout();
             this.panelOrderSubMenu.SuspendLayout();
             this.panelPurchaseSubmenu.SuspendLayout();
             this.panelOrder.SuspendLayout();
+            this.panelBoarder.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -111,6 +113,7 @@
             this.btnLogout.TabIndex = 15;
             this.btnLogout.Text = "Logga ut";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelEconomySubMenu
             // 
@@ -452,9 +455,9 @@
             this.lblOrder.ForeColor = System.Drawing.Color.White;
             this.lblOrder.Location = new System.Drawing.Point(93, 64);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(52, 20);
+            this.lblOrder.Size = new System.Drawing.Size(18, 20);
             this.lblOrder.TabIndex = 14;
-            this.lblOrder.Text = "Order";
+            this.lblOrder.Text = "0";
             // 
             // lblCustomer
             // 
@@ -568,10 +571,12 @@
             this.btnCreateInvoice.TabIndex = 3;
             this.btnCreateInvoice.Text = "Skapa faktura";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
+            this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
             // 
             // panelBoarder
             // 
             this.panelBoarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(120)))), ((int)(((byte)(186)))));
+            this.panelBoarder.Controls.Add(this.lblUser);
             this.panelBoarder.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBoarder.Location = new System.Drawing.Point(250, 0);
             this.panelBoarder.Name = "panelBoarder";
@@ -586,6 +591,19 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1117, 786);
             this.panelChildForm.TabIndex = 6;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(1293, 0);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(15);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(144, 29);
+            this.lblUser.TabIndex = 16;
+            this.lblUser.Text = "Användare";
             // 
             // NewUI
             // 
@@ -606,6 +624,8 @@
             this.panelPurchaseSubmenu.ResumeLayout(false);
             this.panelOrder.ResumeLayout(false);
             this.panelOrder.PerformLayout();
+            this.panelBoarder.ResumeLayout(false);
+            this.panelBoarder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -651,5 +671,6 @@
         private System.Windows.Forms.Button btlMatrialVy;
         private System.Windows.Forms.Button btnTaxSummary;
         private System.Windows.Forms.Button btnCreateInvoiceFromSupplier;
+        private System.Windows.Forms.Label lblUser;
     }
 }

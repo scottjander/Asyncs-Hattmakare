@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer.Controllers;
 
 namespace AsyncHattprojekt
 {
@@ -14,11 +15,16 @@ namespace AsyncHattprojekt
     {
 
         private Form activeForm = null;
+        private OrderControllerScottRobin orderController = new OrderControllerScottRobin();
+
         public NewUI()
         {
-            InitializeComponent(); 
+            
+            InitializeComponent();
+            lblUser.Text = InitialPage.username;
             CustomizeDesign();
             OpenChildForm(new Home());
+            
         }
 
         private void CustomizeDesign()
@@ -75,11 +81,23 @@ namespace AsyncHattprojekt
             childForm.Show();
         }
 
-        //public static void SetOrderInfo(string orderID,string customer)
-        //{
-        //    lblOrder.Text = orderID;
-        //    lblCustomer.Text = customer;
-        //}
+        public void addTolistViewHats()
+        {
+
+        }
+
+        public void UpdatePrice()
+        {
+            int orderID = Int32.Parse(lblOrder.Text);
+            var currentOrder = orderController.getOrderOnId(orderID);
+            lblTotalPrice.Text = currentOrder.TotalPrice.ToString() + ":-" ?? "0.00:-";
+            var customerPoints = currentOrder.Customer.CustomerBonusPoints;
+            var discount = orderController.GetDiscount(customerPoints);
+            lblSuggestedDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString() + ":-";
+            txtBoxDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString();
+                    
+        }
+
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -100,6 +118,15 @@ namespace AsyncHattprojekt
         {
             hideSubMenu();
             setMenuColor(btnPurchase.BackColor);
+            int id = Int32.Parse(lblOrder.Text);
+            if (id != 0) 
+            {
+                OpenChildForm(new StandardHatOrder(id));
+            }
+            else 
+            {
+                MessageBox.Show("Välj kund först.");
+            }
 
         }
 
@@ -107,6 +134,13 @@ namespace AsyncHattprojekt
         {
             hideSubMenu();
             setMenuColor(btnPurchase.BackColor);
+            int id = Int32.Parse(lblOrder.Text);
+            if (id != 0) {
+                OpenChildForm(new SpecialHatForm(id));
+            }
+            else {
+                MessageBox.Show("Välj kund först.");
+            }
 
         }
 
@@ -185,6 +219,7 @@ namespace AsyncHattprojekt
 
         private void btnCreateInvoiceFromSupplier_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
             setMenuColor(btnEconomy.BackColor);
             OpenChildForm(new CreateInvoiceFromSupplier());
 
@@ -214,6 +249,16 @@ namespace AsyncHattprojekt
         {
             lblOrder.Text = orderId;
             lblCustomer.Text = customerName;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCreateInvoice_Click(object sender, EventArgs e)
+        {
+            UpdatePrice();
         }
     }
 }
