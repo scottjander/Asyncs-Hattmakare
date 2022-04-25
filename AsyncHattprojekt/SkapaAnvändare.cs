@@ -28,7 +28,7 @@ namespace AsyncHattprojekt
                 this.Close();
             }
             else {
-                MessageBox.Show("Fylla i textrutan");
+                MessageBox.Show("Fyll i textrutan");
             }
         }
     }
