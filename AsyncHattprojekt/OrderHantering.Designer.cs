@@ -45,7 +45,7 @@ namespace AsyncHattprojekt
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(724, 613);
+            this.btnPrint.Location = new System.Drawing.Point(671, 579);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(119, 48);
             this.btnPrint.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace AsyncHattprojekt
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(46, 613);
+            this.btnSave.Location = new System.Drawing.Point(46, 579);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(119, 48);
             this.btnSave.TabIndex = 1;
@@ -117,7 +117,7 @@ namespace AsyncHattprojekt
             // richTxtBoxComment
             // 
             this.richTxtBoxComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTxtBoxComment.Location = new System.Drawing.Point(46, 387);
+            this.richTxtBoxComment.Location = new System.Drawing.Point(46, 355);
             this.richTxtBoxComment.Name = "richTxtBoxComment";
             this.richTxtBoxComment.Size = new System.Drawing.Size(303, 177);
             this.richTxtBoxComment.TabIndex = 7;
@@ -147,7 +147,7 @@ namespace AsyncHattprojekt
             this.clmnName,
             this.clmnPrice});
             this.listViewHat.HideSelection = false;
-            this.listViewHat.Location = new System.Drawing.Point(595, 387);
+            this.listViewHat.Location = new System.Drawing.Point(542, 355);
             this.listViewHat.Name = "listViewHat";
             this.listViewHat.Size = new System.Drawing.Size(248, 177);
             this.listViewHat.TabIndex = 10;

@@ -24,6 +24,7 @@ namespace AsyncHattprojekt
         }
         public void FyllMaterial()
         {
+            listView1.Items.Clear();
             List<Fabric> fabrics = fabricStockController.GetAllFabric();
             foreach (Fabric a in fabrics) {
 
@@ -52,7 +53,9 @@ namespace AsyncHattprojekt
                 var id = Convert.ToInt32(fabric.SubItems[4].Text);
 
                 fabricStockController.IncreaseAmountInStorage(amount, id);
-                
+                FyllMaterial();
+
+
         }
 
         private void btnTillbaka_Click(object sender, EventArgs e)

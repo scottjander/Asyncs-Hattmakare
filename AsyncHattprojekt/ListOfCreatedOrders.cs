@@ -18,6 +18,7 @@ namespace AsyncHattprojekt
         public HatDbContext HatDbContext = new HatDbContext();
         public OrderControllerScottRobin orderControllerScottRobin = new OrderControllerScottRobin();
         private int orderID;
+        public NewUI parent;
 
         public ListOfCreatedOrders()
         {
@@ -58,8 +59,8 @@ namespace AsyncHattprojekt
             if (listView1.SelectedItems.Count > 0) {
                 var item = listView1.SelectedItems[0];
                 this.Hide();
-                OrderHantering f = new OrderHantering(orderID);
-                f.ShowDialog();
+                OrderHantering form = new OrderHantering(orderID);
+                parent.OpenChildForm(form);
             }
         }
     }

@@ -18,6 +18,10 @@ namespace AsyncHattprojekt
             anvandareController = new AnvandareController();
             testklassen = new Testklassen();
             cbVäljAnvändare_fyllcbx();
+            testklassen.FillHat();
+            testklassen.testmetoden3();
+            testklassen.FillInvoices();
+
         }
 
         private void cbVäljAnvändare_fyllcbx()
@@ -52,7 +56,7 @@ namespace AsyncHattprojekt
             //testklassen.dummydata();
             this.Hide();
             username = cbVäljAnvändare.Text;
-            StartPage f = new StartPage();
+            NewUI f = new NewUI();
             f.ShowDialog();
             f = null;
             this.Show();
@@ -62,12 +66,12 @@ namespace AsyncHattprojekt
 
         //private void button4_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.addHats();
+        //    StandardHatController.AddHats();
         //}
 
         //private void button5_Click(object sender, EventArgs e)
         //{
-        //    StandardHatController.deleteHats();
+        //    StandardHatController.DeleteHats();
         //}
 
         //private void button6_Click(object sender, EventArgs e)

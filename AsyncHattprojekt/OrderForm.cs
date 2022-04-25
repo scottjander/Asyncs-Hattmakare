@@ -33,7 +33,6 @@ namespace AsyncHattprojekt
             var discount = orderController.GetDiscount(customerPoints);
             lblSuggestedDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString() + ":-";
             txtBoxDiscount.Text = (currentOrder.TotalPrice - (currentOrder.TotalPrice * discount)).ToString();
-
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
