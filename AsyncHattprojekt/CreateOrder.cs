@@ -30,6 +30,7 @@ namespace AsyncHattprojekt
         private void btnCreateCustomer_Click(object sender, EventArgs e)
         {
             RegKund f = new RegKund();
+            f.parent = parent;
             f.ShowDialog();
             Dispose();
         }
@@ -43,9 +44,10 @@ namespace AsyncHattprojekt
         {
 
             try {
-            string skapare = InitialPage.username;
-            var comment = txtBoxComment.Text;
-            var Customer = (Customer)comboBox1.SelectedItem;
+
+                string skapare = InitialPage.username;
+                var comment = txtBoxComment.Text;
+                var Customer = (Customer)comboBox1.SelectedItem;
 
             
                 var orderID = controller.CreateOrder(comment, Customer, skapare);

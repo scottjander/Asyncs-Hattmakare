@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using BusinessLayer.Controllers;
 using DataLayer.Models;
 
 namespace AsyncHattprojekt
@@ -15,6 +16,8 @@ namespace AsyncHattprojekt
     public partial class RegKund : Form
     {
         public CustomerController customerController = new CustomerController();
+        private readonly OrderControllerScottRobin ordercontroller = new OrderControllerScottRobin();
+        public NewUI parent;
 
         public RegKund()
         {
@@ -48,12 +51,22 @@ namespace AsyncHattprojekt
 
                 if (FirstNameTxd.Text != String.Empty && LastNameTxd.Text != String.Empty &&
                     PhoneTxd.Text != String.Empty && EmailTxd.Text != String.Empty) {
-                    customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, PhoneTxd.Text,
+                   var Customer = customerController.RegisterCustomer(FirstNameTxd.Text, LastNameTxd.Text, PhoneTxd.Text,
                         EmailTxd.Text,
                         nyAddress, CommentTxt.Text);
                     MessageBox.Show("Kund registrerad.");
-                    CreateOrder orderfrom = new CreateOrder();
-                    orderfrom.Show();
+                    string skapare = InitialPage.username;
+                    var orderID = ordercontroller.CreateOrder(CommentTxt.Text, Customer, skapare);
+                    string stringOrderID = orderID.ToString();
+                    string stringCustomer = Customer.FirstName + " " + Customer.LastName;
+                    parent.updateOrderAndCustomer(stringOrderID, stringCustomer);
+                    parent.activeOrderId = orderID;
+                    parent.OpenChildForm(new Home());
+                    //orderForm.Show();
+                    this.Close();
+                    //CreateOrder orderfrom = new Cr
+                    //eateOrder();
+                    //orderfrom.Show();
                 }
                 else {
                     MessageBox.Show("Vänligen fyll i all information.");

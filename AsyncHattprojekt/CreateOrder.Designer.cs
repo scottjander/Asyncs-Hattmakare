@@ -71,16 +71,17 @@ namespace AsyncHattprojekt
             this.txtBoxComment.TabIndex = 10;
             this.txtBoxComment.Text = "";
             // 
-            // Form1
+            // CreateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtBoxComment);
             this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.btnCreateCustomer);
             this.Controls.Add(this.comboBox1);
-            this.Name = "Form1";
+            this.Name = "CreateOrder";
             this.Text = "Form1";
             this.ResumeLayout(false);
 

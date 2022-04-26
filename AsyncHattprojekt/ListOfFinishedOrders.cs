@@ -59,8 +59,8 @@ namespace AsyncHattprojekt
             if (listView1.SelectedItems.Count > 0) {
                 var item = listView1.SelectedItems[0];
                 this.Hide();
-                OrderHantering f = new OrderHantering(orderID);
-                f.ShowDialog();
+                OrderHantering form = new OrderHantering(orderID);
+                parent.OpenChildForm(form);
             }
         }
 

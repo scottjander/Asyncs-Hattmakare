@@ -32,11 +32,11 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtMangd = new System.Windows.Forms.TextBox();
             this.btnOkaLager = new System.Windows.Forms.Button();
             this.lblOkaLager = new System.Windows.Forms.Label();
             this.btnTillbaka = new System.Windows.Forms.Button();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -78,6 +78,10 @@
             this.columnHeader4.Text = "Färg";
             this.columnHeader4.Width = 107;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Id";
+            // 
             // txtMangd
             // 
             this.txtMangd.Location = new System.Drawing.Point(128, 558);
@@ -114,14 +118,11 @@
             this.btnTillbaka.UseVisualStyleBackColor = true;
             this.btnTillbaka.Click += new System.EventHandler(this.btnTillbaka_Click);
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Id";
-            // 
             // MaterialVy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1309, 741);
             this.Controls.Add(this.btnTillbaka);
             this.Controls.Add(this.lblOkaLager);

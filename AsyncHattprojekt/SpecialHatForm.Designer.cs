@@ -234,6 +234,7 @@
             // 
             // SpecialHatForm
             // 
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(919, 631);
             this.Controls.Add(this.txtBoxChosenFabric);
             this.Controls.Add(this.lblChosenFabric);

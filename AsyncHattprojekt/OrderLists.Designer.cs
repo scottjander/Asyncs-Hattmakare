@@ -35,10 +35,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(425, 193);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(319, 157);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 28);
+            this.button1.Size = new System.Drawing.Size(160, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Se skapade ordrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -46,10 +45,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(425, 229);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(319, 186);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 28);
+            this.button2.Size = new System.Drawing.Size(160, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "Se startade ordrar";
             this.button2.UseVisualStyleBackColor = true;
@@ -57,10 +55,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(425, 265);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(319, 215);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(213, 28);
+            this.button3.Size = new System.Drawing.Size(160, 23);
             this.button3.TabIndex = 2;
             this.button3.Text = "Se avslutade ordrar";
             this.button3.UseVisualStyleBackColor = true;
@@ -68,10 +65,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 513);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(9, 417);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 30);
+            this.button4.Size = new System.Drawing.Size(62, 24);
             this.button4.TabIndex = 6;
             this.button4.Text = "Tillbaka";
             this.button4.UseVisualStyleBackColor = true;
@@ -79,14 +76,14 @@
             // 
             // OrderLists
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderLists";
             this.Text = "OrderLists";
             this.ResumeLayout(false);

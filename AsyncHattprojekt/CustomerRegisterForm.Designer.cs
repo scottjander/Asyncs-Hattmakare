@@ -110,6 +110,7 @@ namespace AsyncHattprojekt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(795, 566);
             this.Controls.Add(this.listviewCust);
             this.Name = "CustomerRegisterForm";

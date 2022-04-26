@@ -18,7 +18,7 @@ namespace BusinessLayer
         {
             CustomerRepository = new CustomerRepository();
         }
-        public void RegisterCustomer(string firstName, string lastName, string phone, string email, Address address, string comment)
+        public Customer RegisterCustomer(string firstName, string lastName, string phone, string email, Address address, string comment)
         {
             try
             {
@@ -37,10 +37,12 @@ namespace BusinessLayer
                 HatDbContext.Addresses.Add(a);
                 HatDbContext.Customers.Add(customer);
                 HatDbContext.SaveChanges();
+                return customer;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return new Customer();
             }
         }
     }
