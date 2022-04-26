@@ -56,7 +56,8 @@ namespace AsyncHattprojekt
                 string stringCustomer = Customer.FirstName + " " + Customer.LastName;
                 parent.updateOrderAndCustomer(stringOrderID, stringCustomer);
                 parent.activeOrderId = orderID;
-                parent.OpenChildForm(new Home());
+                parent.OpenChildForm(new Home());                
+                parent.UpdateOrder();
                 //orderForm.Show();
                 this.Close();
 

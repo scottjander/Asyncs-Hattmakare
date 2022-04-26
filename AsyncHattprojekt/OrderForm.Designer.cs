@@ -46,9 +46,10 @@ namespace AsyncHattprojekt
             // 
             // btnCreateStandard
             // 
-            this.btnCreateStandard.Location = new System.Drawing.Point(753, 737);
+            this.btnCreateStandard.Location = new System.Drawing.Point(1004, 907);
+            this.btnCreateStandard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateStandard.Name = "btnCreateStandard";
-            this.btnCreateStandard.Size = new System.Drawing.Size(118, 45);
+            this.btnCreateStandard.Size = new System.Drawing.Size(157, 55);
             this.btnCreateStandard.TabIndex = 0;
             this.btnCreateStandard.Text = "Lägg till Standardhatt";
             this.btnCreateStandard.UseVisualStyleBackColor = true;
@@ -58,18 +59,20 @@ namespace AsyncHattprojekt
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTotalPrice.Location = new System.Drawing.Point(651, 748);
+            this.lblTotalPrice.Location = new System.Drawing.Point(868, 921);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(53, 20);
+            this.lblTotalPrice.Size = new System.Drawing.Size(68, 25);
             this.lblTotalPrice.TabIndex = 2;
             this.lblTotalPrice.Text = "0,00 :-";
             this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
             // 
             // btnCreateSpecial
             // 
-            this.btnCreateSpecial.Location = new System.Drawing.Point(753, 788);
+            this.btnCreateSpecial.Location = new System.Drawing.Point(1004, 970);
+            this.btnCreateSpecial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateSpecial.Name = "btnCreateSpecial";
-            this.btnCreateSpecial.Size = new System.Drawing.Size(118, 45);
+            this.btnCreateSpecial.Size = new System.Drawing.Size(157, 55);
             this.btnCreateSpecial.TabIndex = 5;
             this.btnCreateSpecial.Text = "Lägg Till Specialhatt";
             this.btnCreateSpecial.UseVisualStyleBackColor = true;
@@ -81,27 +84,30 @@ namespace AsyncHattprojekt
             this.Hatt,
             this.columnHeader1});
             this.listViewHats.HideSelection = false;
-            this.listViewHats.Location = new System.Drawing.Point(100, 338);
+            this.listViewHats.Location = new System.Drawing.Point(13, 22);
+            this.listViewHats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewHats.Name = "listViewHats";
-            this.listViewHats.Size = new System.Drawing.Size(771, 332);
+            this.listViewHats.Size = new System.Drawing.Size(1027, 408);
             this.listViewHats.TabIndex = 9;
             this.listViewHats.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(531, 753);
+            this.label1.Location = new System.Drawing.Point(708, 927);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Ordinarie pris";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(531, 793);
+            this.label2.Location = new System.Drawing.Point(708, 976);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Föreslagen rabatt";
             // 
@@ -109,33 +115,37 @@ namespace AsyncHattprojekt
             // 
             this.lblSuggestedDiscount.AutoSize = true;
             this.lblSuggestedDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSuggestedDiscount.Location = new System.Drawing.Point(651, 788);
+            this.lblSuggestedDiscount.Location = new System.Drawing.Point(868, 970);
+            this.lblSuggestedDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSuggestedDiscount.Name = "lblSuggestedDiscount";
-            this.lblSuggestedDiscount.Size = new System.Drawing.Size(53, 20);
+            this.lblSuggestedDiscount.Size = new System.Drawing.Size(68, 25);
             this.lblSuggestedDiscount.TabIndex = 12;
             this.lblSuggestedDiscount.Text = "0,00 :-";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(531, 832);
+            this.label3.Location = new System.Drawing.Point(708, 1024);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "Rabatt:";
             // 
             // txtBoxDiscount
             // 
-            this.txtBoxDiscount.Location = new System.Drawing.Point(655, 825);
+            this.txtBoxDiscount.Location = new System.Drawing.Point(873, 1015);
+            this.txtBoxDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxDiscount.Name = "txtBoxDiscount";
-            this.txtBoxDiscount.Size = new System.Drawing.Size(49, 20);
+            this.txtBoxDiscount.Size = new System.Drawing.Size(64, 22);
             this.txtBoxDiscount.TabIndex = 14;
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.Location = new System.Drawing.Point(838, 860);
+            this.btnCreateInvoice.Location = new System.Drawing.Point(1117, 1058);
+            this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
-            this.btnCreateInvoice.Size = new System.Drawing.Size(115, 23);
+            this.btnCreateInvoice.Size = new System.Drawing.Size(153, 28);
             this.btnCreateInvoice.TabIndex = 15;
             this.btnCreateInvoice.Text = "Skapa faktura";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
@@ -143,9 +153,9 @@ namespace AsyncHattprojekt
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 895);
+            this.ClientSize = new System.Drawing.Size(1301, 1102);
             this.Controls.Add(this.btnCreateInvoice);
             this.Controls.Add(this.txtBoxDiscount);
             this.Controls.Add(this.label3);
@@ -156,6 +166,7 @@ namespace AsyncHattprojekt
             this.Controls.Add(this.btnCreateSpecial);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.btnCreateStandard);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OrderForm_Load);

@@ -86,6 +86,7 @@ namespace AsyncHattprojekt
             childForm.Show();
         }
 
+
         public void UpdateOrder()
         {
             if (lblOrder.Text == "0") {
@@ -193,7 +194,7 @@ namespace AsyncHattprojekt
             ListOfCreatedOrders form = new ListOfCreatedOrders();
             form.parent = this;
             OpenChildForm(form);
-            lblPageName.Text = "Order";
+            lblPageName.Text = "Ordrar";
 
 
         }
@@ -205,7 +206,7 @@ namespace AsyncHattprojekt
             ListOfStartedOrders form = new ListOfStartedOrders();
             form.parent = this;
             OpenChildForm(form);
-            lblPageName.Text = "Order";
+            lblPageName.Text = "Ordrar";
 
         }
 
@@ -248,6 +249,7 @@ namespace AsyncHattprojekt
         {
             hideSubMenu();
             setMenuColor(btnStorage.BackColor);
+            OpenChildForm(new ManageHatts());
             lblPageName.Text = "Lager";
 
         }
